@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://kernen3d64hx"]
+
+[ext_resource type="PackedScene" uid="uid://bbgd51js65wmg" path="res://assets/blockbench_models/Test Model.gltf" id="1_7cjo5"]
+
+[sub_resource type="Animation" id="Animation_7cjo5"]
+resource_name = "animation_go"
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/root/wheel_left_front")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, -1, 0, 0, 2.9802326e-08, 0.96666664, 1, -0.10452855, 0, 0, -0.9945219, 1, 1, -1.2246469e-16, 0, 0, -1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/root/wheel_right_front")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, -1, 0, 0, 2.9802326e-08, 0.96666664, 1, -0.10452855, 0, 0, -0.9945219, 1, 1, -1.2246469e-16, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/root/wheel_left_rear")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, -1, 0, 0, 2.9802326e-08, 0.96666664, 1, -0.10452855, 0, 0, -0.9945219, 1, 1, -1.2246469e-16, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/root/wheel_right_rear")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, -1, 0, 0, 2.9802326e-08, 0.96666664, 1, -0.10452855, 0, 0, -0.9945219, 1, 1, -1.2246469e-16, 0, 0, -1)
+
+[sub_resource type="Animation" id="Animation_y174k"]
+resource_name = "animation_stop"
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/root/wheel_left_front")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/root/wheel_right_front")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/root/wheel_left_rear")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node/root/wheel_right_rear")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qng76"]
+_data = {
+&"animation_go": SubResource("Animation_7cjo5"),
+&"animation_stop": SubResource("Animation_y174k")
+}
+
+[node name="blockbench_export" instance=ExtResource("1_7cjo5")]
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_qng76")
+}
+autoplay = "animation_go"
