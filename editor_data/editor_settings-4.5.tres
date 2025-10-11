@@ -1,4 +1,16 @@
-[gd_resource type="EditorSettings" load_steps=5 format=3]
+[gd_resource type="EditorSettings" load_steps=12 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_vor7h"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
+
+[sub_resource type="InputEventKey" id="InputEventKey_k53ls"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
 
 [sub_resource type="InputEventKey" id="InputEventKey_jhlam"]
 keycode = 4194326
@@ -17,6 +29,36 @@ unicode = 114
 device = -1
 physical_keycode = 83
 unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_row57"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
+
+[sub_resource type="InputEventKey" id="InputEventKey_27o6x"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
+
+[sub_resource type="InputEventKey" id="InputEventKey_o1cky"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
+
+[sub_resource type="InputEventKey" id="InputEventKey_wil5d"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
+
+[sub_resource type="InputEventKey" id="InputEventKey_6fkut"]
+device = -1
+shift_pressed = true
+physical_keycode = 68
+unicode = 68
 
 [resource]
 interface/theme/base_color = Color(0.21, 0.24, 0.29, 1)
@@ -67,7 +109,7 @@ export/web/tls_key = ""
 export/web/tls_certificate = ""
 export/windows/signtool = ""
 _editor_settings_advanced_mode = true
-_project_settings_advanced_mode = false
+_project_settings_advanced_mode = true
 _export_template_download_directory = ""
 _default_feature_profile = ""
 _script_setup_templates_dictionary = {}
@@ -88,4 +130,26 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/instant_scale",
 "shortcuts": [SubResource("InputEventKey_fd8vk")]
+}, {
+"name": "scene_tree/duplicate",
+"shortcuts": [SubResource("InputEventKey_row57")]
+}, {
+"name": "filesystem_dock/duplicate",
+"shortcuts": [SubResource("InputEventKey_27o6x")]
+}, {
+"name": "animation_editor/duplicate_selected_keys",
+"shortcuts": [SubResource("InputEventKey_o1cky")]
+}, {
+"name": "sprite_frames/duplicate_animation",
+"shortcuts": [SubResource("InputEventKey_wil5d")]
+}, {
+"name": "audio_bus_editor/duplicate_selected_bus",
+"shortcuts": [SubResource("InputEventKey_6fkut")]
+}]
+builtin_action_overrides = [{
+"events": [SubResource("InputEventKey_vor7h")],
+"name": "ui_text_add_selection_for_next_occurrence"
+}, {
+"events": [SubResource("InputEventKey_k53ls")],
+"name": "ui_graph_duplicate"
 }]
