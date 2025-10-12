@@ -1,6 +1,0 @@
-64
-1
-1760224008
-b9b2fd1bb21cda358fc6b109dc7c652c
-{ "dimensions": Vector2i(64, 64) }
-1
