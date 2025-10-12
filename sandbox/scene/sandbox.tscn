@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=12 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="PackedScene" uid="uid://kernen3d64hx" path="res://scene/blockbench_export.tscn" id="1_h0kme"]
 [ext_resource type="PackedScene" uid="uid://cuq1ej7qmerdx" path="res://assets/food/turkey.glb" id="2_31ryr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://m25x8r11epr3" path="res://assets/city_industrial/building-q.glb" id="5_8xnrx"]
 [ext_resource type="PackedScene" uid="uid://blt37ay4ii15x" path="res://assets/city_industrial/chimney-basic.glb" id="6_ruqou"]
 [ext_resource type="PackedScene" uid="uid://v2e5jj3omt0k" path="res://assets/city_industrial/detail-tank.glb" id="7_lgc6p"]
+[ext_resource type="PackedScene" uid="uid://b54e7sy52wstm" path="res://assets/city_industrial/building-j.glb" id="8_s02lu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h0kme"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -147,3 +148,6 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -12.000001)
 
 [node name="detail-tank4" parent="terrain/houses" instance=ExtResource("7_lgc6p")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -13.6)
+
+[node name="building-j2" parent="." instance=ExtResource("8_s02lu")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2, 0, 8.500001)
