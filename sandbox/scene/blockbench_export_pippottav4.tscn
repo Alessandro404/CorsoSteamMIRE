@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://jhusyreb6eyl"]
+
+[ext_resource type="PackedScene" uid="uid://bxx07vmbk6ul1" path="res://assets/blockbench_models/Puppettinov4.gltf" id="1_maudi"]
+
+[sub_resource type="Animation" id="Animation_maudi"]
+resource_name = "animation_saluta"
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Puppettina_base4/Torso_base5/Testa5")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.2881487, 0.16194974, -0.04951301, 0.942492, 0.33333334, 1, 0.27541643, 0.15100372, -0.1340768, 0.9398761, 0.6333333, 1, 0.29049063, 0.16380037, -0.03019925, 0.94227, 0.7, 1, 0.29340434, 0.16639988, -0.0070283804, 0.941369, 0.73333335, 1, 0.29330042, 0.16632314, -0.00802458, 0.94140697, 1, 1, 0.2881487, 0.16194974, -0.049513005, 0.94249195)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Puppettina_base4/Torso_base5")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, -0.021814885, 0.999762, 0.06666667, 1, 0, 0, -0.010180914, 0.99994826, 0.1, 1, 0, 0, -0.004363313, 0.99999046, 0.13333334, 1, 0, 0, 0.0014544389, 0.9999989, 0.53333336, 1, 0, 0, 0.05959674, 0.99822253, 0.8333333, 1, 0, 0, 0.007272142, 0.99997365, 0.8666667, 1, 0, 0, 0.0014544352, 0.999999, 0.9, 1, 0, 0, -0.004363309, 0.9999905, 1, 1, 0, 0, -0.021814886, 0.9997621)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Puppettina_base4/Torso_base5/braccio_left5")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.83930993, 0.08004225, -0.52639043, 0.10984195, 0.1, 1, 0.7765199, 0.22203442, -0.48393634, 0.336932, 0.13333334, 1, 0.774299, 0.22519578, -0.48247337, 0.34200507, 0.2, 1, 0.84302294, -0.036957793, -0.531157, -0.07628023, 0.23333333, 1, 0.8429415, -0.037521347, -0.5311175, -0.07717466, 0.33333334, 1, 0.8360024, 0.09436689, -0.52401197, 0.13268864, 0.36666667, 1, 0.8221438, 0.13743442, -0.51439816, 0.20145942, 0.4, 1, 0.826939, 0.12448699, -0.517684, 0.18077172, 0.53333336, 1, 0.8461081, -0.0044472995, -0.53242266, -0.024648469, 0.56666666, 1, 0.8463493, 0.019934267, -0.5320679, 0.0141163245, 0.6666667, 1, 0.817794, 0.14806105, -0.5114407, 0.21844749, 0.76666665, 1, 0.84597355, 0.029225536, -0.53163856, 0.028898433, 0.8, 1, 0.84646505, 0.012192908, -0.5323016, 0.0018041711, 0.9, 1, 0.80895114, 0.16729, -0.50547767, 0.2492077, 0.93333334, 1, 0.80748326, 0.1702365, -0.504493, 0.2539235, 1, 1, 0.83931, 0.08004226, -0.5263905, 0.10984196)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Puppettina_base4/Torso_base5/Gamba_left5")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.16666667, 1, 0, 0, -0.043618523, 0.99904835, 0.5, 1, 0, 0, -0.08967656, 0.99597096, 0.73333335, 1, 0, 0, -0.046693843, 0.99890924, 0.76666665, 1, 0, 0, -0.040713098, 0.99917096, 0.96666664, 1, 0, 0, -0.005817736, 0.9999831, 1, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Puppettina_base4/Torso_base5/Gamba_right5")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.1, 1, 0, 0, -0.017452408, 0.99984777, 0.13333334, 1, 0, 0, -0.022360174, 0.99975, 0.2, 1, 0, 0, -0.026722219, 0.9996429, 0.36666667, 1, 0, 0, -0.037624937, 0.999292, 0.43333334, 1, 0, 0, -0.04198484, 0.99911827, 0.46666667, 1, 0, 0, -0.041875012, 0.99912286, 0.6333333, 1, 0, 0, -0.0069817407, 0.9999757, 0.6666667, 1, 0, 0, -6.9959987e-07, 1, 0.76666665, 1, 0, 0, 0.017451819, 0.99984777, 0.8333333, 1, 0, 0, 0.01745269, 0.99984777, 0.93333334, 1, 0, 0, 0.006981373, 0.9999757, 0.96666664, 1, 0, 0, 0.0034907106, 0.999994, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_82wuf"]
+_data = {
+&"animation_saluta": SubResource("Animation_maudi")
+}
+
+[node name="blockbench_export" instance=ExtResource("1_maudi")]
+
+[node name="Torso_base5" parent="Puppettina_base4" index="0"]
+transform = Transform3D(0.9976298, -0.06880948, 0, 0.06880948, 0.9976298, 0, 0, 0, 1, 0, 1.625, 0)
+
+[node name="Testa5" parent="Puppettina_base4/Torso_base5" index="0"]
+transform = Transform3D(0.9224797, 0.31916425, 0.21717575, -0.15057844, 0.81548494, -0.5588473, -0.35546765, 0.48282325, 0.8003276, 0, 1.5, 0)
+
+[node name="braccio_left5" parent="Puppettina_base4/Torso_base5" index="1"]
+transform = Transform3D(0.4330126, 0.40707746, -0.8042313, 0.018720971, -0.89608353, -0.44349054, -0.90119344, 0.17698102, -0.39563635, -0.4375, 1.5, 0)
+
+[node name="Gamba_left5" parent="Puppettina_base4/Torso_base5" index="3"]
+transform = Transform3D(0.9900991, 0.14037022, 0, -0.14037022, 0.9900991, 0, 0, 0, 1, -0.1875, -0.0625, 0)
+
+[node name="Gamba_right5" parent="Puppettina_base4/Torso_base5" index="4"]
+transform = Transform3D(0.9972333, 0.0743355, 0, -0.0743355, 0.9972333, 0, 0, 0, 1, 0.25, -0.0625, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_82wuf")
+}
+autoplay = "animation_saluta"

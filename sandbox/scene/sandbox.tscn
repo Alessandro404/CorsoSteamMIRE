@@ -1,17 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=22 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="PackedScene" uid="uid://kernen3d64hx" path="res://scene/blockbench_export.tscn" id="1_h0kme"]
-[ext_resource type="PackedScene" uid="uid://cuq1ej7qmerdx" path="res://assets/food/turkey.glb" id="2_31ryr"]
+[ext_resource type="Script" uid="uid://cumxsbxj56dmk" path="res://addons/block_code/block_code_node/block_code.gd" id="3_3qdv6"]
 [ext_resource type="PackedScene" uid="uid://bprv3n8s2yykr" path="res://assets/city_industrial/building-a.glb" id="3_pqctx"]
+[ext_resource type="Script" uid="uid://brx1cabdmgu38" path="res://addons/block_code/serialization/block_serialization_tree.gd" id="4_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://chpjck5egg4bx" path="res://assets/city_industrial/building-b.glb" id="4_s02lu"]
 [ext_resource type="PackedScene" uid="uid://m25x8r11epr3" path="res://assets/city_industrial/building-q.glb" id="5_8xnrx"]
+[ext_resource type="Script" uid="uid://u035wsjd5tpj" path="res://addons/block_code/serialization/block_serialization.gd" id="5_iccas"]
+[ext_resource type="Script" uid="uid://tlsvrkc3fubl" path="res://addons/block_code/serialization/block_script_serialization.gd" id="6_6vy87"]
 [ext_resource type="PackedScene" uid="uid://blt37ay4ii15x" path="res://assets/city_industrial/chimney-basic.glb" id="6_ruqou"]
+[ext_resource type="Script" uid="uid://bwkinr8omutpw" path="res://addons/block_code/code_generation/variable_definition.gd" id="7_04hr3"]
 [ext_resource type="PackedScene" uid="uid://v2e5jj3omt0k" path="res://assets/city_industrial/detail-tank.glb" id="7_lgc6p"]
+[ext_resource type="PackedScene" uid="uid://jhusyreb6eyl" path="res://scene/blockbench_export_pippottav4.tscn" id="8_8xnrx"]
 [ext_resource type="PackedScene" uid="uid://b54e7sy52wstm" path="res://assets/city_industrial/building-j.glb" id="8_s02lu"]
+[ext_resource type="PackedScene" uid="uid://dfgkgi0uoclce" path="res://assets/vaso di fiori.gltf" id="9_8xnrx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h0kme"]
+sky_top_color = Color(0.55863935, 0.31653798, 0.7318374, 1)
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sun_angle_max = 80.13
 
 [sub_resource type="Sky" id="Sky_23ueg"]
 sky_material = SubResource("ProceduralSkyMaterial_h0kme")
@@ -21,23 +29,56 @@ background_mode = 2
 sky = SubResource("Sky_23ueg")
 tonemap_mode = 2
 
+[sub_resource type="Resource" id="Resource_3qdv6"]
+script = ExtResource("5_iccas")
+name = &"Node3D_change_position"
+arguments = {
+"value": Vector3(0, 0, -0.1)
+}
+
+[sub_resource type="Resource" id="Resource_3f0gx"]
+script = ExtResource("5_iccas")
+name = &"process"
+children = Array[ExtResource("5_iccas")]([SubResource("Resource_3qdv6")])
+
+[sub_resource type="Resource" id="Resource_iccas"]
+script = ExtResource("4_3f0gx")
+root = SubResource("Resource_3f0gx")
+canvas_position = Vector2(175, 50)
+
+[sub_resource type="Resource" id="Resource_8jbqr"]
+script = ExtResource("6_6vy87")
+script_inherits = "Node3D"
+block_serialization_trees = Array[ExtResource("4_3f0gx")]([SubResource("Resource_iccas")])
+generated_script = "extends Node3D
+
+
+func _process(delta):
+	position += Vector3(0.0, 0.0, -0.1)
+
+"
+
 [node name="Sandbox" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.23911753, -0.5814987, 0.7776131, 0.09904576, 0.7820607, 0.61528134, -0.9659259, 0.22414383, -0.12940943, 0, -2.8000002, 0)
+transform = Transform3D(-0.818469, -0.28764123, 0.49736398, 0.09904575, 0.78206056, 0.6152813, -0.5659491, 0.5528504, -0.61160266, 0, -5.873808, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_31ryr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.38268346, 0.3535534, -0.85355335, 0, 0.9238795, 0.38268346, 0.9238795, 0.14644663, -0.3535534, -2.8, 1.2, -1.2000003)
+transform = Transform3D(-0.6342854, 0.2958522, -0.7142504, 0, 0.9238795, 0.38268352, 0.77309906, 0.24273051, -0.5860033, -15.710646, 7.066522, -17.01286)
 
 [node name="blockbench_export" parent="." instance=ExtResource("1_h0kme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0.2746067)
 
-[node name="turkey2" parent="." instance=ExtResource("2_31ryr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0, -1.6999999)
+[node name="blockbench_export3" parent="blockbench_export" instance=ExtResource("9_8xnrx")]
+transform = Transform3D(0.09495968, 0, -0.99548113, 0, 1, 0, 0.99548113, 0, 0.09495968, -0.0029224157, 0.61139154, 0.97884667)
+
+[node name="BlockCode" type="Node" parent="blockbench_export"]
+script = ExtResource("3_3qdv6")
+block_script = SubResource("Resource_8jbqr")
 
 [node name="Terrain" type="Node3D" parent="."]
 
@@ -151,3 +192,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -13.6)
 
 [node name="building-j2" parent="." instance=ExtResource("8_s02lu")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2, 0, 8.500001)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("8_8xnrx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5289035, 0, 1.1868367)
+visible = false
+
+[node name="building-b2" parent="." instance=ExtResource("4_s02lu")]
+transform = Transform3D(4.326645, 0, 0, 0, 4.326645, 0, 0, 0, 4.326645, 9.27148, 0.16082525, -15.881526)
