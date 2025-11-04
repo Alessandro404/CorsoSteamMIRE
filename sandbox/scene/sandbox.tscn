@@ -69,7 +69,7 @@ environment = SubResource("Environment_31ryr")
 transform = Transform3D(-0.6342854, 0.2958522, -0.7142504, 0, 0.9238795, 0.38268352, 0.77309906, 0.24273051, -0.5860033, -15.710646, 7.066522, -17.01286)
 
 [node name="blockbench_export" parent="." instance=ExtResource("1_h0kme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -1.8199916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9299889, 0, -1.8199916)
 
 [node name="blockbench_export3" parent="blockbench_export" instance=ExtResource("9_8xnrx")]
 transform = Transform3D(0.09495968, 0, -0.99548113, 0, 1, 0, 0.99548113, 0, 0.09495968, -0.0029224157, 0.61139154, 0.97884667)
