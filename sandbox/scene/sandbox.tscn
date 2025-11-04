@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=23 format=3 uid="uid://c6nac0ju7dpl8"]
 
+[ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://kernen3d64hx" path="res://scene/blockbench_export.tscn" id="1_h0kme"]
 [ext_resource type="Script" uid="uid://cumxsbxj56dmk" path="res://addons/block_code/block_code_node/block_code.gd" id="3_3qdv6"]
 [ext_resource type="PackedScene" uid="uid://bprv3n8s2yykr" path="res://assets/city_industrial/building-a.glb" id="3_pqctx"]
@@ -15,14 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://b54e7sy52wstm" path="res://assets/city_industrial/building-j.glb" id="8_s02lu"]
 [ext_resource type="PackedScene" uid="uid://dfgkgi0uoclce" path="res://assets/vaso di fiori.gltf" id="9_8xnrx"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h0kme"]
-sky_top_color = Color(0.55863935, 0.31653798, 0.7318374, 1)
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-sun_angle_max = 80.13
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
+panorama = ExtResource("1_3f0gx")
 
 [sub_resource type="Sky" id="Sky_23ueg"]
-sky_material = SubResource("ProceduralSkyMaterial_h0kme")
+sky_material = SubResource("PanoramaSkyMaterial_iccas")
 
 [sub_resource type="Environment" id="Environment_31ryr"]
 background_mode = 2
@@ -61,7 +59,7 @@ func _process(delta):
 [node name="Sandbox" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.818469, -0.28764123, 0.49736398, 0.09904575, 0.78206056, 0.6152813, -0.5659491, 0.5528504, -0.61160266, 0, -5.873808, 0)
+transform = Transform3D(0.86667436, 0.3389592, -0.36603582, -0.023789385, 0.76096934, 0.6483516, 0.49830675, -0.5532019, 0.66757625, 0, 7.406396, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -71,7 +69,7 @@ environment = SubResource("Environment_31ryr")
 transform = Transform3D(-0.6342854, 0.2958522, -0.7142504, 0, 0.9238795, 0.38268352, 0.77309906, 0.24273051, -0.5860033, -15.710646, 7.066522, -17.01286)
 
 [node name="blockbench_export" parent="." instance=ExtResource("1_h0kme")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0.2746067)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -1.8199916)
 
 [node name="blockbench_export3" parent="blockbench_export" instance=ExtResource("9_8xnrx")]
 transform = Transform3D(0.09495968, 0, -0.99548113, 0, 1, 0, 0.99548113, 0, 0.09495968, -0.0029224157, 0.61139154, 0.97884667)
@@ -79,8 +77,6 @@ transform = Transform3D(0.09495968, 0, -0.99548113, 0, 1, 0, 0.99548113, 0, 0.09
 [node name="BlockCode" type="Node" parent="blockbench_export"]
 script = ExtResource("3_3qdv6")
 block_script = SubResource("Resource_8jbqr")
-
-[node name="Terrain" type="Node3D" parent="."]
 
 [node name="terrain" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 2.4000003)
@@ -176,7 +172,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 7.6000004, 0, 7)
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 9.500001, 0, -5.2000003)
 
 [node name="building-q2" parent="terrain/houses" instance=ExtResource("5_8xnrx")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -3.7, 0, 6.7)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -3.7, 0, 6.461955)
 
 [node name="chimney-basic2" parent="terrain/houses" instance=ExtResource("6_ruqou")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.9000006, 4.4, -5)
@@ -194,8 +190,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -13.6)
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2, 0, 8.500001)
 
 [node name="blockbench_export2" parent="." instance=ExtResource("8_8xnrx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5289035, 0, 1.1868367)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6832814, 0, 1.1868367)
 
 [node name="building-b2" parent="." instance=ExtResource("4_s02lu")]
 transform = Transform3D(4.326645, 0, 0, 0, 4.326645, 0, 0, 0, 4.326645, 9.27148, 0.16082525, -15.881526)
