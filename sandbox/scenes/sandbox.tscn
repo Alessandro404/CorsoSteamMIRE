@@ -225,5 +225,7 @@ transform = Transform3D(4.326645, 0, 0, 0, 4.326645, 0, 0, 0, 4.326645, 9.27148,
 
 [node name="giocatore" parent="." instance=ExtResource("17_8b5lh")]
 
+[node name="OggettiRagazzi" type="Node3D" parent="."]
+
 [node name="OggettoSelezionabile" parent="." instance=ExtResource("19_vvfch")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)

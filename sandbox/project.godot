@@ -15,6 +15,13 @@ run/main_scene="uid://c6nac0ju7dpl8"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[asset_placer]
+
+general/preview_material="res://addons/asset_placer/utils/preview_material.tres"
+general/plane_material="res://addons/asset_placer/ui/plane_preview/plane_preview_material.tres"
+general/asset_library_path="user://asset_library.json"
+internal/last_int=1
+
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
@@ -25,7 +32,11 @@ project/assembly_name="Sandbox"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/block_code/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/asset_placer/plugin.cfg", "res://addons/block_code/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+
+[global_group]
+
+player="player group"
 
 [input]
 

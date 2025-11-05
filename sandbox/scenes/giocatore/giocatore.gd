@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-signal interact_object
+signal _on_interact_with_object
 @onready var ray_cast_3d: RayCast3D = $testa/Camera3D/RayCast3D
 
 @onready var testa: Node3D = $testa
@@ -97,6 +97,6 @@ func _physics_process(delta):
 func _process(_delta):
 	if ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
-		interact_object.emit(collider)
+		_on_interact_with_object.emit(collider)
 	else:
-		interact_object.emit(null)
+		_on_interact_with_object.emit(null)
