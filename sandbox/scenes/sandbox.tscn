@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=27 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://kernen3d64hx" path="res://scenes/blockbench_export.tscn" id="1_h0kme"]
@@ -14,8 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://v2e5jj3omt0k" path="res://assets/city_industrial/detail-tank.glb" id="7_lgc6p"]
 [ext_resource type="PackedScene" uid="uid://jhusyreb6eyl" path="res://scenes/blockbench_export_pippottav4.tscn" id="8_8xnrx"]
 [ext_resource type="PackedScene" uid="uid://b54e7sy52wstm" path="res://assets/city_industrial/building-j.glb" id="8_s02lu"]
+[ext_resource type="Material" uid="uid://clwltmpr06qfc" path="res://assets/prototyping/protype_0.25_grid_light.tres" id="9_8b5lh"]
 [ext_resource type="PackedScene" uid="uid://di4o32g3dv15r" path="res://assets/blockbench_models/vaso di fiori.gltf" id="15_2d2mb"]
-[ext_resource type="Script" uid="uid://oavf8pss3sb1" path="res://scenes/giocatore/giocatore.gd" id="16_g7mfh"]
+[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/prototyping/protype_0.25_grid_orange.tres" id="15_hc7ve"]
+[ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://scenes/giocatore/giocatore.tscn" id="17_8b5lh"]
+[ext_resource type="PackedScene" uid="uid://cvjo50qfcv3ng" path="res://scenes/oggetti/oggetto_selezionabile.tscn" id="19_vvfch"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
 panorama = ExtResource("1_3f0gx")
@@ -57,31 +60,6 @@ func _process(delta):
 
 "
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_g7mfh"]
-height = 0.4
-radius = 0.4
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g7mfh"]
-radius = 0.4
-height = 1.6
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hc7ve"]
-albedo_color = Color(0.5677461, 0.577193, 0.94190437, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_vvfch"]
-material = SubResource("StandardMaterial3D_hc7ve")
-radius = 0.4
-height = 1.6
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8b5lh"]
-radius = 0.4
-height = 1.1
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_8b5lh"]
-material = SubResource("StandardMaterial3D_hc7ve")
-radius = 0.4
-height = 1.1
-
 [node name="Sandbox" type="Node3D"]
 
 [node name="Ambiente" type="Node3D" parent="."]
@@ -104,205 +82,106 @@ script = ExtResource("3_3qdv6")
 block_script = SubResource("Resource_8jbqr")
 
 [node name="terrain" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 2.4000003)
 metadata/_edit_lock_ = true
 
 [node name="pavement" type="Node3D" parent="terrain"]
+metadata/_edit_group_ = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -2.9000003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -2.9000003)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, 7)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, 0)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="terrain/pavement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 0)
+material_override = ExtResource("9_8b5lh")
+use_collision = true
+size = Vector3(10, 1, 10)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="terrain/pavement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 0)
+material_override = ExtResource("9_8b5lh")
+use_collision = true
+size = Vector3(10, 1, 10)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -2.9000003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -2.9000003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, 10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -22.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -20)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -22.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -20)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -12.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, -20)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -12.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, -20)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -22.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -22.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -12.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, -10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -12.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, -10)
+material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="pavement2" type="Node3D" parent="terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5000002, -24)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -2.9000003)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -2.9000003)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, 7)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, 7)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -2.9000003)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -2.9000003)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, 7)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, 7)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -22.8)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -22.8)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4999998, -0.49999997, -12.9)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.49999997, -12.9)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -22.8)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -22.8)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.49999997, -12.9)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
-
-[node name="CSGBox3D16" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -0.49999997, -12.9)
-use_collision = true
-size = Vector3(10, 1, 10)
-metadata/_edit_lock_ = true
 
 [node name="houses" type="Node3D" parent="terrain"]
 
@@ -327,45 +206,24 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -12.000001)
 [node name="detail-tank4" parent="terrain/houses" instance=ExtResource("7_lgc6p")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -13.6)
 
+[node name="obstacles" type="Node3D" parent="terrain"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="terrain/obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.6, -10)
+material_override = ExtResource("15_hc7ve")
+use_collision = true
+size = Vector3(2, 2, 2)
+
 [node name="building-j2" parent="." instance=ExtResource("8_s02lu")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2, 0, 8.500001)
 
-[node name="blockbench_export2" parent="." instance=ExtResource("8_8xnrx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6832814, 0, 1.1868367)
+[node name="puppottina" parent="." instance=ExtResource("8_8xnrx")]
+transform = Transform3D(0.44000003, 0, 0, 0, 0.44000003, 0, 0, 0, 0.44000003, -1.6832814, 0, 0.18683672)
 
 [node name="building-b2" parent="." instance=ExtResource("4_s02lu")]
 transform = Transform3D(4.326645, 0, 0, 0, 4.326645, 0, 0, 0, 4.326645, 9.27148, 0.16082525, -15.881526)
 
-[node name="giocatore" type="CharacterBody3D" parent="."]
-collision_layer = 2
-script = ExtResource("16_g7mfh")
+[node name="giocatore" parent="." instance=ExtResource("17_8b5lh")]
 
-[node name="ShapeCast3D" type="ShapeCast3D" parent="giocatore"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
-shape = SubResource("CylinderShape3D_g7mfh")
-target_position = Vector3(0, 0, 0)
-margin = 0.1
-
-[node name="CollisionShape3D_standing" type="CollisionShape3D" parent="giocatore"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
-shape = SubResource("CapsuleShape3D_g7mfh")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="giocatore/CollisionShape3D_standing"]
-layers = 2
-mesh = SubResource("CapsuleMesh_vvfch")
-
-[node name="CollisionShape3D_crouching" type="CollisionShape3D" parent="giocatore"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
-shape = SubResource("CapsuleShape3D_8b5lh")
-disabled = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="giocatore/CollisionShape3D_crouching"]
-layers = 2
-mesh = SubResource("CapsuleMesh_8b5lh")
-
-[node name="testa" type="Node3D" parent="giocatore"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
-
-[node name="Camera3D" type="Camera3D" parent="giocatore/testa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20000005)
-cull_mask = 1048573
+[node name="OggettoSelezionabile" parent="." instance=ExtResource("19_vvfch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, -3)

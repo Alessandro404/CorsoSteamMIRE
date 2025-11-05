@@ -1,7 +1,9 @@
 extends CharacterBody3D
 
-@onready var testa: Node3D = $testa
+signal interact_object
+@onready var ray_cast_3d: RayCast3D = $testa/Camera3D/RayCast3D
 
+@onready var testa: Node3D = $testa
 
 const SPEED_WALKING : float = 5.0
 const SPEED_SPRINTING : float = 11.0
@@ -18,13 +20,16 @@ var lerp_speed_floating : float = 3.0
 
 var crouching_depth = -0.5
 
+#Vari oggetti e collisori per muoversi
 @onready var collision_shape_3d_standing: CollisionShape3D = $CollisionShape3D_standing
+@onready var collision_shape_3d_standing_2: CollisionShape3D = $CollisionShape3D_standing2
 @onready var collision_shape_3d_crouching: CollisionShape3D = $CollisionShape3D_crouching
-
+@onready var collision_shape_3d_crouching_2: CollisionShape3D = $CollisionShape3D_crouching2
 @onready var shape_cast_3d: ShapeCast3D = $ShapeCast3D
 
 
 func _ready():
+	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -38,21 +43,27 @@ func _physics_process(delta):
 		speed_current = SPEED_CROUCHING
 		testa.position.y = lerp(testa.position.y, 1.6 + crouching_depth, delta * 20)
 		collision_shape_3d_crouching.disabled = false
+		collision_shape_3d_crouching_2.disabled = false
 		collision_shape_3d_crouching.get_child(0).visible = true
 		collision_shape_3d_standing.disabled = true
+		collision_shape_3d_standing_2.disabled = true
 		collision_shape_3d_standing.get_child(0).visible = false
 		
 		
 	elif !shape_cast_3d.is_colliding():
-		if Input.is_action_pressed("sprint"):
+		if Input.is_action_pressed("sprint") && is_on_floor():
+		#if Input.is_action_pressed("sprint"):   ##controllo se posso cambiare velocità saltando
 			speed_current = SPEED_SPRINTING
 		else:
-			speed_current = SPEED_WALKING
+			if is_on_floor():
+				speed_current = SPEED_WALKING
 		
 		testa.position.y = lerp(testa.position.y, 1.6, delta * 20)
 		collision_shape_3d_crouching.disabled = true
+		collision_shape_3d_crouching_2.disabled = true
 		collision_shape_3d_crouching.get_child(0).visible = false
 		collision_shape_3d_standing.disabled = false
+		collision_shape_3d_standing_2.disabled = false
 		collision_shape_3d_standing.get_child(0).visible = true
 		
 		
@@ -82,3 +93,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("escape_mouse"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _process(_delta):
+	if ray_cast_3d.is_colliding():
+		var collider = ray_cast_3d.get_collider()
+		interact_object.emit(collider)
+	else:
+		interact_object.emit(null)
