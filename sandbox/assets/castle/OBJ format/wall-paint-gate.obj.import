@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://debh4ssk5a8qp"
+path="res://.godot/imported/wall-paint-gate.obj-a2baf161450b9822c4e3b8a0e240234f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-paint-gate.obj-a2baf161450b9822c4e3b8a0e240234f.mesh"]
+
+source_file="res://assets/castle/OBJ format/wall-paint-gate.obj"
+dest_files=["res://.godot/imported/wall-paint-gate.obj-a2baf161450b9822c4e3b8a0e240234f.mesh", "res://.godot/imported/wall-paint-gate.obj-a2baf161450b9822c4e3b8a0e240234f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cr1ydwf2rd74j"]
+
+[ext_resource type="Texture2D" uid="uid://c85wrfkov20sg" path="res://assets/castle/GLB format/Textures/tree.png" id="1_wlf1w"]
+
+[resource]
+resource_name = "tree"
+transparency = 4
+shading_mode = 0
+albedo_texture = ExtResource("1_wlf1w")
+texture_filter = 0

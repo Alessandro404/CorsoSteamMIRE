@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bly3lb4tlt85u"]
+
+[ext_resource type="Texture2D" uid="uid://diss5b3wjuokl" path="res://assets/castle/GLB format/Textures/cobblestonePainted.png" id="1_7odow"]
+
+[resource]
+resource_name = "stonesPainted"
+shading_mode = 0
+albedo_texture = ExtResource("1_7odow")
+texture_filter = 0

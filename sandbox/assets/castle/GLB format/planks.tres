@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0v8r4ve22abl"]
+
+[ext_resource type="Texture2D" uid="uid://bllx8f5kjw1rb" path="res://assets/castle/GLB format/Textures/planks.png" id="1_4xxbb"]
+
+[resource]
+resource_name = "planks"
+shading_mode = 0
+albedo_texture = ExtResource("1_4xxbb")
+texture_filter = 0
