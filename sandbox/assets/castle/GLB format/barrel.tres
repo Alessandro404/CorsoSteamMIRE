@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c1nrae3yif5ue"]
-
-[ext_resource type="Texture2D" uid="uid://drx6gk57uxo7" path="res://assets/castle/GLB format/Textures/barrel.png" id="1_uvqy1"]
-
-[resource]
-resource_name = "barrel"
-shading_mode = 0
-albedo_texture = ExtResource("1_uvqy1")
-texture_filter = 0

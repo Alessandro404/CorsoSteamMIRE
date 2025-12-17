@@ -1,7 +1,9 @@
 @tool
 extends Node3D
+class_name OggettoSelezionabile
 
-@onready var placeholder_mesh : PackedScene = preload("res://assets/prototyping/floating_question_mark.tscn")
+#@onready var placeholder_mesh : PackedScene = preload("res://assets/prototyping/floating_question_mark.tscn")
+var placeholder_mesh : PackedScene 
 @export var model : PackedScene:
 	get: return model
 	set(new_model): 
@@ -21,10 +23,14 @@ var collision
 var material 
 var selected = false
 
+func _init():
+	placeholder_mesh = preload("res://assets/prototyping/floating_question_mark.tscn")
+	model = placeholder_mesh
+
 func _ready():
 	#Questo avviene quando il gioco parte, quindi la risorsa viene ricordata
-	collision = get_child(0).get_child(0).get_child(0)
-	material = get_child(0).get_child(0).get_mesh().surface_get_material(0)
+	collision = get_child(0).get_child(0).get_child(0).get_child(0)
+	material = get_child(0).get_child(0).get_child(0).get_mesh().surface_get_material(0)
 	if not Engine.is_editor_hint():
 		get_tree().get_first_node_in_group("player")._on_interact_with_object.connect(set_selected)
 	
@@ -32,8 +38,8 @@ func _ready():
 
 #ancora non funziona non ci sono collisioni
 func _process(_delta):
-	material = get_child(0).get_child(0).get_mesh().surface_get_material(0)
-	collision = get_child(0).get_child(0).get_child(0)
+	material = get_child(0).get_child(0).get_child(0).get_mesh().surface_get_material(0)
+	collision = get_child(0).get_child(0).get_child(0).get_child(0)
 	if not Engine.is_editor_hint():
 		if selected:
 			material.set_stencil_mode(1)

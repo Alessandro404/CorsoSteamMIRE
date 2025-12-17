@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cp31w60s8pdsu"]
 
 [ext_resource type="Script" uid="uid://oavf8pss3sb1" path="res://scenes/giocatore/giocatore.gd" id="1_x5jxo"]
-[ext_resource type="Texture2D" uid="uid://jhm1p5uhlps4" path="res://assets/plus-svgrepo-com.svg" id="2_fvtlo"]
+[ext_resource type="Texture2D" uid="uid://fbp5gngqjv5o" path="res://assets/plus-bold-svgrepo-com.svg" id="2_fvtlo"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_g7mfh"]
 height = 0.4
@@ -83,6 +83,8 @@ cull_mask = 1048573
 
 [node name="RayCast3D" type="RayCast3D" parent="testa/Camera3D"]
 target_position = Vector3(0, 0, -1.8)
+collision_mask = 16
+collide_with_areas = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="testa"]
 transform = Transform3D(0.98730594, 0.15883014, 0, -0.15690061, 0.97531176, -0.15540007, -0.024682214, 0.1534274, 0.9878516, 0.29530814, -0.32300544, -0.5)
@@ -107,5 +109,5 @@ size_flags_vertical = 4
 
 [node name="PlusSvgrepoCom" type="Sprite2D" parent="Control"]
 position = Vector2(19.999998, 19.999998)
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_fvtlo")

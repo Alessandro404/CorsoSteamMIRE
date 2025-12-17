@@ -1,46 +1,22 @@
-[gd_scene load_steps=49 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=26 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="PackedScene" uid="uid://kernen3d64hx" path="res://scenes/blockbench_export.tscn" id="1_h0kme"]
 [ext_resource type="Texture2D" uid="uid://lyaow2vx7thh" path="res://assets/sky/rogland_clear_night_2k.exr" id="1_yc6dp"]
 [ext_resource type="Script" uid="uid://cumxsbxj56dmk" path="res://addons/block_code/block_code_node/block_code.gd" id="3_3qdv6"]
-[ext_resource type="PackedScene" uid="uid://bprv3n8s2yykr" path="res://assets/city_industrial/building-a.glb" id="3_pqctx"]
 [ext_resource type="Script" uid="uid://brx1cabdmgu38" path="res://addons/block_code/serialization/block_serialization_tree.gd" id="4_3f0gx"]
-[ext_resource type="PackedScene" uid="uid://chpjck5egg4bx" path="res://assets/city_industrial/building-b.glb" id="4_s02lu"]
-[ext_resource type="PackedScene" uid="uid://m25x8r11epr3" path="res://assets/city_industrial/building-q.glb" id="5_8xnrx"]
 [ext_resource type="Script" uid="uid://u035wsjd5tpj" path="res://addons/block_code/serialization/block_serialization.gd" id="5_iccas"]
 [ext_resource type="Script" uid="uid://tlsvrkc3fubl" path="res://addons/block_code/serialization/block_script_serialization.gd" id="6_6vy87"]
-[ext_resource type="PackedScene" uid="uid://blt37ay4ii15x" path="res://assets/city_industrial/chimney-basic.glb" id="6_ruqou"]
 [ext_resource type="Script" uid="uid://bwkinr8omutpw" path="res://addons/block_code/code_generation/variable_definition.gd" id="7_04hr3"]
-[ext_resource type="PackedScene" uid="uid://v2e5jj3omt0k" path="res://assets/city_industrial/detail-tank.glb" id="7_lgc6p"]
-[ext_resource type="PackedScene" uid="uid://jhusyreb6eyl" path="res://scenes/blockbench_export_pippottav4.tscn" id="8_8xnrx"]
-[ext_resource type="PackedScene" uid="uid://b54e7sy52wstm" path="res://assets/city_industrial/building-j.glb" id="8_s02lu"]
+[ext_resource type="Material" uid="uid://cx15q4ooop7cm" path="res://assets/materiali vari/piastrelle1.tres" id="9_2d2mb"]
 [ext_resource type="Material" uid="uid://clwltmpr06qfc" path="res://assets/prototyping/protype_0.25_grid_light.tres" id="9_8b5lh"]
-[ext_resource type="PackedScene" uid="uid://di4o32g3dv15r" path="res://assets/blockbench_models/vaso di fiori.gltf" id="15_2d2mb"]
-[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/prototyping/protype_0.25_grid_orange.tres" id="15_hc7ve"]
-[ext_resource type="PackedScene" uid="uid://drx8nna6psenw" path="res://assets/castle/GLB format/barrels.glb" id="16_jvr0b"]
+[ext_resource type="Material" uid="uid://cr5j3yjrjmddp" path="res://assets/materiali vari/legno1.tres" id="9_r5tyk"]
+[ext_resource type="Material" uid="uid://bhejrqn73j7cu" path="res://assets/materiali vari/erba1.tres" id="10_g7mfh"]
+[ext_resource type="PackedScene" uid="uid://cbk4smbbw8wkn" path="res://assets/personaggi/character_e_scene.tscn" id="10_m5lhb"]
+[ext_resource type="PackedScene" uid="uid://cmrfvhc41i61r" path="res://assets/oggetti_vari/CommonTree_Autumn_2.fbx" id="11_i1hvo"]
+[ext_resource type="PackedScene" uid="uid://dddg1u4kvjhog" path="res://assets/oggetti_vari/Tree2.fbx" id="12_cg56h"]
+[ext_resource type="PackedScene" uid="uid://c10rk17u0tump" path="res://tools/dialogo_manager.tscn" id="13_8b5lh"]
+[ext_resource type="PackedScene" uid="uid://dar1p3v55x14k" path="res://assets/oggetti_vari/blocco.tscn" id="13_r5tyk"]
 [ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://scenes/giocatore/giocatore.tscn" id="17_8b5lh"]
-[ext_resource type="PackedScene" uid="uid://dc8q1tcvuepe7" path="res://assets/castle/GLB format/dock-corner.glb" id="17_xyjy3"]
-[ext_resource type="PackedScene" uid="uid://bp5qx8axugttf" path="res://assets/castle/GLB format/fence-wood.glb" id="18_4yc7b"]
-[ext_resource type="PackedScene" uid="uid://bauosopfpymfu" path="res://assets/castle/GLB format/fence.glb" id="19_oieu5"]
-[ext_resource type="PackedScene" uid="uid://cvjo50qfcv3ng" path="res://scenes/oggetti/oggetto_selezionabile.tscn" id="19_vvfch"]
-[ext_resource type="PackedScene" uid="uid://ckft2mhdbk563" path="res://assets/castle/GLB format/floor-flat.glb" id="20_4u4o7"]
-[ext_resource type="PackedScene" uid="uid://byvgvdjlguje2" path="res://assets/city_industrial/building-d.glb" id="20_yc6dp"]
-[ext_resource type="PackedScene" uid="uid://cp77hnwfb7n1y" path="res://assets/castle/GLB format/wall-fortified-half.glb" id="21_wrw2h"]
-[ext_resource type="PackedScene" uid="uid://h5rctqocaf0d" path="res://assets/castle/GLB format/tower-base.glb" id="26_stf01"]
-[ext_resource type="PackedScene" uid="uid://d2qsu7sfkxhqw" path="res://assets/castle/GLB format/tower-edge.glb" id="27_23ysv"]
-[ext_resource type="PackedScene" uid="uid://cbwruralnx4su" path="res://assets/castle/GLB format/tower-paint-base.glb" id="28_wrw2h"]
-[ext_resource type="PackedScene" uid="uid://cd8kw0tpji75f" path="res://assets/castle/GLB format/tower.glb" id="29_4v0yr"]
-[ext_resource type="PackedScene" uid="uid://bvpls0kr8xdao" path="res://assets/castle/GLB format/tower-top.glb" id="30_2qokn"]
-[ext_resource type="PackedScene" uid="uid://y25wbdd1aipi" path="res://assets/castle/GLB format/tree-large.glb" id="31_xibsq"]
-[ext_resource type="PackedScene" uid="uid://bu6t86qngbdnh" path="res://assets/castle/GLB format/tree-shrub.glb" id="32_pq6qq"]
-[ext_resource type="PackedScene" uid="uid://dy8xgagp6v6ka" path="res://assets/castle/GLB format/wall-flat-gate.glb" id="33_1y3jj"]
-[ext_resource type="PackedScene" uid="uid://eprtqjoxegg5" path="res://assets/castle/GLB format/wall-fortified-gate-half.glb" id="35_4v0yr"]
-[ext_resource type="PackedScene" uid="uid://b0k7hjwirock2" path="res://assets/castle/GLB format/wall-fortified-gate.glb" id="36_2qokn"]
-[ext_resource type="PackedScene" uid="uid://ky2jv6em7tqi" path="res://assets/Stanza castello.gltf" id="36_4v0yr"]
-[ext_resource type="PackedScene" uid="uid://dbv2jc0c1yrwn" path="res://assets/castle/GLB format/wall-fortified-paint-door.glb" id="37_xibsq"]
-[ext_resource type="PackedScene" uid="uid://c6eaxgpo8lmuo" path="res://assets/castle/GLB format/wall-fortified-paint.glb" id="38_pq6qq"]
-[ext_resource type="PackedScene" uid="uid://cvsmnt0ptrdle" path="res://assets/castle/GLB format/wall-fortified.glb" id="39_1y3jj"]
-[ext_resource type="PackedScene" uid="uid://c20t1uq7li82o" path="res://assets/castle/GLB format/wall.glb" id="40_xkx5y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
 panorama = ExtResource("1_yc6dp")
@@ -54,7 +30,6 @@ sky = SubResource("Sky_23ueg")
 tonemap_mode = 2
 glow_levels/1 = 7.35
 fog_depth_curve = 5.4641604
-volumetric_fog_enabled = true
 
 [sub_resource type="Resource" id="Resource_3qdv6"]
 script = ExtResource("5_iccas")
@@ -85,6 +60,9 @@ func _process(delta):
 
 "
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_hc7ve"]
+radius = 0.7
+
 [node name="Sandbox" type="Node3D"]
 
 [node name="Ambiente" type="Node3D" parent="."]
@@ -92,7 +70,6 @@ func _process(delta):
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Ambiente"]
 transform = Transform3D(0.86667436, 0.3389592, -0.36603582, -0.023789385, 0.76096934, 0.6483516, 0.49830675, -0.5532019, 0.66757625, 0, 7.406396, 0)
 light_color = Color(0.60972697, 0.63731664, 0.6582302, 1)
-light_energy = 1.446
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Ambiente"]
@@ -101,15 +78,13 @@ environment = SubResource("Environment_31ryr")
 [node name="Macchinina" parent="." instance=ExtResource("1_h0kme")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.929989, 0, 4.5800085)
 
-[node name="Vaso di fiori" parent="Macchinina" instance=ExtResource("15_2d2mb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12998879, 0.7, 0.9199916)
-
 [node name="BlockCode" type="Node" parent="Macchinina"]
 script = ExtResource("3_3qdv6")
 block_script = SubResource("Resource_8jbqr")
 
 [node name="terrain" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="pavement" type="Node3D" parent="terrain"]
 metadata/_edit_group_ = true
@@ -164,13 +139,13 @@ size = Vector3(10, 1, 10)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="terrain/pavement"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
+material_override = ExtResource("9_2d2mb")
 use_collision = true
 size = Vector3(10, 1, 10)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="terrain/pavement"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
+material_override = ExtResource("9_2d2mb")
 use_collision = true
 size = Vector3(10, 1, 10)
 
@@ -188,13 +163,13 @@ size = Vector3(10, 1, 10)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="terrain/pavement"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
+material_override = ExtResource("10_g7mfh")
 use_collision = true
 size = Vector3(10, 1, 10)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="terrain/pavement"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
+material_override = ExtResource("9_2d2mb")
 use_collision = true
 size = Vector3(10, 1, 10)
 
@@ -210,383 +185,59 @@ material_override = ExtResource("9_8b5lh")
 use_collision = true
 size = Vector3(10, 1, 10)
 
-[node name="pavement2" type="Node3D" parent="terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.944515, 0, 0)
-metadata/_edit_group_ = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, 0)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 0)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 0)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, 10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, 10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, -20)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="CSGBox3D16" type="CSGBox3D" parent="terrain/pavement2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.5, -10)
-material_override = ExtResource("9_8b5lh")
-use_collision = true
-size = Vector3(10, 1, 10)
-
-[node name="houses" type="Node3D" parent="terrain"]
-
-[node name="building-a2" parent="terrain/houses" instance=ExtResource("3_pqctx")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 7.6000004, 0, 7)
-
-[node name="building-b2" parent="terrain/houses" instance=ExtResource("4_s02lu")]
-transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 9.500001, 0, -5.2000003)
-
-[node name="building-q2" parent="terrain/houses" instance=ExtResource("5_8xnrx")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -3.7, 0, 6.461955)
-
-[node name="chimney-basic2" parent="terrain/houses" instance=ExtResource("6_ruqou")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.9000006, 4.4, -5)
-
-[node name="detail-tank2" parent="terrain/houses" instance=ExtResource("7_lgc6p")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -10.400001)
-
-[node name="detail-tank3" parent="terrain/houses" instance=ExtResource("7_lgc6p")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -12.000001)
-
-[node name="detail-tank4" parent="terrain/houses" instance=ExtResource("7_lgc6p")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.6, 0, -13.6)
-
-[node name="obstacles" type="Node3D" parent="terrain"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="terrain/obstacles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.6, -10)
-material_override = ExtResource("15_hc7ve")
-use_collision = true
-size = Vector3(2, 2, 2)
-
-[node name="castello" type="Node3D" parent="terrain"]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -28, 0, 0)
-
-[node name="tower-base2" parent="terrain/castello" instance=ExtResource("26_stf01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
-
-[node name="tower-edge2" parent="terrain/castello" instance=ExtResource("27_23ysv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 6)
-
-[node name="tower-paint-base2" parent="terrain/castello" instance=ExtResource("28_wrw2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
-
-[node name="tower2" parent="terrain/castello" instance=ExtResource("29_4v0yr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 6)
-
-[node name="tower-top2" parent="terrain/castello" instance=ExtResource("30_2qokn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 6)
-
-[node name="tree-large2" parent="terrain/castello" instance=ExtResource("31_xibsq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
-
-[node name="tree-shrub2" parent="terrain/castello" instance=ExtResource("32_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
-
-[node name="wall-flat-gate2" parent="terrain/castello" instance=ExtResource("33_1y3jj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
-
-[node name="wall-fortified-gate-half2" parent="terrain/castello" instance=ExtResource("35_4v0yr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-
-[node name="wall-fortified-gate2" parent="terrain/castello" instance=ExtResource("36_2qokn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
-
-[node name="wall-fortified-paint-door2" parent="terrain/castello" instance=ExtResource("37_xibsq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
-
-[node name="wall-fortified-paint2" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-
-[node name="wall-fortified-paint3" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-
-[node name="wall-fortified-paint4" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-
-[node name="wall-fortified-paint5" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
-
-[node name="wall-fortified-paint6" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="wall-fortified-paint7" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 4)
-
-[node name="wall-fortified-paint8" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 3)
-
-[node name="wall-fortified-paint9" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
-
-[node name="wall-fortified-paint10" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1)
-
-[node name="wall-fortified-paint11" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
-
-[node name="wall-fortified-paint12" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
-
-[node name="wall-fortified-paint13" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
-
-[node name="wall-fortified-paint14" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
-
-[node name="wall-fortified-paint16" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-
-[node name="wall-fortified-paint17" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 4)
-
-[node name="wall-fortified-paint18" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 3)
-
-[node name="wall-fortified-paint19" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 2)
-
-[node name="wall-fortified-paint21" parent="terrain/castello" instance=ExtResource("38_pq6qq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
-
-[node name="wall-fortified2" parent="terrain/castello" instance=ExtResource("39_1y3jj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
-
-[node name="wall2" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
-
-[node name="wall3" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 1)
-
-[node name="wall4" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 5)
-
-[node name="wall5" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 5)
-
-[node name="wall6" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 5)
-
-[node name="wall7" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
-
-[node name="wall8" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 5)
-
-[node name="wall9" parent="terrain/castello" instance=ExtResource("40_xkx5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 5)
-
-[node name="barrels2" parent="terrain/castello" instance=ExtResource("16_jvr0b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 8)
-
-[node name="dock-corner2" parent="terrain/castello" instance=ExtResource("17_xyjy3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 9)
-
-[node name="fence-wood2" parent="terrain/castello" instance=ExtResource("18_4yc7b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)
-
-[node name="fence2" parent="terrain/castello" instance=ExtResource("19_oieu5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
-
-[node name="fence-wood3" parent="terrain/castello" instance=ExtResource("18_4yc7b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7)
-
-[node name="floor-flat2" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999998, -0.05701046, 7)
-
-[node name="floor-flat3" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9999998, -0.05701046, 7)
-
-[node name="floor-flat4" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.05701046, 7)
-
-[node name="floor-flat5" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.05701046, 8)
-
-[node name="floor-flat6" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9999998, -0.05701046, 8)
-
-[node name="floor-flat7" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9999998, -0.05701046, 8)
-
-[node name="floor-flat8" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 1)
-
-[node name="floor-flat9" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 1)
-
-[node name="floor-flat10" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 1)
-
-[node name="floor-flat11" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 2)
-
-[node name="floor-flat13" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 2)
-
-[node name="floor-flat14" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 1)
-
-[node name="floor-flat15" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 2)
-
-[node name="floor-flat12" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 2)
-
-[node name="floor-flat16" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 3)
-
-[node name="floor-flat17" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 3)
-
-[node name="floor-flat18" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 3)
-
-[node name="floor-flat19" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 3)
-
-[node name="floor-flat20" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 4)
-
-[node name="floor-flat21" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 4)
-
-[node name="floor-flat22" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 4)
-
-[node name="floor-flat23" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 4)
-
-[node name="floor-flat24" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 5)
-
-[node name="floor-flat25" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 5)
-
-[node name="floor-flat26" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 5)
-
-[node name="floor-flat27" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 5)
-
-[node name="floor-flat28" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030416965, 0)
-
-[node name="floor-flat29" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0030416965, 0)
-
-[node name="floor-flat30" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0030416965, 0)
-
-[node name="floor-flat31" parent="terrain/castello" instance=ExtResource("20_4u4o7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0030416965, 0)
-
-[node name="wall-fortified-half2" parent="terrain/castello" instance=ExtResource("21_wrw2h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
-
-[node name="tree-large2" parent="terrain" instance=ExtResource("31_xibsq")]
-transform = Transform3D(11.1, 0, 0, 0, 11.1, 0, 0, 0, 11.1, -22, -12, 20)
-
-[node name="blockbench_export" parent="terrain" instance=ExtResource("36_4v0yr")]
-transform = Transform3D(-3.496911e-07, 0, 8, 0, 8, 0, -8, 0, -3.496911e-07, -44, 0.01, -12)
-
-[node name="building-j2" parent="." instance=ExtResource("8_s02lu")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2, 0, 8.500001)
-
-[node name="puppottina" parent="." instance=ExtResource("8_8xnrx")]
-transform = Transform3D(0.44000003, 0, 0, 0, 0.44000003, 0, 0, 0, 0.44000003, -1.6832814, 0, 0.18683672)
-
-[node name="building-b2" parent="." instance=ExtResource("4_s02lu")]
-transform = Transform3D(4.326645, 0, 0, 0, 4.326645, 0, 0, 0, 4.326645, 9.27148, 0.16082525, -15.881526)
-
 [node name="giocatore" parent="." instance=ExtResource("17_8b5lh")]
 
 [node name="OggettiRagazzi" type="Node3D" parent="."]
 
-[node name="OggettoSelezionabile" parent="." instance=ExtResource("19_vvfch")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+[node name="character-e" parent="OggettiRagazzi" instance=ExtResource("10_m5lhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
-[node name="building-d2" parent="." instance=ExtResource("20_yc6dp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.450902, 1.1920929e-07, -3.2401493)
+[node name="DialogoManager" parent="OggettiRagazzi/character-e" instance=ExtResource("13_8b5lh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OggettiRagazzi/character-e/DialogoManager"]
+shape = SubResource("SphereShape3D_hc7ve")
+
+[node name="CommonTree_Autumn_2 (1)" parent="." instance=ExtResource("11_i1hvo")]
+transform = Transform3D(1.718174, 0, -1.5969805, 0, 2.3457344, 0, 1.5969805, 0, 1.718174, -1, -9.536743e-07, -6)
+metadata/asset_placer_res_id = "uid://cmrfvhc41i61r"
+
+[node name="Tree2" parent="." instance=ExtResource("12_cg56h")]
+transform = Transform3D(0.6528141, 0, 1.2140341, 0, 1.3784212, 0, -1.2140341, 0, 0.6528141, -4, 0, -1)
+metadata/asset_placer_res_id = "uid://dddg1u4kvjhog"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2.5, -9)
+material_override = ExtResource("9_r5tyk")
+use_collision = true
+size = Vector3(14, 6, 1)
+
+[node name="blocco" parent="CSGBox3D" instance=ExtResource("13_r5tyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+operation = 2
+size = Vector3(2, 3, 1)
+metadata/asset_placer_res_id = "uid://dar1p3v55x14k"
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2.5, -17.999)
+material_override = ExtResource("9_r5tyk")
+use_collision = true
+size = Vector3(10, 6, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2.5, -24.999)
+material_override = ExtResource("9_r5tyk")
+use_collision = true
+size = Vector3(14, 6, 1)
+
+[node name="Blocco" parent="." instance=ExtResource("13_r5tyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.5, -17)
+material_override = ExtResource("9_r5tyk")
+size = Vector3(1, 6, 17)
+metadata/asset_placer_res_id = "uid://dar1p3v55x14k"
+
+[node name="Blocco2" parent="." instance=ExtResource("13_r5tyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.5, -17)
+material_override = ExtResource("9_r5tyk")
+size = Vector3(1, 6, 17)
+metadata/asset_placer_res_id = "uid://dar1p3v55x14k"

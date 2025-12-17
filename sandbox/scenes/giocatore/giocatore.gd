@@ -37,6 +37,13 @@ func _input(event):
 		rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSIBILITY))
 		testa.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSIBILITY))
 		testa.rotation.x = clamp(testa.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+		
+	if Input.is_action_just_pressed("Interazione"):
+		var actionables = ray_cast_3d.get_collider()
+		print(actionables)
+		if actionables && actionables.has_method("action"):
+			actionables.action()
+	return
 
 func _physics_process(delta):
 	if Input.is_action_pressed("crouch"):

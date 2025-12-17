@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cr5j3yjrjmddp"]
+
+[ext_resource type="Texture2D" uid="uid://um3ama0l3fst" path="res://assets/oggetti_vari/Pine_4_0.png" id="1_oknym"]
+
+[resource]
+albedo_texture = ExtResource("1_oknym")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0717734

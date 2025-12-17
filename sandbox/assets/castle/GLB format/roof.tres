@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cpsjp4ece18tu"]
-
-[ext_resource type="Texture2D" uid="uid://5dejqoe33bcl" path="res://assets/castle/GLB format/Textures/roof.png" id="1_m80eg"]
-
-[resource]
-resource_name = "roof"
-shading_mode = 0
-albedo_texture = ExtResource("1_m80eg")
-texture_filter = 0

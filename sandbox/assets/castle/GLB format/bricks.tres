@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bdxtvd2ug30w3"]
-
-[ext_resource type="Texture2D" uid="uid://bex2gt7fhivkj" path="res://assets/castle/GLB format/Textures/cobblestoneAlternative.png" id="1_552qp"]
-
-[resource]
-resource_name = "bricks"
-shading_mode = 0
-albedo_texture = ExtResource("1_552qp")
-texture_filter = 0
