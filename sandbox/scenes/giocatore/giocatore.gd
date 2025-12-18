@@ -33,70 +33,77 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion:
-		rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSIBILITY))
-		testa.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSIBILITY))
-		testa.rotation.x = clamp(testa.rotation.x, deg_to_rad(-89), deg_to_rad(89))
+	if !Singleton.dialogue_playing:
+		if event is InputEventMouseMotion:
+			rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSIBILITY))
+			testa.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSIBILITY))
+			testa.rotation.x = clamp(testa.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 		
 	if Input.is_action_just_pressed("Interazione"):
 		var actionables = ray_cast_3d.get_collider()
 		print(actionables)
 		if actionables && actionables.has_method("action"):
 			actionables.action()
+		#Singleton.toggle_porta(0)
+		#TODO QUESTO E' ORRIBILE
+		elif actionables && actionables.get_owner().has_method("toggle_porta"):
+			actionables.get_owner().toggle_porta()
+		
 	return
 
 func _physics_process(delta):
-	if Input.is_action_pressed("crouch"):
-		speed_current = SPEED_CROUCHING
-		testa.position.y = lerp(testa.position.y, 1.6 + crouching_depth, delta * 20)
-		collision_shape_3d_crouching.disabled = false
-		collision_shape_3d_crouching_2.disabled = false
-		collision_shape_3d_crouching.get_child(0).visible = true
-		collision_shape_3d_standing.disabled = true
-		collision_shape_3d_standing_2.disabled = true
-		collision_shape_3d_standing.get_child(0).visible = false
-		
-		
-	elif !shape_cast_3d.is_colliding():
-		if Input.is_action_pressed("sprint") && is_on_floor():
-		#if Input.is_action_pressed("sprint"):   ##controllo se posso cambiare velocità saltando
-			speed_current = SPEED_SPRINTING
-		else:
-			if is_on_floor():
-				speed_current = SPEED_WALKING
-		
-		testa.position.y = lerp(testa.position.y, 1.6, delta * 20)
-		collision_shape_3d_crouching.disabled = true
-		collision_shape_3d_crouching_2.disabled = true
-		collision_shape_3d_crouching.get_child(0).visible = false
-		collision_shape_3d_standing.disabled = false
-		collision_shape_3d_standing_2.disabled = false
-		collision_shape_3d_standing.get_child(0).visible = true
-		
-		
-	
-	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	if is_on_floor():
-		direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_speed)
-	else:
-		velocity.y -= gravity * delta
-		direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_speed_floating)
-		
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		
-		
-	
-	
-	
-	if direction:
-		velocity.x = direction.x * speed_current
-		velocity.z = direction.z * speed_current
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed_current)
-		velocity.z = move_toward(velocity.z, 0, speed_current)
+	if !Singleton.dialogue_playing:
+		if Input.is_action_pressed("crouch"):
+			speed_current = SPEED_CROUCHING
+			testa.position.y = lerp(testa.position.y, 1.6 + crouching_depth, delta * 20)
+			collision_shape_3d_crouching.disabled = false
+			collision_shape_3d_crouching_2.disabled = false
+			collision_shape_3d_crouching.get_child(0).visible = true
+			collision_shape_3d_standing.disabled = true
+			collision_shape_3d_standing_2.disabled = true
+			collision_shape_3d_standing.get_child(0).visible = false
 			
-	move_and_slide()
+			
+		elif !shape_cast_3d.is_colliding():
+			if Input.is_action_pressed("sprint") && is_on_floor():
+			#if Input.is_action_pressed("sprint"):   ##controllo se posso cambiare velocità saltando
+				speed_current = SPEED_SPRINTING
+			else:
+				if is_on_floor():
+					speed_current = SPEED_WALKING
+			
+			testa.position.y = lerp(testa.position.y, 1.6, delta * 20)
+			collision_shape_3d_crouching.disabled = true
+			collision_shape_3d_crouching_2.disabled = true
+			collision_shape_3d_crouching.get_child(0).visible = false
+			collision_shape_3d_standing.disabled = false
+			collision_shape_3d_standing_2.disabled = false
+			collision_shape_3d_standing.get_child(0).visible = true
+			
+			
+		
+		var input_dir = Input.get_vector("left", "right", "forward", "backward")
+		if is_on_floor():
+			direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_speed)
+		else:
+			velocity.y -= gravity * delta
+			direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_speed_floating)
+			
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+			
+			
+		
+		
+		
+		if direction:
+			velocity.x = direction.x * speed_current
+			velocity.z = direction.z * speed_current
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed_current)
+			velocity.z = move_toward(velocity.z, 0, speed_current)
+				
+		move_and_slide()
 	
 	if Input.is_action_just_pressed("escape_mouse"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

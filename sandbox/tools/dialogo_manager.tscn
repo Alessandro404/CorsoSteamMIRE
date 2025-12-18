@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c10rk17u0tump"]
+[gd_scene load_steps=4 format=3 uid="uid://c10rk17u0tump"]
 
 [ext_resource type="Resource" uid="uid://bn45nq2xy5vgp" path="res://dialoghi/dialogodi test.dialogue" id="1_dquu2"]
 
@@ -9,11 +9,19 @@ script/source = "extends Area3D
 @export var dialogue_start: String = \"start\"
 
 func action() -> void:
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	if !Singleton.dialogue_playing:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+		Singleton.dialogue_playing = true
 "
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dquu2"]
 
 [node name="DialogoManager" type="Area3D"]
 collision_layer = 16
 collision_mask = 16
 script = SubResource("GDScript_r22or")
 dialogue_resource = ExtResource("1_dquu2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_dquu2")

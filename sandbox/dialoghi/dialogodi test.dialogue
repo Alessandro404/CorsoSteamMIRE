@@ -1,11 +1,15 @@
 ~ start
-Lisa: [[Hi|Hello|Howdy]], this is some dialogue.
-Lisa: Here are some choices.
-- First one
-	Lisa: You picked the first one.
-- Second one
-	Lisa You picked the second one.
-- Start again => start
-- End the conversation => END
-Lisa: For more information see the online documentation.
+Lisa: [[Hi|Hello|Howdy]], come stai?
+Lisa: Questo dialogo ha delle scelte!
+- La prima
+	Lisa: Hai scelto la prima scelta!
+- La seconda
+	Lisa: Hai scelto la seconda!
+- Ricomincia => start
+- Finisci la conversazione => AEND
+Lisa: Chiedete ad Alessandro per altre regole!
+
+
+~ AEND
+set Singleton.dialogue_playing = false
 => END
