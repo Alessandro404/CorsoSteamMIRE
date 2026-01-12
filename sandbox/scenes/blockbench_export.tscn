@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://kernen3d64hx"]
 
-[ext_resource type="PackedScene" uid="uid://bbgd51js65wmg" path="res://assets/blockbench_models/Test Model.gltf" id="1_7cjo5"]
+[ext_resource type="PackedScene" uid="uid://bbgd51js65wmg" path="res://assets/import/blockbench_models/Test Model.gltf" id="1_7cjo5"]
 
 [sub_resource type="Animation" id="Animation_7cjo5"]
 resource_name = "animation_go"

@@ -13,6 +13,8 @@ extends Node
 
 
 @onready var registered_doors: Array[OggettoProgrammabile] = []
+var keys_found: Array[String] = []
+
 
 func apri_porta(porta) ->void:
 	registered_doors[porta].apri_porta()

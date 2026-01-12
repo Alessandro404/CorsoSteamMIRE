@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 general/preview_material="res://addons/asset_placer/utils/preview_material.tres"
 general/plane_material="res://addons/asset_placer/ui/plane_preview/plane_preview_material.tres"
 general/asset_library_path="user://asset_library.json"
-internal/last_int=1
+internal/last_int=3
 
 [autoload]
 
@@ -85,7 +85,7 @@ Interazione={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialoghi/dialogodi test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialoghi/dialogodi test.dialogue", "res://dialoghi/dialogo cartello 1.dialogue", "res://dialoghi/dialogo cartello 2.dialogue", "res://dialoghi/dialogo cartello 3.dialogue", "res://dialoghi/dialogo cartello 4.dialogue", "res://dialoghi/dialogo cartello template.dialogue", "res://dialoghi/dialogo cartello 5.dialogue")
 
 [layer_names]
 

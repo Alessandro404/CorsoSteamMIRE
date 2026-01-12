@@ -1,0 +1,7 @@
+~ start
+Cartello: Ciao sono un cartello!
+Cartello: Ricordati di usare AEND e non END per finire la scritta!
+
+~ AEND
+set Singleton.dialogue_playing = false
+=> END

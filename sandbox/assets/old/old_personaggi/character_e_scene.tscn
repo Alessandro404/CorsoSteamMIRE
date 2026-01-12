@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbk4smbbw8wkn"]
+
+[ext_resource type="PackedScene" uid="uid://bdyh6xbmndtfy" path="res://assets/import/character-e.glb" id="1_0n3qq"]
+[ext_resource type="Texture2D" uid="uid://cg5u4xtkyp2xl" path="res://assets/old/old_personaggi/Textures/texture-e.png" id="2_ofwjy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vf256"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gih57"]
+data = PackedVector3Array(-0.19999999, -1, 0.19999999, 0.19999999, -1, 0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, -0.19999999, -1, -0.19999999, -0.19999999, -1, 0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, 0, 0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, 0, -0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, -1, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, 0, 0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, 0.19999999, 0.19999999, 0, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, -1, -0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, 0, -0.19999999, -0.19999999, 0, -0.19999999)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pv2tg"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h6262"]
+data = PackedVector3Array(-0.19999999, -1, 0.19999999, 0.19999999, -1, 0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, -0.19999999, -1, -0.19999999, -0.19999999, -1, 0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, 0, 0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, 0, -0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, -1, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, 0, 0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, 0, 0.19999999, 0.19999999, 0, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, 0.19999999, 0.19999999, 0, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, -1, -0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, 0, 0.19999999, -0.19999999, -1, 0.19999999, -0.19999999, 0, -0.19999999, -0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, -1, -0.19999999, 0.19999999, 0, -0.19999999, -0.19999999, 0, -0.19999999)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngtl6"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ftvk"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_caixv"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e5fd"]
+albedo_texture = ExtResource("2_ofwjy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q0iak"]
+data = PackedVector3Array(-4, 0, 4, -4, 0, -4, -4, 8, -4, -4, 8, -4, -4, 8, 4, -4, 0, 4, -4, 8, -4, 4, 8, -4, 4, 8, 4, 4, 8, 4, -4, 8, 4, -4, 8, -4, 4, 8, 4, 4, 8, -4, 4, 0, -4, 4, 0, -4, 4, 0, 4, 4, 8, 4, 4, 8, 4, 4, 0, 4, -4, 0, 4, -4, 0, 4, -4, 8, 4, 4, 8, 4, -4, 8, -4, -4, 0, -4, 4, 0, -4, 4, 0, -4, 4, 8, -4, -4, 8, -4, 4, 0, 4, 4, 0, -4, -4, 0, -4, -4, 0, -4, -4, 0, 4, 4, 0, 4)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6hil7"]
+data = PackedVector3Array(0.39999998, 0.29999998, 0.29999998, 0.39999998, 0.29999998, -0.29999998, -0.39999998, 0.29999998, -0.29999998, -0.39999998, 0.29999998, -0.29999998, -0.39999998, 0.29999998, 0.29999998, 0.39999998, 0.29999998, 0.29999998, -0.39999998, 1.1999999, -0.29999998, -0.39999998, 0.29999998, -0.29999998, 0.39999998, 0.29999998, -0.29999998, 0.39999998, 0.29999998, -0.29999998, 0.39999998, 1.1999999, -0.29999998, -0.39999998, 1.1999999, -0.29999998, 0.39999998, 1.1999999, 0.29999998, 0.39999998, 1.1999999, -0.29999998, 0.39999998, 0.29999998, -0.29999998, 0.39999998, 0.29999998, -0.29999998, 0.39999998, 0.29999998, 0.29999998, 0.39999998, 1.1999999, 0.29999998, 0.39999998, 1.1999999, 0.29999998, 0.39999998, 0.29999998, 0.29999998, -0.39999998, 0.29999998, 0.29999998, -0.39999998, 0.29999998, 0.29999998, -0.39999998, 1.1999999, 0.29999998, 0.39999998, 1.1999999, 0.29999998, -0.39999998, 1.1999999, -0.29999998, 0.39999998, 1.1999999, -0.29999998, 0.39999998, 1.1999999, 0.29999998, 0.39999998, 1.1999999, 0.29999998, -0.39999998, 1.1999999, 0.29999998, -0.39999998, 1.1999999, -0.29999998, -0.39999998, 0.29999998, -0.29999998, -0.39999998, 1.1999999, -0.29999998, -0.39999998, 1.1999999, 0.29999998, -0.39999998, 1.1999999, 0.29999998, -0.39999998, 0.29999998, 0.29999998, -0.39999998, 0.29999998, -0.29999998)
+
+[node name="character-e" instance=ExtResource("1_0n3qq")]
+
+[node name="character-e" parent="." index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="leg-left" parent="character-e/root" index="0"]
+material_override = SubResource("StandardMaterial3D_vf256")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="character-e/root/leg-left" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="character-e/root/leg-left/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_gih57")
+
+[node name="leg-right" parent="character-e/root" index="1"]
+material_override = SubResource("StandardMaterial3D_pv2tg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="character-e/root/leg-right" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="character-e/root/leg-right/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_h6262")
+
+[node name="torso" parent="character-e/root" index="2"]
+material_override = SubResource("StandardMaterial3D_ngtl6")
+
+[node name="arm-left" parent="character-e/root/torso" index="0"]
+material_override = SubResource("StandardMaterial3D_4ftvk")
+
+[node name="arm-right" parent="character-e/root/torso" index="1"]
+material_override = SubResource("StandardMaterial3D_caixv")
+
+[node name="head" parent="character-e/root/torso" index="2"]
+material_override = SubResource("StandardMaterial3D_3e5fd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="character-e/root/torso/head" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="character-e/root/torso/head/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_q0iak")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="character-e/root/torso" index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="character-e/root/torso/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_6hil7")

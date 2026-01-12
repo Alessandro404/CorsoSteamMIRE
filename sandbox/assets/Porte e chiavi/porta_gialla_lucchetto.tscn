@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://3fy5g4fkp1nw"]
+
+[ext_resource type="PackedScene" uid="uid://drldkl2fsubkt" path="res://assets/import/Porta1.gltf" id="1_d7egu"]
+[ext_resource type="Script" uid="uid://dntt8glf8e0jp" path="res://oggetto_programmabile.gd" id="2_c15s6"]
+[ext_resource type="PackedScene" uid="uid://da3bmqw7dne28" path="res://assets/import/Simple Padlock.glb" id="3_70g1c"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcex4"]
+data = PackedVector3Array(0.625, 2, -0.0625, 0.625, 0, 0.0625, 0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, -0.625, 0, 0.0625, -0.625, 0, -0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 2, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, 0.625, 0, -0.0625, -0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, -0.625, 2, 0.0625, 0.625, 2, 0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 2, -0.0625, -0.625, 2, -0.0625, -0.625, 0, -0.0625, 0.625, 0, -0.0625)
+
+[node name="porta01" instance=ExtResource("1_d7egu")]
+script = ExtResource("2_c15s6")
+
+[node name="lock" parent="." index="0" instance=ExtResource("3_70g1c")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0, 1, 0.1)
+
+[node name="group" parent="." index="1"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.625, 0, 0.0625)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="group/cuboid" index="0"]
+collision_layer = 17
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="group/cuboid/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_kcex4")
+
+[node name="AnimationPlayer" parent="." index="5"]
+autoplay = "close"

@@ -1,7 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=17 format=3 uid="uid://c6nac0ju7dpl8"]
 
-[ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_a8pr3"]
-[ext_resource type="Material" uid="uid://bhejrqn73j7cu" path="res://assets/materiali vari/erba1.tres" id="10_g7mfh"]
+[ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/import/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_a8pr3"]
+[ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://assets/oggetti dialoghi/cartello_1.tscn" id="4_j6lu3"]
+[ext_resource type="PackedScene" uid="uid://bj832xklkwvhm" path="res://assets/oggetti dialoghi/cartello_2.tscn" id="6_17a3a"]
+[ext_resource type="PackedScene" uid="uid://hgn6hcupobra" path="res://assets/oggetti dialoghi/cartello_3.tscn" id="7_4b02c"]
+[ext_resource type="PackedScene" uid="uid://b68nhcaxfqylo" path="res://assets/costruzioni/blocco_bianco.tscn" id="7_rvfw7"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="8_m5lhb"]
+[ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://assets/costruzioni/blocco_nero.tscn" id="8_rvfw7"]
+[ext_resource type="PackedScene" uid="uid://chhcj0suq7bh0" path="res://assets/Porte e chiavi/porta_gialla.tscn" id="9_rvfw7"]
+[ext_resource type="PackedScene" uid="uid://chn1ykfcjl1uv" path="res://assets/Porte e chiavi/chiave.tscn" id="10_m5lhb"]
+[ext_resource type="PackedScene" uid="uid://3fy5g4fkp1nw" path="res://assets/Porte e chiavi/porta_gialla_lucchetto.tscn" id="11_qqy3k"]
 [ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://scenes/giocatore/giocatore.tscn" id="17_8b5lh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
@@ -17,6 +25,34 @@ tonemap_mode = 2
 glow_levels/1 = 7.35
 fog_depth_curve = 5.4641604
 
+[sub_resource type="GDScript" id="GDScript_rvfw7"]
+script/source = "extends Area3D
+
+# Trascina qui un nodo Marker3D dall'editor per impostare la destinazione
+@export var spawn_point : Marker3D 
+
+func _on_body_entered(body):
+	# Verifichiamo che l'oggetto sia il giocatore
+	print(\"entrato\")
+	if body.is_in_group(\"player\") or body.name == \"giocatore\":
+		teleport(body)
+
+func teleport(player):
+	if spawn_point:
+		# Sposta il giocatore alla posizione del Marker3D
+		player.global_position = spawn_point.global_position
+		
+		# Se il giocatore ha velocità (fisica), è meglio azzerarla
+		if player is CharacterBody3D:
+			player.velocity = Vector3.ZERO
+	else:
+		# Destinazione di default se non hai assegnato un Marker3D
+		player.global_position = Vector3(0, 5, 0)
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvfw7"]
+size = Vector3(1275, 6, 1639)
+
 [node name="Sandbox" type="Node3D"]
 
 [node name="Ambiente" type="Node3D" parent="."]
@@ -29,17 +65,185 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Ambiente"]
 environment = SubResource("Environment_31ryr")
 
+[node name="respwan" type="Marker3D" parent="Ambiente"]
+gizmo_extents = 1.0
+
+[node name="KillPlane" type="Area3D" parent="Ambiente" node_paths=PackedStringArray("spawn_point")]
+collision_layer = 3
+collision_mask = 3
+script = SubResource("GDScript_rvfw7")
+spawn_point = NodePath("../respwan")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ambiente/KillPlane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, -27.5, 40)
+shape = SubResource("BoxShape3D_rvfw7")
+metadata/_edit_lock_ = true
+
 [node name="terrain" type="Node3D" parent="."]
 
 [node name="pavement" type="Node3D" parent="terrain"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="terrain/pavement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-material_override = ExtResource("10_g7mfh")
-use_collision = true
-size = Vector3(50, 1, 50)
-metadata/_edit_lock_ = true
-
 [node name="giocatore" parent="." instance=ExtResource("17_8b5lh")]
 
 [node name="OggettiRagazzi" type="Node3D" parent="."]
+
+[node name="Cartello1" parent="." instance=ExtResource("4_j6lu3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="Cartello2" parent="." instance=ExtResource("6_17a3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -8)
+
+[node name="Cartello3" parent="." instance=ExtResource("7_4b02c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+
+[node name="Blocco" parent="." instance=ExtResource("7_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5263815, -0.5, -39.4356)
+size = Vector3(21, 1, 29)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="BloccoNero" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -27.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero2" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -29.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero3" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -31.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero4" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -33.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero5" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -35.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero6" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -37.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero7" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -39.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero8" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -41.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero9" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -43.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero10" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -45.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero11" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -47.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero12" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -49.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero13" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -51.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero14" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -27.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero15" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -29.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero16" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -31.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero17" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -33.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero18" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -35.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero19" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -37.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero20" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -39.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero21" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -41.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero22" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -43.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero23" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -45.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero24" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -47.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero25" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -49.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero26" parent="." instance=ExtResource("8_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -51.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="PavimentoErba" parent="." instance=ExtResource("8_m5lhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1704464, 0, -10.762928)
+size = Vector3(31, 0.001, 28)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
+[node name="porta01" parent="." instance=ExtResource("9_rvfw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Chiave" parent="." instance=ExtResource("10_m5lhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
+
+[node name="porta02" parent="." instance=ExtResource("11_qqy3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -11)
+
+[connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

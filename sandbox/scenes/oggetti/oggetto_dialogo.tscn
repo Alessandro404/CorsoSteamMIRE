@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cvjo50qfcv3ng" path="res://scenes/oggetti/oggetto_selezionabile.tscn" id="1_vslxw"]
 [ext_resource type="Script" uid="uid://dj5ckugqfx3cl" path="res://scenes/oggetti/oggetto_dialogo.gd" id="2_d8vwn"]
-[ext_resource type="PackedScene" uid="uid://dsrst3jrbkyds" path="res://assets/prototyping/floating_dialogue.tscn" id="3_ogob2"]
+[ext_resource type="PackedScene" uid="uid://dsrst3jrbkyds" path="res://assets/old/prototyping/floating_dialogue.tscn" id="3_ogob2"]
 
 [node name="OggettoDialogo" instance=ExtResource("1_vslxw")]
 script = ExtResource("2_d8vwn")

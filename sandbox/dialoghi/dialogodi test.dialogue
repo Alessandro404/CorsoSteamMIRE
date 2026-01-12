@@ -1,13 +1,14 @@
 ~ start
-Lisa: [[Hi|Hello|Howdy]], come stai?
-Lisa: Questo dialogo ha delle scelte!
+Godot: [[Hi|Hello|Howdy]], come stai?
+Godot: Questo dialogo è il dialogo standard.
+Godot: Ricorda di cambiarlo nel manager di dialogo!
 - La prima
-	Lisa: Hai scelto la prima scelta!
+	Godot: Hai scelto la prima scelta!
 - La seconda
-	Lisa: Hai scelto la seconda!
+	Godot: Hai scelto la seconda!
 - Ricomincia => start
 - Finisci la conversazione => AEND
-Lisa: Chiedete ad Alessandro per altre regole!
+Godot: Chiedete ad Alessandro per altre regole!
 
 
 ~ AEND

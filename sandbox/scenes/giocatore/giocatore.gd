@@ -46,8 +46,9 @@ func _input(event):
 			actionables.action()
 		#Singleton.toggle_porta(0)
 		#TODO QUESTO E' ORRIBILE
-		elif actionables && actionables.get_owner().has_method("toggle_porta"):
-			actionables.get_owner().toggle_porta()
+		elif actionables && actionables.get_owner().has_method("action"):
+			actionables.get_owner().action()
+
 		
 	return
 

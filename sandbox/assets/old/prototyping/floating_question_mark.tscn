@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://kg1le6pj131x"]
+
+[ext_resource type="PackedScene" uid="uid://b3ahj04yib2ka" path="res://assets/import/blockbench_models/?.gltf" id="1_p6fkw"]
+[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/materiali vari/protype_0.25_grid_orange.tres" id="2_p6fkw"]
+
+[sub_resource type="GDScript" id="GDScript_p6fkw"]
+script/source = "@tool
+extends Node3D
+
+
+func _ready():
+	$AnimationPlayer.play(\"Rotation\")
+"
+
+[sub_resource type="Animation" id="Animation_r0vrc"]
+resource_name = "Rotation"
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("group")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, 0, 1, 0, 2.9802326e-08, 0.96666664, 1, 0, 0.10452855, 0, -0.9945219, 1, 1, 0, 1.2246469e-16, 0, -1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p6fkw"]
+_data = {
+&"Rotation": SubResource("Animation_r0vrc")
+}
+
+[node name="FloatingQuestionMark" instance=ExtResource("1_p6fkw")]
+script = SubResource("GDScript_p6fkw")
+
+[node name="domanda " parent="group" index="0"]
+surface_material_override/0 = ExtResource("2_p6fkw")
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_p6fkw")
+}
+autoplay = "Rotation"

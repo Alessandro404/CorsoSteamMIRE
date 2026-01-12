@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://tij5xs16f2j"
+path="res://.godot/imported/dialogo cartello 2.dialogue-1a3a64ed73366a4daf65ba0c1687e218.tres"
+
+[deps]
+
+source_file="res://dialoghi/dialogo cartello 2.dialogue"
+dest_files=["res://.godot/imported/dialogo cartello 2.dialogue-1a3a64ed73366a4daf65ba0c1687e218.tres"]
+
+[params]
+
+defaults=true

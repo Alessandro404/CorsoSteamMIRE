@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dar1p3v55x14k"]
+
+[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/materiali vari/protype_0.25_grid_orange.tres" id="1_h7gly"]
+
+[node name="BloccoGiallo" type="CSGBox3D"]
+material_override = ExtResource("1_h7gly")
+use_collision = true

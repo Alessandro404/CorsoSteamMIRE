@@ -2,7 +2,7 @@ extends Node3D
 class_name OggettoProgrammabile
 
 var animation_player: AnimationPlayer 
-var status: bool = 1
+var status: bool = true
 @onready var collision_nodes: Array[Node]
 
 func _ready():
@@ -10,8 +10,8 @@ func _ready():
 		animation_player = $AnimationPlayer 
 		Singleton.add_to_doors(self)
 	collision_nodes = find_children("*", "StaticBody3D")
-	for i in collision_nodes.size():
-		collision_nodes[i].set_owner(self)
+	for node in  collision_nodes:
+		node.set_owner(self)
 	print(collision_nodes)
 
 	
@@ -38,3 +38,6 @@ func toggle_porta():
 			apri_porta()
 		else:
 			chiudi_porta()
+
+func action() -> void:
+	toggle_porta()

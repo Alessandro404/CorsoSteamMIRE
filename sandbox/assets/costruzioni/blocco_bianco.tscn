@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b68nhcaxfqylo"]
+
+[ext_resource type="Texture2D" uid="uid://bm78o4dodw216" path="res://assets/import/texture_materiali/prototype_grid_light.png" id="1_iuwy5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gx3fe"]
+albedo_texture = ExtResource("1_iuwy5")
+uv1_triplanar = true
+
+[node name="BloccoBianco" type="CSGBox3D"]
+material_override = SubResource("StandardMaterial3D_gx3fe")
+use_collision = true
