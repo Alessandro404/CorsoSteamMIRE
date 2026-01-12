@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://chhcj0suq7bh0"]
+[gd_scene load_steps=5 format=3 uid="uid://chhcj0suq7bh0"]
 
 [ext_resource type="PackedScene" uid="uid://drldkl2fsubkt" path="res://assets/import/Porta1.gltf" id="1_kcex4"]
-[ext_resource type="Script" uid="uid://dntt8glf8e0jp" path="res://oggetto_programmabile.gd" id="2_w0276"]
+[ext_resource type="Script" uid="uid://bjny6dq1supma" path="res://assets/Porte e chiavi/porta.gd" id="2_cx2ac"]
+[ext_resource type="AudioStream" uid="uid://c2y68hpxiuoxa" path="res://assets/import/15419__pagancow__dorm-door-opening.wav" id="3_1kbud"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcex4"]
 data = PackedVector3Array(0.625, 2, -0.0625, 0.625, 0, 0.0625, 0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, -0.625, 0, 0.0625, -0.625, 0, -0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 2, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, 0.625, 0, -0.0625, -0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, -0.625, 2, 0.0625, 0.625, 2, 0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 2, -0.0625, -0.625, 2, -0.0625, -0.625, 0, -0.0625, 0.625, 0, -0.0625)
 
-[node name="porta01" instance=ExtResource("1_kcex4")]
-script = ExtResource("2_w0276")
+[node name="porta_gialla" instance=ExtResource("1_kcex4")]
+script = ExtResource("2_cx2ac")
 
 [node name="group" parent="." index="0"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.625, 0, 0.0625)
@@ -21,3 +22,6 @@ shape = SubResource("ConcavePolygonShape3D_kcex4")
 
 [node name="AnimationPlayer" parent="." index="4"]
 autoplay = "close"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = ExtResource("3_1kbud")

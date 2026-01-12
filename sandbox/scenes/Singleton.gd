@@ -12,7 +12,7 @@ extends Node
 		dialogue_playing = value
 
 
-@onready var registered_doors: Array[OggettoProgrammabile] = []
+@onready var registered_doors: Array[Porta] = []
 var keys_found: Array[String] = []
 
 

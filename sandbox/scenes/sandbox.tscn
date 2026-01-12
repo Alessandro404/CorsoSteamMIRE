@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://assets/costruzioni/blocco_nero.tscn" id="8_rvfw7"]
 [ext_resource type="PackedScene" uid="uid://chhcj0suq7bh0" path="res://assets/Porte e chiavi/porta_gialla.tscn" id="9_rvfw7"]
 [ext_resource type="PackedScene" uid="uid://chn1ykfcjl1uv" path="res://assets/Porte e chiavi/chiave.tscn" id="10_m5lhb"]
-[ext_resource type="PackedScene" uid="uid://3fy5g4fkp1nw" path="res://assets/Porte e chiavi/porta_gialla_lucchetto.tscn" id="11_qqy3k"]
+[ext_resource type="PackedScene" uid="uid://b815r856d4n7k" path="res://assets/Porte e chiavi/porta_gialla_lucchetto.tscn" id="11_qqy3k"]
 [ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://scenes/giocatore/giocatore.tscn" id="17_8b5lh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
@@ -243,7 +243,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
 [node name="Chiave" parent="." instance=ExtResource("10_m5lhb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
 
-[node name="porta02" parent="." instance=ExtResource("11_qqy3k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -11)
+[node name="Chiave2" parent="." instance=ExtResource("10_m5lhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -10)
+id_chiave = "portabella"
+
+[node name="porta_gialla_lucchetto" parent="." instance=ExtResource("11_qqy3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -12)
+
+[node name="porta_gialla_lucchetto2" parent="." instance=ExtResource("11_qqy3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -12)
+key_id_required = "portabella"
 
 [connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

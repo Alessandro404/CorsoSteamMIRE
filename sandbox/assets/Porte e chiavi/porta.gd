@@ -1,9 +1,11 @@
 extends Node3D
-class_name OggettoProgrammabile
+class_name Porta
 
 var animation_player: AnimationPlayer 
 var status: bool = true
 @onready var collision_nodes: Array[Node]
+
+@onready var sound_node = $AudioStreamPlayer3D
 
 func _ready():
 	if $AnimationPlayer: 
@@ -34,6 +36,7 @@ func chiudi_porta():
 
 func toggle_porta():
 	if animation_player:
+		sound_node.play()
 		if status: 
 			apri_porta()
 		else:
