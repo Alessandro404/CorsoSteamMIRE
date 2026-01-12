@@ -1,6 +1,0 @@
-~ start
-lucia: Ciao!
-
-~ AEND
-set Singleton.dialogue_playing = false
-=> END
