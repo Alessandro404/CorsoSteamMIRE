@@ -6,8 +6,10 @@ var status: bool = true
 @onready var collision_nodes: Array[Node]
 
 @onready var sound_node = $AudioStreamPlayer3D
+var open_sound = preload("res://assets/import/15419__pagancow__dorm-door-opening.wav")
 
 func _ready():
+	sound_node.set_stream(open_sound)
 	if $AnimationPlayer: 
 		animation_player = $AnimationPlayer 
 		Singleton.add_to_doors(self)

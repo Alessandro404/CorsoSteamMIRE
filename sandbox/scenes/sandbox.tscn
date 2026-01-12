@@ -233,8 +233,8 @@ size = Vector3(1, 10, 1)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="PavimentoErba" parent="." instance=ExtResource("8_m5lhb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1704464, 0, -10.762928)
-size = Vector3(31, 0.001, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1704464, 0, -10.862928)
+size = Vector3(31, 0.001, 28.2)
 metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
 
 [node name="porta01" parent="." instance=ExtResource("9_rvfw7")]
