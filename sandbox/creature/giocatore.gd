@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 signal _on_interact_with_object
 @onready var ray_cast_3d: RayCast3D = $testa/Camera3D/RayCast3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @onready var testa: Node3D = $testa
 
@@ -28,7 +29,7 @@ var crouching_depth = -0.5
 @onready var shape_cast_3d: ShapeCast3D = $ShapeCast3D
 
 
-func _ready():
+func _ready() -> void:
 	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -40,6 +41,7 @@ func _input(event):
 			testa.rotation.x = clamp(testa.rotation.x, deg_to_rad(-89), deg_to_rad(89))
 		
 	if Input.is_action_just_pressed("Interazione"):
+		animation_player.play("interact")
 		var actionables = ray_cast_3d.get_collider()
 		print(actionables)
 		if actionables && actionables.has_method("action"):
@@ -52,7 +54,7 @@ func _input(event):
 		
 	return
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	if !Singleton.dialogue_playing:
 		if Input.is_action_pressed("crouch"):
 			speed_current = SPEED_CROUCHING
@@ -109,9 +111,14 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("escape_mouse"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-func _process(_delta):
+func _process(_delta) -> void:
 	if ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
 		_on_interact_with_object.emit(collider)
 	else:
 		_on_interact_with_object.emit(null)
+
+func die() -> void:
+	print("Sono morto!")
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	SceneTransition.change_scene()

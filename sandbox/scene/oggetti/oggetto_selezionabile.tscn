@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvjo50qfcv3ng"]
 
-[ext_resource type="Script" uid="uid://dq78j2apjlnab" path="res://scenes/oggetti/oggetto_selezionabile.gd" id="1_4ndba"]
+[ext_resource type="Script" uid="uid://dq78j2apjlnab" path="res://scene/oggetti/oggetto_selezionabile.gd" id="1_4ndba"]
 [ext_resource type="PackedScene" uid="uid://kg1le6pj131x" path="res://assets/old/prototyping/floating_question_mark.tscn" id="3_bk0aa"]
 
 [node name="OggettoSelezionabile" type="Node3D"]

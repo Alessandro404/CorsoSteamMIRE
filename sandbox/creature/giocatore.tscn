@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cp31w60s8pdsu"]
+[gd_scene load_steps=15 format=3 uid="uid://cp31w60s8pdsu"]
 
-[ext_resource type="Script" uid="uid://oavf8pss3sb1" path="res://scenes/giocatore/giocatore.gd" id="1_x5jxo"]
+[ext_resource type="Script" uid="uid://oavf8pss3sb1" path="res://creature/giocatore.gd" id="1_x5jxo"]
 [ext_resource type="Texture2D" uid="uid://fbp5gngqjv5o" path="res://assets/plus-bold-svgrepo-com.svg" id="2_fvtlo"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_g7mfh"]
@@ -37,6 +37,43 @@ height = 0.4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5jxo"]
 no_depth_test = true
 albedo_color = Color(0.22568056, 0.4723999, 0.41954336, 1)
+
+[sub_resource type="Animation" id="Animation_f7igd"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("testa/shoulder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.15603243, 0, -0.15950564)]
+}
+
+[sub_resource type="Animation" id="Animation_b2o2f"]
+resource_name = "interact"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("testa/shoulder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.15603243, 0, -0.15950564), Vector3(-0.5061455, 0.57072264, 0.1134464), Vector3(0.15603243, 0, -0.15950564)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8pqo5"]
+_data = {
+&"RESET": SubResource("Animation_f7igd"),
+&"interact": SubResource("Animation_b2o2f")
+}
 
 [node name="giocatore" type="CharacterBody3D" groups=["player"]]
 collision_layer = 2
@@ -86,8 +123,11 @@ target_position = Vector3(0, 0, -1.8)
 collision_mask = 16
 collide_with_areas = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="testa"]
-transform = Transform3D(0.98730594, 0.15883014, 0, -0.15690061, 0.97531176, -0.15540007, -0.024682214, 0.1534274, 0.9878516, 0.29530814, -0.32300544, -0.5)
+[node name="shoulder" type="Node3D" parent="testa"]
+transform = Transform3D(0.98730594, 0.15883012, 0, -0.15690061, 0.9753117, -0.15540007, -0.024682214, 0.15342739, 0.9878516, 0.29530814, -0.36705586, -0.21997902)
+
+[node name="Hand" type="CSGBox3D" parent="testa/shoulder"]
+transform = Transform3D(1, -6.7520887e-09, 0, 8.1490725e-09, 1, 0, 0, 0, 1, 0, 0, -0.2834646)
 material_override = SubResource("StandardMaterial3D_x5jxo")
 size = Vector3(0.2, 0.2, 0.4)
 
@@ -111,3 +151,8 @@ size_flags_vertical = 4
 position = Vector2(19.999998, 19.999998)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_fvtlo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8pqo5")
+}

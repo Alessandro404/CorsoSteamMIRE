@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://chhcj0suq7bh0"]
+[gd_scene load_steps=9 format=3 uid="uid://chhcj0suq7bh0"]
 
 [ext_resource type="PackedScene" uid="uid://drldkl2fsubkt" path="res://assets/import/Porta1.gltf" id="1_kcex4"]
 [ext_resource type="Script" uid="uid://bjny6dq1supma" path="res://assets/Porte e chiavi/porta.gd" id="2_cx2ac"]
@@ -7,11 +7,46 @@
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcex4"]
 data = PackedVector3Array(0.625, 2, -0.0625, 0.625, 0, 0.0625, 0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, -0.625, 0, 0.0625, -0.625, 0, -0.0625, -0.625, 2, -0.0625, -0.625, 2, 0.0625, 0.625, 2, -0.0625, 0.625, 2, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 2, -0.0625, 0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, 0.625, 0, -0.0625, -0.625, 0, -0.0625, -0.625, 0, 0.0625, 0.625, 0, 0.0625, -0.625, 2, 0.0625, 0.625, 2, 0.0625, 0.625, 0, 0.0625, -0.625, 0, 0.0625, -0.625, 2, 0.0625, -0.625, 2, -0.0625, 0.625, 0, -0.0625, 0.625, 2, -0.0625, -0.625, 2, -0.0625, -0.625, 0, -0.0625, 0.625, 0, -0.0625)
 
+[sub_resource type="Animation" id="Animation_1kbud"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("group")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.7071068, 0, 0.7071068, 0.46666667, 1, 0, -0.05233595, 0, 0.9986295, 0.5, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_akhyw"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("group")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.5, 1, 0, -0.7071068, 0, 0.7071068)
+
+[sub_resource type="Animation" id="Animation_a10if"]
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("group")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ha4qf"]
+_data = {
+&"RESET": SubResource("Animation_a10if"),
+&"close": SubResource("Animation_1kbud"),
+&"open": SubResource("Animation_akhyw")
+}
+
 [node name="porta_gialla" instance=ExtResource("1_kcex4")]
 script = ExtResource("2_cx2ac")
-
-[node name="group" parent="." index="0"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.625, 0, 0.0625)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="group/cuboid" index="0"]
 collision_layer = 17
@@ -21,7 +56,9 @@ collision_mask = 16
 shape = SubResource("ConcavePolygonShape3D_kcex4")
 
 [node name="AnimationPlayer" parent="." index="4"]
-autoplay = "close"
+libraries = {
+&"": SubResource("AnimationLibrary_ha4qf")
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)

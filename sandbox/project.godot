@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sandbox"
-run/main_scene="uid://c6nac0ju7dpl8"
+run/main_scene="uid://dffqrbtwu0g8r"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,12 +20,13 @@ config/icon="res://icon.svg"
 general/preview_material="res://addons/asset_placer/utils/preview_material.tres"
 general/plane_material="res://addons/asset_placer/ui/plane_preview/plane_preview_material.tres"
 general/asset_library_path="user://asset_library.json"
-internal/last_int=3
+internal/last_int=4
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Singleton="*res://scenes/Singleton.gd"
+Singleton="*res://scene/Singleton.gd"
+SceneTransition="*res://scene/scene_transition.tscn"
 
 [dotnet]
 
@@ -89,4 +90,7 @@ locale/translations_pot_files=PackedStringArray("res://dialoghi/dialogodi test.d
 
 [layer_names]
 
+3d_physics/layer_2="player"
+3d_physics/layer_3="monster"
+3d_physics/layer_4="projectile"
 3d_physics/layer_5="Dialoghi"
