@@ -119,6 +119,6 @@ func _process(_delta) -> void:
 		_on_interact_with_object.emit(null)
 
 func die() -> void:
-	print("Sono morto!")
+	animation_player.play("die")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	SceneTransition.change_scene()

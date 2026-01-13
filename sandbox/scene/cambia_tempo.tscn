@@ -24,11 +24,13 @@ sky_nuvoloso = ExtResource("4_40nbi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 material_override = SubResource("StandardMaterial3D_upkqx")
 height = 0.2
+sides = 16
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCylinder3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17500001, 0)
 radius = 0.3
 height = 0.55
+sides = 16
 
 [node name="Clouds" parent="." instance=ExtResource("2_j8e3f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)

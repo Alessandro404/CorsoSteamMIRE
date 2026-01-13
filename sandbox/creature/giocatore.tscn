@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cp31w60s8pdsu"]
+[gd_scene load_steps=16 format=3 uid="uid://cp31w60s8pdsu"]
 
 [ext_resource type="Script" uid="uid://oavf8pss3sb1" path="res://creature/giocatore.gd" id="1_x5jxo"]
 [ext_resource type="Texture2D" uid="uid://fbp5gngqjv5o" path="res://assets/plus-bold-svgrepo-com.svg" id="2_fvtlo"]
@@ -52,6 +52,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0.15603243, 0, -0.15950564)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("testa:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.4, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("testa:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_b2o2f"]
 resource_name = "interact"
@@ -69,9 +93,37 @@ tracks/0/keys = {
 "values": [Vector3(0.15603243, 0, -0.15950564), Vector3(-0.5061455, 0.57072264, 0.1134464), Vector3(0.15603243, 0, -0.15950564)]
 }
 
+[sub_resource type="Animation" id="Animation_8pqo5"]
+resource_name = "die"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("testa:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.4, 0), Vector3(0, 1.3054956, 0), Vector3(0.11246282, 1.0038245, 0), Vector3(0.026580919, 0.5591754, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("testa:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.23448499), Vector3(0, 0, -0.23877847), Vector3(0, 0, 1.4328804)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8pqo5"]
 _data = {
 &"RESET": SubResource("Animation_f7igd"),
+&"die": SubResource("Animation_8pqo5"),
 &"interact": SubResource("Animation_b2o2f")
 }
 
@@ -113,7 +165,7 @@ shape = SubResource("CylinderShape3D_fvtlo")
 disabled = true
 
 [node name="testa" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.4, 0)
 
 [node name="Camera3D" type="Camera3D" parent="testa"]
 cull_mask = 1048573

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmd2iiub71nkv"]
+
+[ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="1_adx6s"]
+[ext_resource type="Script" uid="uid://ll7idq47if1c" path="res://creature/mostro_inseguitore.gd" id="2_jba2t"]
+
+[node name="MostroInseguitore" instance=ExtResource("1_adx6s")]
+script = ExtResource("2_jba2t")
+MOVE_SPEED = null
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="0"]

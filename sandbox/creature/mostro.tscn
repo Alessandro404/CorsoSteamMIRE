@@ -1683,6 +1683,60 @@ script = ExtResource("2_tyykf")
 [node name="RootNode" parent="." index="0"]
 transform = Transform3D(-0.6631963, 0, 5.7978465e-08, 0, 0.6631963, 0, -5.7978465e-08, 0, -0.6631963, 0, 0, 0)
 
+[node name="Skeleton3D" parent="RootNode/CharacterArmature" index="0"]
+bones/1/position = Vector3(3.1972486e-05, 0.013973277, -0.0024659582)
+bones/1/rotation = Quaternion(0.14349473, -0.00038738022, 0.0028582274, 0.989647)
+bones/2/rotation = Quaternion(0.079939716, -0.0002567447, -0.0028727197, 0.9967956)
+bones/3/rotation = Quaternion(0.68843883, -0.00020016315, -0.00018899326, 0.7252944)
+bones/5/rotation = Quaternion(-0.3615446, -0.47742054, -0.5206835, 0.6084767)
+bones/6/rotation = Quaternion(0.044054933, -0.1151075, -0.6625981, 0.73876464)
+bones/11/rotation = Quaternion(-0.005516571, -0.0009553108, -0.17064509, 0.9853167)
+bones/14/rotation = Quaternion(-0.07964682, 0.016557088, 0.2028552, 0.9758238)
+bones/20/rotation = Quaternion(-0.36154464, 0.47742048, 0.52068347, 0.60847676)
+bones/21/rotation = Quaternion(0.0440549, 0.115107484, 0.66259813, 0.73876464)
+bones/23/rotation = Quaternion(-0.14271109, 0.020009989, 0.056670364, 0.9879381)
+bones/24/rotation = Quaternion(-0.004242646, 0.00039809488, -0.0032198343, 0.99998575)
+bones/26/rotation = Quaternion(-0.005516595, 0.0009552697, 0.17064512, 0.9853167)
+bones/27/rotation = Quaternion(-0.0373578, -0.00043710953, 0.011690838, 0.9992335)
+bones/29/rotation = Quaternion(-0.07964675, -0.016557075, -0.20285521, 0.9758238)
+bones/30/rotation = Quaternion(-9.313252e-09, 1.5366865e-08, 0.0024158484, 0.9999971)
+bones/32/rotation = Quaternion(-6.4409484e-08, 1.1658854e-07, -0.32096568, 0.94709086)
+bones/33/rotation = Quaternion(-2.8164576e-08, 1.1265829e-08, -0.12612222, 0.9920147)
+bones/34/rotation = Quaternion(0.9979947, -0.012163728, -0.007763503, -0.061630823)
+bones/35/rotation = Quaternion(0.08928362, -0.07216822, 0.2146892, 0.9699118)
+bones/36/rotation = Quaternion(0.3517989, 0.52093464, -0.57179344, 0.5271782)
+bones/37/rotation = Quaternion(-0.05151639, 0.7403547, -0.6647463, -0.08563535)
+
+[node name="Head" parent="RootNode/CharacterArmature/Skeleton3D" index="0"]
+transform = Transform3D(0.9999997, 1.1994189e-08, -0.0005504985, 0.00021230837, -0.92264646, 0.38564602, -0.0005079099, -0.38564616, -0.92264616, -6.3837656e-06, -0.000721726, 0.022193488)
+
+[node name="Middle3_L" parent="RootNode/CharacterArmature/Skeleton3D" index="1"]
+transform = Transform3D(-0.74375445, -0.12944728, 0.6557987, -0.061992735, -0.9634841, -0.2604883, 0.6655712, -0.23439403, 0.7085713, 0.012319414, -0.011059317, 0.008640483)
+
+[node name="Pinky3_L" parent="RootNode/CharacterArmature/Skeleton3D" index="2"]
+transform = Transform3D(-0.71683544, 0.15299827, 0.680248, -0.38551864, -0.8998993, -0.20385292, 0.5809654, -0.40837738, 0.7040638, 0.013895151, -0.009060452, 0.0073833195)
+
+[node name="Index3_L" parent="RootNode/CharacterArmature/Skeleton3D" index="3"]
+transform = Transform3D(-0.7128036, -0.21707417, 0.66692495, 0.16990227, -0.9760185, -0.13608965, 0.6804727, 0.016306896, 0.7325912, 0.010683979, -0.010295086, 0.010699847)
+
+[node name="Thumb3_L" parent="RootNode/CharacterArmature/Skeleton3D" index="4"]
+transform = Transform3D(-0.43757161, -0.60310984, 0.6669247, 0.72426283, -0.6759604, -0.13608953, 0.53289175, 0.4234801, 0.73259103, 0.008917684, -0.0063018687, 0.012382427)
+
+[node name="Middle3_R" parent="RootNode/CharacterArmature/Skeleton3D" index="5"]
+transform = Transform3D(-0.7437547, 0.12944749, -0.655799, 0.061992913, -0.9634845, -0.2604885, -0.6655718, -0.23439434, 0.7085714, -0.012319412, -0.011059317, 0.0086404765)
+
+[node name="Pinky3_R" parent="RootNode/CharacterArmature/Skeleton3D" index="6"]
+transform = Transform3D(-0.71683586, -0.15299805, -0.68024856, 0.38551903, -0.89989907, -0.20385304, -0.5809661, -0.40837768, 0.7040638, -0.01389515, -0.009060448, 0.0073833154)
+
+[node name="Index3_R" parent="RootNode/CharacterArmature/Skeleton3D" index="7"]
+transform = Transform3D(-0.7128037, 0.21707441, -0.6669252, -0.16990216, -0.9760189, -0.13608967, -0.6804732, 0.016306914, 0.7325912, -0.010683976, -0.010295083, 0.01069984)
+
+[node name="Thumb3_R" parent="RootNode/CharacterArmature/Skeleton3D" index="8"]
+transform = Transform3D(-0.43757203, 0.60311, -0.66692513, -0.7242626, -0.6759608, -0.13608962, -0.53289247, 0.42348024, 0.7325913, -0.008917683, -0.006301868, 0.012382427)
+
+[node name="Body4" parent="RootNode/CharacterArmature/Skeleton3D" index="9"]
+transform = Transform3D(0.10064879, -0.44638327, -0.8891637, 0.98017126, 0.19780104, 0.011650389, 0.17067961, -0.8727065, 0.4574422, 0.0017609288, 0.003832027, 0.0059712315)
+
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
 &"": SubResource("AnimationLibrary_p7jbg")
