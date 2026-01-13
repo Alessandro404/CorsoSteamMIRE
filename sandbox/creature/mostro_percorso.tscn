@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b33w08bssjq8b"]
+[gd_scene load_steps=4 format=3 uid="uid://b33w08bssjq8b"]
 
 [ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="1_k7tph"]
 [ext_resource type="Script" uid="uid://chjhrigt4h1vh" path="res://creature/mostro_percorso.gd" id="2_tyykf"]
+[ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://creature/player_detector.tscn" id="3_wevio"]
 
 [node name="MostroPercorso" instance=ExtResource("1_k7tph")]
 script = ExtResource("2_tyykf")
@@ -9,7 +10,12 @@ script = ExtResource("2_tyykf")
 [node name="RootNode" parent="." index="0"]
 transform = Transform3D(-0.6631963, 0, -5.7978465e-08, 0, 0.6631963, 0, 5.7978465e-08, 0, -0.6631963, 0, 0, 0)
 
-[node name="PlayerDetector" parent="." index="3"]
-visible = true
+[node name="PlayerDetector" parent="." index="3" instance=ExtResource("3_wevio")]
+
+[node name="CSGBox3D2" parent="PlayerDetector" index="2"]
+visible = false
+
+[node name="CSGBox3D" parent="PlayerDetector" index="3"]
+visible = false
 
 [editable path="PlayerDetector"]

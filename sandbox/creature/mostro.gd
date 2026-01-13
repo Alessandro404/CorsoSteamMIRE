@@ -10,7 +10,7 @@ var parent
 
 func _ready() -> void:
 	parent = get_parent()
-	if player_detector.is_visible_in_tree():
+	if player_detector and player_detector.is_visible_in_tree():
 		player_detector.connect("player_seen", _on_player_detected)
 
 

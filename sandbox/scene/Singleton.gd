@@ -13,7 +13,12 @@ extends Node
 
 
 @onready var registered_doors: Array[Porta] = []
+@onready var registered_buttons: Array[ButtonGame] = []
+
 var keys_found: Array[String] = []
+
+
+
 
 
 func apri_porta(porta) ->void:
@@ -29,3 +34,7 @@ func toggle_porta(porta) -> void:
 func add_to_doors(node) -> void:
 	registered_doors.append(node)
 	print(registered_doors)
+
+func add_to_buttons(node) -> void:
+	registered_buttons.append(node)
+	print(registered_buttons)

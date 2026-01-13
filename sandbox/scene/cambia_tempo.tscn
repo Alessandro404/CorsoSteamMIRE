@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://e6vautykdcjt"]
+
+[ext_resource type="Script" uid="uid://c70tfk2rbeahs" path="res://scene/cambia_tempo.gd" id="1_upkqx"]
+[ext_resource type="Texture2D" uid="uid://d1yid34g8p363" path="res://assets/import/sky/furstenstein_2k.exr" id="2_4yss4"]
+[ext_resource type="PackedScene" uid="uid://k10t4paospca" path="res://assets/import/Clouds.glb" id="2_j8e3f"]
+[ext_resource type="PackedScene" uid="uid://bvnbki5e42t4a" path="res://assets/import/Moon.glb" id="3_35yhe"]
+[ext_resource type="Texture2D" uid="uid://lyaow2vx7thh" path="res://assets/import/sky/rogland_clear_night_2k.exr" id="3_i2ma2"]
+[ext_resource type="Texture2D" uid="uid://p0e24ea0ximu" path="res://assets/import/sky/spooky_bamboo_morning_2k.exr" id="4_40nbi"]
+[ext_resource type="PackedScene" uid="uid://du142smf2y4bo" path="res://assets/import/Sun.glb" id="4_a5yqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upkqx"]
+albedo_color = Color(0.56169504, 0.53218013, 0.39375767, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4yss4"]
+
+[node name="CambiaTempo" type="Node3D"]
+script = ExtResource("1_upkqx")
+scelta_tempo = null
+sky_sereno = ExtResource("2_4yss4")
+sky_notturno = ExtResource("3_i2ma2")
+sky_nuvoloso = ExtResource("4_40nbi")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_upkqx")
+height = 0.2
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17500001, 0)
+radius = 0.3
+height = 0.55
+
+[node name="Clouds" parent="." instance=ExtResource("2_j8e3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="Moon" parent="." instance=ExtResource("3_35yhe")]
+transform = Transform3D(0.019515924, 0.02570126, 0.035532698, -0.017653547, 0.040206283, -0.019385716, -0.040143237, -0.0051864185, 0.025799613, 0, 0.8, 0)
+
+[node name="Sun" parent="." instance=ExtResource("4_a5yqd")]
+transform = Transform3D(0.0059999977, 0, 0, 0, 0.0059999977, 0, 0, 0, 0.0059999977, 0, 0.90000004, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CapsuleShape3D_4yss4")

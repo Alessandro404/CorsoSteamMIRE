@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnbua5nses3vv"]
+[gd_scene load_steps=13 format=3 uid="uid://dnbua5nses3vv"]
 
 [ext_resource type="PackedScene" uid="uid://cr16clygexc07" path="res://assets/import/Ghost Skull.glb" id="1_k7tph"]
 [ext_resource type="Script" uid="uid://k46x8m6lyyqf" path="res://creature/mostro.gd" id="2_tyykf"]
-[ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://creature/player_detector.tscn" id="3_3lud5"]
 
 [sub_resource type="Animation" id="Animation_tyykf"]
 resource_name = "CharacterArmature|Death"
@@ -1694,16 +1693,4 @@ autoplay = "CharacterArmature|Flying_Idle"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.853788, 0)
 shape = SubResource("SphereShape3D_tyykf")
 
-[node name="PlayerDetector" parent="." index="3" instance=ExtResource("3_3lud5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2658488, 0)
-visible = false
-
-[node name="CSGBox3D2" parent="PlayerDetector" index="2"]
-visible = false
-
-[node name="CSGBox3D" parent="PlayerDetector" index="3"]
-visible = false
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-
-[editable path="PlayerDetector"]

@@ -4,7 +4,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hcac7"]
 height = 8.028198
-radius = 2.1982422
+radius = 5.748047
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ie6b"]
 render_priority = 1

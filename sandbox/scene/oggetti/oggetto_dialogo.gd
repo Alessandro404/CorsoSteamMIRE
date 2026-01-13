@@ -6,7 +6,7 @@ extends OggettoSelezionabile
 
 
 func _init():
-	placeholder_mesh = preload("res://assets/prototyping/floating_dialogue.tscn")
+	placeholder_mesh = preload("res://assets/old/prototyping/floating_question_mark.tscn")
 	model = placeholder_mesh
 
 func _process(_delta):

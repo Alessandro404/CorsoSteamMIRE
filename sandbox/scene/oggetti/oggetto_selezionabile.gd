@@ -24,7 +24,7 @@ var material
 var selected = false
 
 func _init():
-	placeholder_mesh = preload("res://assets/prototyping/floating_question_mark.tscn")
+	placeholder_mesh = preload("res://assets/old/prototyping/floating_question_mark.tscn")
 	model = placeholder_mesh
 
 func _ready():

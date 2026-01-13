@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpnnwek7a0iqr"]
+
+[ext_resource type="Script" uid="uid://cd081pf37jymn" path="res://scene/button_game.gd" id="1_0v33p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8so7k"]
+albedo_color = Color(1, 1, 0.06666667, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2byp"]
+albedo_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+
+[sub_resource type="Animation" id="Animation_8so7k"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bottone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u2byp"]
+resource_name = "press"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bottone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0), Vector3(0, 0.15141761, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2byp"]
+_data = {
+&"RESET": SubResource("Animation_8so7k"),
+&"press": SubResource("Animation_u2byp")
+}
+
+[node name="ButtonGame" type="Node3D"]
+script = ExtResource("1_0v33p")
+
+[node name="bottone" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+use_collision = true
+collision_layer = 17
+collision_mask = 16
+material = SubResource("StandardMaterial3D_8so7k")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.081207275, 0.25, -0.05847168)
+size = Vector3(2, 0.5, 2)
+material = SubResource("StandardMaterial3D_u2byp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u2byp")
+}
