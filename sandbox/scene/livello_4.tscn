@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp2wxp3lgj7o4"]
+
+[ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_pxmxm"]
+
+[node name="Livello_4" instance=ExtResource("1_pxmxm")]
