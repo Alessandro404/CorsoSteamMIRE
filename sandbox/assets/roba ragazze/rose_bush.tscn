@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccq7joujkr2q1"]
+
+[ext_resource type="PackedScene" uid="uid://qtj6bgi58d0d" path="res://assets/import/Rose bush.glb" id="1_22apa"]
+
+[node name="RoseBush" instance=ExtResource("1_22apa")]
+
+[node name="Rose_bush_Circle_006" parent="." index="0"]
+transform = Transform3D(0.063999996, 0, 0, 0, 0.063999996, 0, 0, 0, 0.063999996, 0, 0, 0)

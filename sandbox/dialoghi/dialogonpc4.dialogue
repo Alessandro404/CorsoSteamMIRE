@@ -1,0 +1,7 @@
+~ start
+Luna: Ciao! Modificami ma non cancellare mai AEND!
+
+
+~ AEND
+set Singleton.dialogue_playing = false
+=> END

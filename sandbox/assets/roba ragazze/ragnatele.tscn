@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8g377isltb6"]
+
+[ext_resource type="PackedScene" uid="uid://d1om7xymgkp5i" path="res://assets/import/Cobweb.glb" id="1_l2055"]
+
+[node name="Ragnatele" instance=ExtResource("1_l2055")]
+
+[node name="RootNode" parent="." index="0"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

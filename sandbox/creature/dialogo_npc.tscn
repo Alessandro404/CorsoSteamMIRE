@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://8dmjvlphav0i"]
+
+[ext_resource type="PackedScene" uid="uid://c10rk17u0tump" path="res://tools/dialogo_manager.tscn" id="1_y77ui"]
+[ext_resource type="PackedScene" uid="uid://cyid5e8t38rjd" path="res://assets/import/Animated Woman.glb" id="2_7x6xd"]
+[ext_resource type="Script" uid="uid://darfjo4mejwme" path="res://creature/dialogo_npc.gd" id="2_au1u4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_au1u4"]
+radius = 0.3
+height = 1.6
+
+[node name="DialogoNpc" instance=ExtResource("1_y77ui")]
+script = ExtResource("2_au1u4")
+nome_animazione_idle = ""
+nome_animazione_talk = ""
+talk_loop = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_au1u4")
+
+[node name="Root Scene" parent="." index="1" instance=ExtResource("2_7x6xd")]
+transform = Transform3D(-0.9, 0, 7.86805e-08, 0, 0.9, 0, -7.86805e-08, 0, -0.9, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Root Scene/RootNode/CharacterArmature" index="0"]
+bones/1/rotation = Quaternion(1.94633e-40, 0.23553018, -8.03119e-40, 0.971867)
+bones/4/rotation = Quaternion(0.15386799, -0.23770583, -0.0052931677, 0.95905817)
+bones/5/rotation = Quaternion(-0.00020697594, 7.639756e-11, 1.4551918e-10, 1)
+bones/6/rotation = Quaternion(0.030685874, 7.475931e-07, 2.2755367e-08, 0.9995291)
+bones/7/rotation = Quaternion(-0.024510816, -1.8174245e-10, 0.00012705482, 0.99969953)
+bones/9/rotation = Quaternion(-0.74191755, -0.041393477, -0.1764089, 0.6455424)
+bones/10/rotation = Quaternion(-0.11985042, -0.020959418, -0.19428955, 0.9733695)
+bones/11/rotation = Quaternion(0.009300645, 0.0063040415, 0.023191547, 0.99966794)
+bones/22/rotation = Quaternion(-0.11929442, 0.057257555, -0.039888274, 0.99040365)
+bones/23/rotation = Quaternion(-0.074808866, 0.027954167, -0.00762858, 0.9967769)
+bones/27/rotation = Quaternion(-0.116957806, -0.009654581, -0.0032303545, 0.9930847)
+bones/29/rotation = Quaternion(0.13183598, 0.27465305, -0.010817471, 0.9524012)
+bones/32/rotation = Quaternion(-0.7411426, 0.1711194, 0.10882584, 0.6399866)
+bones/33/rotation = Quaternion(-0.20300294, -0.20324557, 0.33184862, 0.8985308)
+bones/34/rotation = Quaternion(0.008225444, -0.009819513, -0.052006796, 0.9985646)
+bones/45/rotation = Quaternion(-0.11929452, -0.05725759, 0.039888304, 0.9904037)
+bones/47/rotation = Quaternion(-0.031090606, 0.027352901, -0.22707841, 0.97299576)
+bones/51/rotation = Quaternion(-0.25428855, 0.35154942, 0.2482536, 0.866095)
+bones/52/rotation = Quaternion(0.13183598, -0.27465305, 0.010817466, 0.9524012)
+bones/54/rotation = Quaternion(0.9678701, 0.07718028, -0.22204773, 0.089249395)
+bones/55/rotation = Quaternion(0.24745764, -2.3549841e-08, 3.6861212e-16, 0.9688987)
+bones/56/rotation = Quaternion(0.9650923, -0.01839655, 0.17100462, 0.19752428)
+bones/57/rotation = Quaternion(0.22298734, 7.4638855e-09, 7.643024e-09, 0.9748214)
+bones/60/rotation = Quaternion(0.7040318, 0.04098869, -0.04077008, 0.70781136)
+
+[node name="Head" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="0"]
+transform = Transform3D(0.99998784, 0.0007401912, -0.00480773, -0.0046401145, -0.15146182, -0.9884515, -0.001459845, 0.9884624, -0.15145652, -0.00013772026, -0.0009384657, 0.01546739)
+
+[node name="Index4_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="1"]
+transform = Transform3D(-0.24635756, -0.17993963, 0.9523279, -0.9662733, 0.121621534, -0.22698504, -0.07498018, -0.9761293, -0.20383322, 0.0021166827, -0.00045602367, 0.0077580274)
+
+[node name="Middle4_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="2"]
+transform = Transform3D(-0.17874905, -0.28365678, 0.9421182, -0.9837553, 0.03546342, -0.17597136, 0.016504651, -0.9582691, -0.2853879, 0.002145784, -0.00018859535, 0.0075907386)
+
+[node name="Ring4_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="3"]
+transform = Transform3D(-0.31312862, -0.41455585, 0.8544549, -0.94805795, 0.18948697, -0.2554976, -0.05599027, -0.89007676, -0.45235685, 0.0020969273, 0.00015343947, 0.0077794287)
+
+[node name="Pinky4_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="4"]
+transform = Transform3D(0.046297666, -0.4901831, 0.87038815, -0.9960113, 0.043868486, 0.07768566, -0.076262794, -0.8705139, -0.4861971, 0.002087145, 0.00028701854, 0.008011482)
+
+[node name="Thumb3_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="5"]
+transform = Transform3D(0.03612928, -0.26284274, 0.9641617, -0.9760225, -0.21650608, -0.022448607, 0.21464743, -0.9402326, -0.2643625, 0.0017787982, -0.0008284038, 0.008616221)
+
+[node name="Index4_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="6"]
+transform = Transform3D(-0.52723765, 0.28740153, -0.79963714, 0.8161714, -0.09052156, -0.570674, -0.23639695, -0.95352244, -0.18684237, -0.0018452024, -0.0021011797, 0.0080758035)
+
+[node name="Middle4_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="7"]
+transform = Transform3D(-0.4639765, 0.34132892, -0.8174472, 0.86685073, -0.01513586, -0.49833736, -0.18246964, -0.9398217, -0.28885844, -0.0019745163, -0.001814679, 0.00781207)
+
+[node name="Ring4_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="8"]
+transform = Transform3D(-0.5832846, 0.44316256, -0.6807241, 0.7734741, 0.047134552, -0.6320725, -0.2480252, -0.8952007, -0.37026745, -0.0020261277, -0.0015482322, 0.00790644)
+
+[node name="Pinky4_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="9"]
+transform = Transform3D(-0.25911233, 0.555497, -0.79011595, 0.93672365, -0.054838993, -0.34574595, -0.23539004, -0.8297081, -0.5061377, -0.0020839279, -0.0013577451, 0.008085776)
+
+[node name="Thumb3_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="10"]
+transform = Transform3D(-0.13332506, 0.3038378, -0.94334835, 0.8043194, -0.5229558, -0.28211153, -0.5790459, -0.7963661, -0.17465936, -0.0016912161, -0.0022465792, 0.009056199)
+
+[node name="LowerLeg_L" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="11"]
+transform = Transform3D(0.5877041, -0.16864155, -0.7913117, 0.801595, 0.25405547, 0.54120886, 0.10976578, -0.9523755, 0.28448638, 0.001870509, -0.00021131091, 0.0053208196)
+
+[node name="LowerLeg_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="12"]
+transform = Transform3D(0.99088883, 0.02498196, -0.13234417, 0.13081239, 0.055293173, 0.9898715, 0.032046378, -0.99815917, 0.051515073, -0.0005813575, -0.0027554538, 0.00556589)
+
+[node name="Foot_R" parent="Root Scene/RootNode/CharacterArmature/Skeleton3D" index="15"]
+transform = Transform3D(0.99331546, 0.11542974, 0.00061765313, 0.11543138, -0.99330115, -0.0053181048, -3.5131794e-07, 0.0053538685, -0.9999856, -0.00044774523, -0.0024597417, 0.00022754623)
+
+[editable path="Root Scene"]

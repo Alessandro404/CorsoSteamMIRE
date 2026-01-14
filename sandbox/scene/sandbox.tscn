@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c6nac0ju7dpl8"]
+[gd_scene load_steps=63 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/import/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_a8pr3"]
 [ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://assets/oggetti dialoghi/cartello_1.tscn" id="4_j6lu3"]
@@ -22,6 +22,40 @@
 [ext_resource type="PackedScene" uid="uid://btnega8tlb5a0" path="res://scene/luce.tscn" id="20_ytmia"]
 [ext_resource type="Resource" uid="uid://df1oxa1g0twsd" path="res://dialoghi/dialogo1.dialogue" id="22_8jbqr"]
 [ext_resource type="PackedScene" uid="uid://4303s1w6bakf" path="res://scene/dialogo_activator.tscn" id="23_6akiy"]
+[ext_resource type="PackedScene" uid="uid://8dmjvlphav0i" path="res://creature/dialogo_npc.tscn" id="23_in15d"]
+[ext_resource type="Resource" uid="uid://bn45nq2xy5vgp" path="res://dialoghi/dialogodi test.dialogue" id="24_in15d"]
+[ext_resource type="PackedScene" uid="uid://bsvk3dv1efk1s" path="res://assets/roba ragazze/avocado.tscn" id="25_x68ts"]
+[ext_resource type="PackedScene" uid="uid://dlk05syxs4vj6" path="res://assets/roba ragazze/bed_1.tscn" id="26_cd6fx"]
+[ext_resource type="PackedScene" uid="uid://dnxi5kj5ywlgn" path="res://assets/roba ragazze/book_stack.tscn" id="27_85qsr"]
+[ext_resource type="PackedScene" uid="uid://3qoywacjpnv6" path="res://assets/roba ragazze/box.tscn" id="28_f57hn"]
+[ext_resource type="PackedScene" uid="uid://boi7knqmwfdxx" path="res://assets/roba ragazze/box_2.tscn" id="29_3qv46"]
+[ext_resource type="PackedScene" uid="uid://tn0bkbb3du4v" path="res://assets/roba ragazze/camera.tscn" id="30_kat5w"]
+[ext_resource type="PackedScene" uid="uid://b1tumjbhpkmjl" path="res://assets/roba ragazze/car_model.tscn" id="31_cd6fx"]
+[ext_resource type="PackedScene" uid="uid://b1witoxr2or50" path="res://assets/roba ragazze/castle_1.tscn" id="32_sqvtq"]
+[ext_resource type="PackedScene" uid="uid://p0mm866ugiu6" path="res://assets/roba ragazze/computer_mouse.tscn" id="33_p1scd"]
+[ext_resource type="PackedScene" uid="uid://1n4u6gfdgff8" path="res://assets/roba ragazze/dead_rat.tscn" id="34_ufyj1"]
+[ext_resource type="PackedScene" uid="uid://oa2rnyayrylj" path="res://assets/roba ragazze/desktop_computer.tscn" id="35_fx2ho"]
+[ext_resource type="PackedScene" uid="uid://5pto2qphkq1u" path="res://assets/roba ragazze/gabbia_1.tscn" id="36_ryo4p"]
+[ext_resource type="PackedScene" uid="uid://b75qiacyghnvd" path="res://assets/roba ragazze/gate.tscn" id="37_a3wlh"]
+[ext_resource type="PackedScene" uid="uid://6aikxnh6gvs2" path="res://assets/roba ragazze/green_notebook.tscn" id="38_nbcyy"]
+[ext_resource type="PackedScene" uid="uid://ci6ttcknfbtny" path="res://assets/roba ragazze/guardaroba.tscn" id="39_6gkuv"]
+[ext_resource type="PackedScene" uid="uid://rkf5p0ojscef" path="res://assets/roba ragazze/house_1.tscn" id="40_gwvrx"]
+[ext_resource type="PackedScene" uid="uid://dk6m1ty7p87i4" path="res://assets/roba ragazze/kitten.tscn" id="41_flm7v"]
+[ext_resource type="PackedScene" uid="uid://cih0lh5x87mha" path="res://assets/roba ragazze/laptop_and_monitor.tscn" id="42_gn3ig"]
+[ext_resource type="PackedScene" uid="uid://cf2lblgjcpbl1" path="res://assets/roba ragazze/liberia_storta.tscn" id="43_gndlo"]
+[ext_resource type="PackedScene" uid="uid://cm0on11pqfx75" path="res://assets/roba ragazze/open_book.tscn" id="44_duoqq"]
+[ext_resource type="PackedScene" uid="uid://da41u3ydqcoiy" path="res://assets/roba ragazze/paper_1.tscn" id="45_0ivgi"]
+[ext_resource type="PackedScene" uid="uid://coswac0lxl2ns" path="res://assets/roba ragazze/pens.tscn" id="46_ddmow"]
+[ext_resource type="PackedScene" uid="uid://5a6mybi3ylgj" path="res://assets/roba ragazze/potion_1.tscn" id="47_7kivy"]
+[ext_resource type="PackedScene" uid="uid://cndbbcp6bbrsr" path="res://assets/roba ragazze/potions.tscn" id="48_3v5mo"]
+[ext_resource type="PackedScene" uid="uid://b8g377isltb6" path="res://assets/roba ragazze/ragnatele.tscn" id="49_2sote"]
+[ext_resource type="PackedScene" uid="uid://ccq7joujkr2q1" path="res://assets/roba ragazze/rose_bush.tscn" id="50_8mxhq"]
+[ext_resource type="PackedScene" uid="uid://hrlr0f8xmimx" path="res://assets/roba ragazze/sofa.tscn" id="51_k1xj7"]
+[ext_resource type="PackedScene" uid="uid://dwjhl2aiu57i5" path="res://assets/roba ragazze/street_light.tscn" id="52_0er4m"]
+[ext_resource type="PackedScene" uid="uid://iwbdpxk67u11" path="res://assets/roba ragazze/sushi.tscn" id="53_l8smn"]
+[ext_resource type="PackedScene" uid="uid://b523xox4f7fbe" path="res://assets/roba ragazze/table.tscn" id="54_io52b"]
+[ext_resource type="PackedScene" uid="uid://jfw7eb0thi6c" path="res://assets/roba ragazze/toilet_paper.tscn" id="55_xolfh"]
+[ext_resource type="PackedScene" uid="uid://c7sbhmasjlmmd" path="res://assets/roba ragazze/tree_1.tscn" id="56_flofe"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
 panorama = ExtResource("1_a8pr3")
@@ -74,6 +108,11 @@ point_count = 4
 
 [node name="Sandbox" type="Node3D"]
 
+[node name="CambiaTempo" parent="." instance=ExtResource("15_3f0gx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.582548, 0.00049996376, -4.877124)
+scelta_tempo = 0
+sky_sereno = ExtResource("1_a8pr3")
+
 [node name="Ambiente" type="Node3D" parent="."]
 
 [node name="DirectLight" type="DirectionalLight3D" parent="Ambiente"]
@@ -102,16 +141,11 @@ shape = SubResource("BoxShape3D_rvfw7")
 metadata/_edit_lock_ = true
 
 [node name="playerbase" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0.1, -4)
 use_collision = true
 radius = 1.0
 height = 0.2
 sides = 16
-
-[node name="CambiaTempo" parent="playerbase" instance=ExtResource("15_3f0gx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.582548, -0.09950004, -4.877124)
-scelta_tempo = 0
-sky_sereno = ExtResource("1_a8pr3")
 
 [node name="giocatore" parent="playerbase" instance=ExtResource("17_8b5lh")]
 unique_name_in_owner = true
@@ -447,5 +481,138 @@ metadata/asset_placer_res_id = "uid://dnbua5nses3vv"
 [node name="DialogoActivator" parent="." instance=ExtResource("23_6akiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2, 0.1, -11.400001)
 dialogue_resource = ExtResource("22_8jbqr")
+
+[node name="DialogoNpc" parent="." instance=ExtResource("23_in15d")]
+transform = Transform3D(-0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5000001, 9, 0, -8)
+nome_animazione_idle = "CharacterArmature|Idle"
+nome_animazione_talk = "CharacterArmature|Wave"
+dialogue_resource = ExtResource("24_in15d")
+
+[node name="AVOCADO" parent="." instance=ExtResource("25_x68ts")]
+transform = Transform3D(0.8055655, 0, 0.59250677, 0, 1, 0, -0.59250677, 0, 0.8055655, 25.38126, 0.0005002022, -5.5191317)
+metadata/asset_placer_res_id = "uid://bsvk3dv1efk1s"
+
+[node name="Book Stack" parent="." instance=ExtResource("27_85qsr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.502289, 0.0005002022, -5.4884863)
+metadata/asset_placer_res_id = "uid://dnxi5kj5ywlgn"
+
+[node name="Box" parent="." instance=ExtResource("28_f57hn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.57887, 0.000500679, -5.490283)
+metadata/asset_placer_res_id = "uid://3qoywacjpnv6"
+
+[node name="Box2" parent="." instance=ExtResource("29_3qv46")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.651287, 0.0005002022, -4.8231554)
+metadata/asset_placer_res_id = "uid://boi7knqmwfdxx"
+
+[node name="Camera" parent="." instance=ExtResource("30_kat5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.760628, 0.0005002022, -5.383087)
+metadata/asset_placer_res_id = "uid://tn0bkbb3du4v"
+
+[node name="CarModel" parent="." instance=ExtResource("31_cd6fx")]
+transform = Transform3D(0.28107297, 0, 0, 0, 0.28107297, 0, 0, 0, 0.28107297, 38.743103, 0.000500679, -4.794969)
+metadata/asset_placer_res_id = "uid://b1tumjbhpkmjl"
+
+[node name="Castle1" parent="." instance=ExtResource("32_sqvtq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.59075, 0.00049972534, -16.020658)
+metadata/asset_placer_res_id = "uid://b1witoxr2or50"
+
+[node name="Computer mouse" parent="." instance=ExtResource("33_p1scd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.85417, 0.0005016327, -3.48975)
+metadata/asset_placer_res_id = "uid://p0mm866ugiu6"
+
+[node name="DeadRat" parent="." instance=ExtResource("34_ufyj1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.51091, 0.00049972534, -3.6810198)
+metadata/asset_placer_res_id = "uid://1n4u6gfdgff8"
+
+[node name="DesktopComputer" parent="." instance=ExtResource("35_fx2ho")]
+transform = Transform3D(0.5807796, 0, 0, 0, 0.5807796, 0, 0, 0, 0.5807796, 63.038418, 0.000500679, -3.5554724)
+metadata/asset_placer_res_id = "uid://oa2rnyayrylj"
+
+[node name="Gabbia1" parent="." instance=ExtResource("36_ryo4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.35925, 0.00049972534, -3.5254812)
+metadata/asset_placer_res_id = "uid://5pto2qphkq1u"
+
+[node name="Gate" parent="." instance=ExtResource("37_a3wlh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.33378, 0.000500679, -6.409421)
+metadata/asset_placer_res_id = "uid://b75qiacyghnvd"
+
+[node name="GreenNotebook" parent="." instance=ExtResource("38_nbcyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.802914, 0.00049972534, -1.575139)
+metadata/asset_placer_res_id = "uid://6aikxnh6gvs2"
+
+[node name="Guardaroba" parent="." instance=ExtResource("39_6gkuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.768982, 0.00049972534, -0.5377321)
+metadata/asset_placer_res_id = "uid://ci6ttcknfbtny"
+
+[node name="House1" parent="." instance=ExtResource("40_gwvrx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.26019, 0.000500679, -19.408546)
+metadata/asset_placer_res_id = "uid://rkf5p0ojscef"
+
+[node name="Kitten" parent="." instance=ExtResource("41_flm7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.180782, 0.0005002022, 0.25237083)
+metadata/asset_placer_res_id = "uid://dk6m1ty7p87i4"
+
+[node name="LaptopAndMonitor" parent="." instance=ExtResource("42_gn3ig")]
+transform = Transform3D(0.011399993, 0, 0, 0, 0.011399993, 0, 0, 0, 0.011399993, 58.549797, 0.000500679, 0.7295151)
+metadata/asset_placer_res_id = "uid://cih0lh5x87mha"
+
+[node name="LiberiaStorta" parent="." instance=ExtResource("43_gndlo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.986237, 0.00049972534, 0.12055874)
+metadata/asset_placer_res_id = "uid://cf2lblgjcpbl1"
+
+[node name="OpenBook" parent="." instance=ExtResource("44_duoqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.071857, 0.0005002022, 0.13529015)
+metadata/asset_placer_res_id = "uid://cm0on11pqfx75"
+
+[node name="paper1" parent="." instance=ExtResource("45_0ivgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.302288, 0.0005002022, 0.09103489)
+metadata/asset_placer_res_id = "uid://da41u3ydqcoiy"
+
+[node name="Pens" parent="." instance=ExtResource("46_ddmow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.26466, 0.0005002022, 0.097929)
+metadata/asset_placer_res_id = "uid://coswac0lxl2ns"
+
+[node name="Potion1" parent="." instance=ExtResource("47_7kivy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.27581, 0.0005002022, 1.8184414)
+metadata/asset_placer_res_id = "uid://5a6mybi3ylgj"
+
+[node name="Potions" parent="." instance=ExtResource("48_3v5mo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.81511, 0.0005002022, 2.18476)
+metadata/asset_placer_res_id = "uid://cndbbcp6bbrsr"
+
+[node name="Ragnatele" parent="." instance=ExtResource("49_2sote")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.378723, 0.0005002022, 2.4191408)
+metadata/asset_placer_res_id = "uid://b8g377isltb6"
+
+[node name="RoseBush" parent="." instance=ExtResource("50_8mxhq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.82805, 0.0005002022, 2.4491024)
+metadata/asset_placer_res_id = "uid://ccq7joujkr2q1"
+
+[node name="Sofa" parent="." instance=ExtResource("51_k1xj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.09514, 0.0005002022, 1.5824642)
+metadata/asset_placer_res_id = "uid://hrlr0f8xmimx"
+
+[node name="StreetLight" parent="." instance=ExtResource("52_0er4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.766098, 0.00049996376, 1.8813515)
+metadata/asset_placer_res_id = "uid://dwjhl2aiu57i5"
+
+[node name="Sushi" parent="." instance=ExtResource("53_l8smn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.866737, 0.00049996376, 1.7924299)
+metadata/asset_placer_res_id = "uid://iwbdpxk67u11"
+
+[node name="Table" parent="." instance=ExtResource("54_io52b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.22461, 0.00049972534, 1.7495289)
+metadata/asset_placer_res_id = "uid://b523xox4f7fbe"
+
+[node name="ToiletPaper" parent="." instance=ExtResource("55_xolfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.50325, 0.00049996376, 1.667346)
+metadata/asset_placer_res_id = "uid://jfw7eb0thi6c"
+
+[node name="Tree1" parent="." instance=ExtResource("56_flofe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.59632, 0.00049972534, 1.6074171)
+metadata/asset_placer_res_id = "uid://c7sbhmasjlmmd"
+
+[node name="Bed1" parent="." instance=ExtResource("26_cd6fx")]
+transform = Transform3D(1.43, 0, 0, 0, 1.43, 0, 0, 0, 1.43, 27.9, 0, -5)
 
 [connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

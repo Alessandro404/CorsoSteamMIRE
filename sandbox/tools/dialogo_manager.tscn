@@ -1,22 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c10rk17u0tump"]
+[gd_scene load_steps=2 format=3 uid="uid://c10rk17u0tump"]
 
-[ext_resource type="Resource" uid="uid://bn45nq2xy5vgp" path="res://dialoghi/dialogodi test.dialogue" id="1_dquu2"]
-
-[sub_resource type="GDScript" id="GDScript_r22or"]
-script/source = "extends Area3D
-
-@export var dialogue_resource: DialogueResource
-@export var dialogue_start: String = \"start\"
-
-func action() -> void:
-	if !Singleton.dialogue_playing:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
-		Singleton.dialogue_playing = true
-"
+[ext_resource type="Script" uid="uid://cv1lse5mict2l" path="res://tools/dialogo_manager.gd" id="1_dquu2"]
 
 [node name="DialogoManager" type="Area3D"]
 collision_layer = 16
 collision_mask = 16
-script = SubResource("GDScript_r22or")
-dialogue_resource = ExtResource("1_dquu2")
+script = ExtResource("1_dquu2")

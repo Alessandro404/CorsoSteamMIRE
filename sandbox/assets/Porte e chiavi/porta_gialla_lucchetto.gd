@@ -4,6 +4,7 @@ class_name  PortaLucchetto
 @export var key_id_required: String = "nessuna chiave!"
 
 var closed_sound: Resource = preload("res://assets/import/491952__cmilo1269__bloocked-door.wav")
+var locked : bool = true
 
 func _ready():
 	super()
@@ -21,7 +22,8 @@ func action():
 
 
 func _process(_delta):
-	await get_tree().create_timer(1).timeout
-	if key_id_required in Singleton.keys_found and $"Simple Padlock":
-		sound_node.set_stream(open_sound)
-		$"Simple Padlock".queue_free()
+	if locked :
+		if key_id_required in Singleton.keys_found and $"Simple Padlock":
+			sound_node.set_stream(open_sound)
+			$"Simple Padlock".queue_free()
+			locked = false
