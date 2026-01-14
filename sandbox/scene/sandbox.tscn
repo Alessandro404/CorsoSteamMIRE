@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="14_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://e6vautykdcjt" path="res://scene/cambia_tempo.tscn" id="15_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://u07gtp1leahb" path="res://scene/arena.tscn" id="16_iccas"]
+[ext_resource type="PackedScene" uid="uid://v8hgl21oesa1" path="res://scene/teleport.tscn" id="17_6vy87"]
 [ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://creature/giocatore.tscn" id="17_8b5lh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
@@ -65,8 +66,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0)
 }
 point_count = 4
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_6vy87"]
 
 [node name="Sandbox" type="Node3D"]
 
@@ -353,7 +352,9 @@ size = Vector3(3, 3, 4)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="Arena" parent="." instance=ExtResource("16_iccas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.8, 0, -11)
-navigation_mesh = SubResource("NavigationMesh_6vy87")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2000008, 0, 15.4)
+
+[node name="Teleport" parent="." instance=ExtResource("17_6vy87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -2)
 
 [connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

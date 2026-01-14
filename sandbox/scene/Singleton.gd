@@ -14,6 +14,7 @@ extends Node
 
 @onready var registered_doors: Array[Porta] = []
 @onready var registered_buttons: Array[ButtonGame] = []
+@onready var registered_teleports: Array[Teleport] = []
 
 var keys_found: Array[String] = []
 
@@ -33,8 +34,11 @@ func toggle_porta(porta) -> void:
 
 func add_to_doors(node) -> void:
 	registered_doors.append(node)
-	print(registered_doors)
+
 
 func add_to_buttons(node) -> void:
 	registered_buttons.append(node)
-	print(registered_buttons)
+
+
+func add_to_teleport(node) -> void:
+	registered_teleports.append(node)
