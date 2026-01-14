@@ -9,6 +9,7 @@ extends Node
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			
 			await get_tree().create_timer(0.5).timeout
+		
 		dialogue_playing = value
 
 

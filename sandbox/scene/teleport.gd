@@ -4,6 +4,9 @@ class_name Teleport
 @export var nome_teletrasporto : String = "Nome questo teletrasporto"
 @export var destinazione : String = "Nome destinazione"
 
+@onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
+
+var cooldown : bool = false
 
 
 func _ready() -> void:
@@ -11,17 +14,24 @@ func _ready() -> void:
 
 
 func send():
-	pass
+	for node in Singleton.registered_teleports:
+		if node.nome_teletrasporto == destinazione:
+			node.receive()
 
 func receive():
-	pass
+	SceneTransition.fake_dissolve()
+	cooldown = true
+	player.global_position = global_position
+	
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.is_in_group("player"):
-		print("Entrato player")
+	if body == player and not cooldown:
+		#print("entrato player")
+		send()
 
 
 func _on_body_exited(body: Node3D) -> void:
-	if body.is_in_group("player"):
+	if body == player:
 		print("Uscito player")
+		cooldown = false
