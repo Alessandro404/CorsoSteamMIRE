@@ -1,0 +1,618 @@
+[gd_scene load_steps=63 format=3 uid="uid://bom1vrm0fk0my"]
+
+[ext_resource type="PackedScene" uid="uid://e6vautykdcjt" path="res://scene/cambia_tempo.tscn" id="1_cdval"]
+[ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/import/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_w6pbo"]
+[ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://creature/giocatore.tscn" id="3_gtelr"]
+[ext_resource type="PackedScene" uid="uid://b68nhcaxfqylo" path="res://assets/costruzioni/blocco_bianco.tscn" id="4_jy6d5"]
+[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/materiali vari/protype_0.25_grid_orange.tres" id="5_gimoo"]
+[ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://assets/costruzioni/blocco_nero.tscn" id="6_5w7h8"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="7_7wjo7"]
+[ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://assets/oggetti dialoghi/cartello_1.tscn" id="8_5im3q"]
+[ext_resource type="PackedScene" uid="uid://bj832xklkwvhm" path="res://assets/oggetti dialoghi/cartello_2.tscn" id="9_g5vj0"]
+[ext_resource type="PackedScene" uid="uid://hgn6hcupobra" path="res://assets/oggetti dialoghi/cartello_3.tscn" id="10_kbqte"]
+[ext_resource type="PackedScene" uid="uid://chhcj0suq7bh0" path="res://assets/Porte e chiavi/porta_gialla.tscn" id="11_tbs3h"]
+[ext_resource type="PackedScene" uid="uid://chn1ykfcjl1uv" path="res://assets/Porte e chiavi/chiave.tscn" id="12_tebqg"]
+[ext_resource type="PackedScene" uid="uid://b815r856d4n7k" path="res://assets/Porte e chiavi/porta_gialla_lucchetto.tscn" id="13_u6fiy"]
+[ext_resource type="PackedScene" uid="uid://b33w08bssjq8b" path="res://creature/mostro_percorso.tscn" id="14_h2nfm"]
+[ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://creature/player_detector.tscn" id="15_o2h32"]
+[ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="16_gxqw4"]
+[ext_resource type="PackedScene" uid="uid://u07gtp1leahb" path="res://scene/arena.tscn" id="17_gfnch"]
+[ext_resource type="PackedScene" uid="uid://v8hgl21oesa1" path="res://scene/teleport.tscn" id="18_iumjc"]
+[ext_resource type="PackedScene" uid="uid://dhbto73a386nh" path="res://scene/casa.tscn" id="19_43fvj"]
+[ext_resource type="PackedScene" uid="uid://btnega8tlb5a0" path="res://scene/luce.tscn" id="20_xngfe"]
+[ext_resource type="PackedScene" uid="uid://4303s1w6bakf" path="res://scene/dialogo_activator.tscn" id="21_wfova"]
+[ext_resource type="Resource" uid="uid://df1oxa1g0twsd" path="res://dialoghi/dialogo1.dialogue" id="22_b21kx"]
+[ext_resource type="PackedScene" uid="uid://8dmjvlphav0i" path="res://creature/dialogo_npc.tscn" id="23_h074s"]
+[ext_resource type="Resource" uid="uid://bn45nq2xy5vgp" path="res://dialoghi/dialogodi test.dialogue" id="24_gp3p0"]
+[ext_resource type="PackedScene" uid="uid://bsvk3dv1efk1s" path="res://assets/roba ragazze/avocado.tscn" id="25_o8rqy"]
+[ext_resource type="PackedScene" uid="uid://dnxi5kj5ywlgn" path="res://assets/roba ragazze/book_stack.tscn" id="26_kwao6"]
+[ext_resource type="PackedScene" uid="uid://3qoywacjpnv6" path="res://assets/roba ragazze/box.tscn" id="27_koqh0"]
+[ext_resource type="PackedScene" uid="uid://boi7knqmwfdxx" path="res://assets/roba ragazze/box_2.tscn" id="28_ocxbd"]
+[ext_resource type="PackedScene" uid="uid://tn0bkbb3du4v" path="res://assets/roba ragazze/camera.tscn" id="29_xcmf0"]
+[ext_resource type="PackedScene" uid="uid://b1tumjbhpkmjl" path="res://assets/roba ragazze/car_model.tscn" id="30_hm1jh"]
+[ext_resource type="PackedScene" uid="uid://b1witoxr2or50" path="res://assets/roba ragazze/castle_1.tscn" id="31_ktbow"]
+[ext_resource type="PackedScene" uid="uid://p0mm866ugiu6" path="res://assets/roba ragazze/computer_mouse.tscn" id="32_pusha"]
+[ext_resource type="PackedScene" uid="uid://1n4u6gfdgff8" path="res://assets/roba ragazze/dead_rat.tscn" id="33_7j2k1"]
+[ext_resource type="PackedScene" uid="uid://oa2rnyayrylj" path="res://assets/roba ragazze/desktop_computer.tscn" id="34_ymw2f"]
+[ext_resource type="PackedScene" uid="uid://5pto2qphkq1u" path="res://assets/roba ragazze/gabbia_1.tscn" id="35_tuleh"]
+[ext_resource type="PackedScene" uid="uid://b75qiacyghnvd" path="res://assets/roba ragazze/gate.tscn" id="36_ssuwy"]
+[ext_resource type="PackedScene" uid="uid://6aikxnh6gvs2" path="res://assets/roba ragazze/green_notebook.tscn" id="37_s3qtv"]
+[ext_resource type="PackedScene" uid="uid://ci6ttcknfbtny" path="res://assets/roba ragazze/guardaroba.tscn" id="38_llhhr"]
+[ext_resource type="PackedScene" uid="uid://rkf5p0ojscef" path="res://assets/roba ragazze/house_1.tscn" id="39_tuu41"]
+[ext_resource type="PackedScene" uid="uid://dk6m1ty7p87i4" path="res://assets/roba ragazze/kitten.tscn" id="40_j1yay"]
+[ext_resource type="PackedScene" uid="uid://cih0lh5x87mha" path="res://assets/roba ragazze/laptop_and_monitor.tscn" id="41_x364x"]
+[ext_resource type="PackedScene" uid="uid://cf2lblgjcpbl1" path="res://assets/roba ragazze/liberia_storta.tscn" id="42_fj7ja"]
+[ext_resource type="PackedScene" uid="uid://cm0on11pqfx75" path="res://assets/roba ragazze/open_book.tscn" id="43_67d8o"]
+[ext_resource type="PackedScene" uid="uid://da41u3ydqcoiy" path="res://assets/roba ragazze/paper_1.tscn" id="44_bcqiu"]
+[ext_resource type="PackedScene" uid="uid://coswac0lxl2ns" path="res://assets/roba ragazze/pens.tscn" id="45_r06la"]
+[ext_resource type="PackedScene" uid="uid://5a6mybi3ylgj" path="res://assets/roba ragazze/potion_1.tscn" id="46_ykuy4"]
+[ext_resource type="PackedScene" uid="uid://cndbbcp6bbrsr" path="res://assets/roba ragazze/potions.tscn" id="47_a13lq"]
+[ext_resource type="PackedScene" uid="uid://b8g377isltb6" path="res://assets/roba ragazze/ragnatele.tscn" id="48_wu5iv"]
+[ext_resource type="PackedScene" uid="uid://ccq7joujkr2q1" path="res://assets/roba ragazze/rose_bush.tscn" id="49_4j3q8"]
+[ext_resource type="PackedScene" uid="uid://hrlr0f8xmimx" path="res://assets/roba ragazze/sofa.tscn" id="50_hglfm"]
+[ext_resource type="PackedScene" uid="uid://dwjhl2aiu57i5" path="res://assets/roba ragazze/street_light.tscn" id="51_yh8um"]
+[ext_resource type="PackedScene" uid="uid://iwbdpxk67u11" path="res://assets/roba ragazze/sushi.tscn" id="52_umwan"]
+[ext_resource type="PackedScene" uid="uid://b523xox4f7fbe" path="res://assets/roba ragazze/table.tscn" id="53_bqu8y"]
+[ext_resource type="PackedScene" uid="uid://jfw7eb0thi6c" path="res://assets/roba ragazze/toilet_paper.tscn" id="54_fjl6b"]
+[ext_resource type="PackedScene" uid="uid://c7sbhmasjlmmd" path="res://assets/roba ragazze/tree_1.tscn" id="55_2a5ph"]
+[ext_resource type="PackedScene" uid="uid://dlk05syxs4vj6" path="res://assets/roba ragazze/bed_1.tscn" id="56_urmcy"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
+panorama = ExtResource("2_w6pbo")
+
+[sub_resource type="Sky" id="Sky_23ueg"]
+sky_material = SubResource("PanoramaSkyMaterial_iccas")
+
+[sub_resource type="Environment" id="Environment_31ryr"]
+background_mode = 2
+sky = SubResource("Sky_23ueg")
+tonemap_mode = 2
+glow_levels/1 = 7.35
+fog_depth_curve = 5.4641604
+
+[sub_resource type="GDScript" id="GDScript_rvfw7"]
+script/source = "extends Area3D
+
+# Trascina qui un nodo Marker3D dall'editor per impostare la destinazione
+@export var spawn_point : Marker3D 
+
+func _on_body_entered(body):
+	# Verifichiamo che l'oggetto sia il giocatore
+	print(\"entrato\")
+	if body.is_in_group(\"player\") or body.name == \"giocatore\":
+		teleport(body)
+
+func teleport(player):
+	if spawn_point:
+		# Sposta il giocatore alla posizione del Marker3D
+		player.global_position = spawn_point.global_position
+		
+		# Se il giocatore ha velocità (fisica), è meglio azzerarla
+		if player is CharacterBody3D:
+			player.velocity = Vector3.ZERO
+	else:
+		# Destinazione di default se non hai assegnato un Marker3D
+		player.global_position = Vector3(0, 5, 0)
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvfw7"]
+size = Vector3(1275, 6, 1639)
+
+[sub_resource type="Curve3D" id="Curve3D_qqy3k"]
+closed = true
+_data = {
+"points": PackedVector3Array(-1, 0, 3, 1, 0, -3, -5, -0.1, -9, 0, 0, -3, 0, 0, 3, 6, -0.100000024, -10, 2, 0, 0, -2, 0, 0, 3, -0.100000024, -4.200001, 3, 0, 2, -3, 0, -2, -4, -0.1, 4),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[node name="Sandbox" type="Node3D"]
+
+[node name="CambiaTempo" parent="." instance=ExtResource("1_cdval")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.582548, 0.00049996376, -4.877124)
+scelta_tempo = 0
+sky_sereno = ExtResource("2_w6pbo")
+
+[node name="Ambiente" type="Node3D" parent="."]
+
+[node name="DirectLight" type="DirectionalLight3D" parent="Ambiente"]
+unique_name_in_owner = true
+transform = Transform3D(0.86667436, 0.3389592, -0.36603582, -0.023789385, 0.76096934, 0.6483516, 0.49830675, -0.5532019, 0.66757625, 0, 7.406396, 0)
+light_color = Color(0.60972697, 0.63731664, 0.6582302, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Ambiente"]
+unique_name_in_owner = true
+environment = SubResource("Environment_31ryr")
+
+[node name="respwan" type="Marker3D" parent="Ambiente"]
+gizmo_extents = 1.0
+
+[node name="KillPlane" type="Area3D" parent="Ambiente" node_paths=PackedStringArray("spawn_point")]
+collision_layer = 3
+collision_mask = 3
+script = SubResource("GDScript_rvfw7")
+spawn_point = NodePath("../respwan")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ambiente/KillPlane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, -27.5, 40)
+shape = SubResource("BoxShape3D_rvfw7")
+metadata/_edit_lock_ = true
+
+[node name="playerbase" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+use_collision = true
+radius = 1.0
+height = 0.2
+sides = 16
+
+[node name="giocatore" parent="playerbase" instance=ExtResource("3_gtelr")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000001, 0)
+
+[node name="terrain" type="Node3D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="pavement" type="Node3D" parent="terrain"]
+
+[node name="Blocco" parent="terrain" instance=ExtResource("4_jy6d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5263815, -0.5, -39.4356)
+size = Vector3(21, 1, 29)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="Blocco3" parent="terrain" instance=ExtResource("4_jy6d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.973618, -0.5, 25.0644)
+material_override = ExtResource("5_gimoo")
+size = Vector3(10, 1, 12)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="Blocco4" parent="terrain" instance=ExtResource("4_jy6d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.973618, -0.5, 6.0643997)
+material_override = ExtResource("5_gimoo")
+size = Vector3(10, 1, 6)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="Blocco2" parent="terrain" instance=ExtResource("4_jy6d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.526382, -0.5, -39.4356)
+size = Vector3(21, 1, 29)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="BloccoNero" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -27.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero2" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -29.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero3" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -31.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero4" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -33.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero5" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -35.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero6" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -37.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero7" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -39.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero8" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -41.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero9" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -43.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero10" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -45.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero11" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -47.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero12" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -49.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero13" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.658496, 4, -51.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero14" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -27.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero15" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -29.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero16" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -31.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero17" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -33.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero18" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -35.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero19" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -37.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero20" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -39.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero21" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -41.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero22" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -43.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero23" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -45.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero24" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -47.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero25" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -49.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero26" parent="terrain" instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.341504, 4, -51.28392)
+size = Vector3(1, 10, 1)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="PavimentoErba" parent="terrain" instance=ExtResource("7_7wjo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1704464, 0, -10.862928)
+size = Vector3(31, 0.001, 28.2)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
+[node name="PavimentoErba3" parent="terrain" instance=ExtResource("7_7wjo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.170446, 0, -10.862928)
+size = Vector3(9, 0.001, 28.2)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
+[node name="PavimentoErba2" parent="terrain" instance=ExtResource("7_7wjo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.32955, 0, -10.862928)
+size = Vector3(52, 0.001, 28.2)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
+[node name="OggettiRagazzi" type="Node3D" parent="."]
+
+[node name="Cartello1" parent="." instance=ExtResource("8_5im3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="Cartello2" parent="." instance=ExtResource("9_g5vj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -8)
+
+[node name="Cartello3" parent="." instance=ExtResource("10_kbqte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+
+[node name="porta01" parent="." instance=ExtResource("11_tbs3h")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.842857, 0, -11.457143)
+
+[node name="porta02" parent="." instance=ExtResource("11_tbs3h")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.94286, 0, -13.557143)
+
+[node name="Chiave2" parent="." instance=ExtResource("12_tebqg")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.94286, 0, -14.957143)
+id_chiave = "portabella"
+
+[node name="porta_gialla_lucchetto2" parent="." instance=ExtResource("13_u6fiy")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14.942858, 0, -9.557143)
+key_id_required = "portabella"
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -37)
+curve = SubResource("Curve3D_qqy3k")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.90449667, 0, 0.42644966, 0, 0.9999934, 0, -0.42644912, 0, 0.9044978, -5.2034693, -0.1, 2.512528)
+progress = 33.500683
+rotation_mode = 1
+
+[node name="MostroPercorso" parent="Path3D/PathFollow3D" instance=ExtResource("14_h2nfm")]
+transform = Transform3D(0.9659258, 0, 0.258819, 0, 0.99999994, 0, -0.2588191, 0, 0.9659258, 0, 0, 0)
+
+[node name="PlayerDetector" parent="." instance=ExtResource("15_o2h32")]
+transform = Transform3D(-0.7071053, 0, 0.707106, 0, 0.9999997, 0, -0.70710737, 0, -0.70710826, 27, 0.9999998, -34)
+
+[node name="PlayerDetector2" parent="." instance=ExtResource("15_o2h32")]
+transform = Transform3D(0.25882038, 0, 0.96592677, 0, 0.99999964, 0, -0.9659248, 0, 0.2588177, 27, 0.9999998, -40)
+
+[node name="BloccoNero (1)" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.186588, 1, -36.251198)
+size = Vector3(1, 3, 14)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (1)2" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.18659, 1, -36.251198)
+size = Vector3(1, 3, 14)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (1)3" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 27.936588, 1, -28.751198)
+size = Vector3(1, 3, 9.5)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="Mostro" parent="." instance=ExtResource("16_gxqw4")]
+transform = Transform3D(-1.0000007, 0, -3.9488077e-07, 0, 1, 0, 3.9488077e-07, 0, -1.0000007, -3.3145704, 0, -22.50834)
+metadata/asset_placer_res_id = "uid://dnbua5nses3vv"
+
+[node name="Mostro (1)" parent="." instance=ExtResource("16_gxqw4")]
+transform = Transform3D(-1.0000007, 0, -3.9488077e-07, 0, 1, 0, 3.9488077e-07, 0, -1.0000007, 0.9008825, 0, -22.260609)
+metadata/asset_placer_res_id = "uid://dnbua5nses3vv"
+
+[node name="BloccoNero (3)" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4894438, 1, -37.97573)
+size = Vector3(3, 3, 4)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (3)2" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4894438, 1.5, -44.97573)
+size = Vector3(3, 2, 4)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (3)3" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5105562, 1, -37.97573)
+size = Vector3(3, 3, 4)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="Arena" parent="." instance=ExtResource("17_gfnch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2000008, 0, 15.4)
+
+[node name="Teleport" parent="." instance=ExtResource("18_iumjc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 25)
+nome_teletrasporto = "unot"
+destinazione = "francot"
+
+[node name="Teleport2" parent="." instance=ExtResource("18_iumjc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 5)
+nome_teletrasporto = "francot"
+destinazione = "unot"
+
+[node name="Casa" parent="." instance=ExtResource("19_43fvj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -34, 0, -4)
+
+[node name="Luce" parent="." instance=ExtResource("20_xngfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 2, -5)
+
+[node name="Luce2" parent="." instance=ExtResource("20_xngfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 2, -6)
+light_color = Color(0.9672976, 0, 0.087777756, 1)
+omni_range = 4.0
+
+[node name="BloccoNero (6)" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.042858, 0.9, -16.757143)
+size = Vector3(0.6, 2.8, 8.6)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)3" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.592857, 0.9, -9.557143)
+size = Vector3(0.2, 2.8, 3.5)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)6" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.392857, 0.9, -9.557143)
+size = Vector3(0.2, 2.8, 3.3)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)4" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.042858, 0.9, -11.057143)
+size = Vector3(0.6, 2.8, 12)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)5" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.842859, 0.9, -7.807143)
+size = Vector3(0.2, 2.8, 5.5)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)8" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.842859, 0.9, -14.707145)
+size = Vector3(0.2, 2.8, 4.7000003)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)2" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.3928585, 0.9, -13.557143)
+size = Vector3(0.2, 2.8, 3.3)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)9" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.392859, 0.9, -13.557143)
+size = Vector3(0.2, 2.8, 3.1000001)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="BloccoNero (6)7" parent="." instance=ExtResource("6_5w7h8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.742857, 0.9, -5.3571424)
+size = Vector3(0.6, 2.8, 8)
+metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
+
+[node name="Mostro (2)" parent="." instance=ExtResource("16_gxqw4")]
+transform = Transform3D(1.0000006, 0, -2.448771e-07, 0, 1, 0, 2.448771e-07, 0, 1.0000006, 14.842857, 0, -7.557143)
+metadata/asset_placer_res_id = "uid://dnbua5nses3vv"
+
+[node name="DialogoActivator" parent="." instance=ExtResource("21_wfova")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2, 0.1, -11.400001)
+dialogue_resource = ExtResource("22_b21kx")
+
+[node name="DialogoNpc" parent="." instance=ExtResource("23_h074s")]
+transform = Transform3D(-0.5000001, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5000001, 9, 0, -8)
+nome_animazione_idle = "CharacterArmature|Idle"
+nome_animazione_talk = "CharacterArmature|Wave"
+dialogue_resource = ExtResource("24_gp3p0")
+
+[node name="AVOCADO" parent="." instance=ExtResource("25_o8rqy")]
+transform = Transform3D(0.8055655, 0, 0.59250677, 0, 1, 0, -0.59250677, 0, 0.8055655, 25.38126, 0.0005002022, -5.5191317)
+metadata/asset_placer_res_id = "uid://bsvk3dv1efk1s"
+
+[node name="Book Stack" parent="." instance=ExtResource("26_kwao6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.502289, 0.0005002022, -5.4884863)
+metadata/asset_placer_res_id = "uid://dnxi5kj5ywlgn"
+
+[node name="Box" parent="." instance=ExtResource("27_koqh0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.57887, 0.000500679, -5.490283)
+metadata/asset_placer_res_id = "uid://3qoywacjpnv6"
+
+[node name="Box2" parent="." instance=ExtResource("28_ocxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.651287, 0.0005002022, -4.8231554)
+metadata/asset_placer_res_id = "uid://boi7knqmwfdxx"
+
+[node name="Camera" parent="." instance=ExtResource("29_xcmf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.760628, 0.0005002022, -5.383087)
+metadata/asset_placer_res_id = "uid://tn0bkbb3du4v"
+
+[node name="CarModel" parent="." instance=ExtResource("30_hm1jh")]
+transform = Transform3D(0.28107297, 0, 0, 0, 0.28107297, 0, 0, 0, 0.28107297, 38.743103, 0.000500679, -4.794969)
+metadata/asset_placer_res_id = "uid://b1tumjbhpkmjl"
+
+[node name="Castle1" parent="." instance=ExtResource("31_ktbow")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.59075, 0.00049972534, -16.020658)
+metadata/asset_placer_res_id = "uid://b1witoxr2or50"
+
+[node name="Computer mouse" parent="." instance=ExtResource("32_pusha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.85417, 0.0005016327, -3.48975)
+metadata/asset_placer_res_id = "uid://p0mm866ugiu6"
+
+[node name="DeadRat" parent="." instance=ExtResource("33_7j2k1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.51091, 0.00049972534, -3.6810198)
+metadata/asset_placer_res_id = "uid://1n4u6gfdgff8"
+
+[node name="DesktopComputer" parent="." instance=ExtResource("34_ymw2f")]
+transform = Transform3D(0.5807796, 0, 0, 0, 0.5807796, 0, 0, 0, 0.5807796, 63.038418, 0.000500679, -3.5554724)
+metadata/asset_placer_res_id = "uid://oa2rnyayrylj"
+
+[node name="Gabbia1" parent="." instance=ExtResource("35_tuleh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.35925, 0.00049972534, -3.5254812)
+metadata/asset_placer_res_id = "uid://5pto2qphkq1u"
+
+[node name="Gate" parent="." instance=ExtResource("36_ssuwy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.33378, 0.000500679, -6.409421)
+metadata/asset_placer_res_id = "uid://b75qiacyghnvd"
+
+[node name="GreenNotebook" parent="." instance=ExtResource("37_s3qtv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.802914, 0.00049972534, -1.575139)
+metadata/asset_placer_res_id = "uid://6aikxnh6gvs2"
+
+[node name="Guardaroba" parent="." instance=ExtResource("38_llhhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.768982, 0.00049972534, -0.5377321)
+metadata/asset_placer_res_id = "uid://ci6ttcknfbtny"
+
+[node name="House1" parent="." instance=ExtResource("39_tuu41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.26019, 0.000500679, -19.408546)
+metadata/asset_placer_res_id = "uid://rkf5p0ojscef"
+
+[node name="Kitten" parent="." instance=ExtResource("40_j1yay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.180782, 0.0005002022, 0.25237083)
+metadata/asset_placer_res_id = "uid://dk6m1ty7p87i4"
+
+[node name="LaptopAndMonitor" parent="." instance=ExtResource("41_x364x")]
+transform = Transform3D(0.011399993, 0, 0, 0, 0.011399993, 0, 0, 0, 0.011399993, 58.549797, 0.000500679, 0.7295151)
+metadata/asset_placer_res_id = "uid://cih0lh5x87mha"
+
+[node name="LiberiaStorta" parent="." instance=ExtResource("42_fj7ja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.986237, 0.00049972534, 0.12055874)
+metadata/asset_placer_res_id = "uid://cf2lblgjcpbl1"
+
+[node name="OpenBook" parent="." instance=ExtResource("43_67d8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.071857, 0.0005002022, 0.13529015)
+metadata/asset_placer_res_id = "uid://cm0on11pqfx75"
+
+[node name="paper1" parent="." instance=ExtResource("44_bcqiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.302288, 0.0005002022, 0.09103489)
+metadata/asset_placer_res_id = "uid://da41u3ydqcoiy"
+
+[node name="Pens" parent="." instance=ExtResource("45_r06la")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.26466, 0.0005002022, 0.097929)
+metadata/asset_placer_res_id = "uid://coswac0lxl2ns"
+
+[node name="Potion1" parent="." instance=ExtResource("46_ykuy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.27581, 0.0005002022, 1.8184414)
+metadata/asset_placer_res_id = "uid://5a6mybi3ylgj"
+
+[node name="Potions" parent="." instance=ExtResource("47_a13lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.81511, 0.0005002022, 2.18476)
+metadata/asset_placer_res_id = "uid://cndbbcp6bbrsr"
+
+[node name="Ragnatele" parent="." instance=ExtResource("48_wu5iv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.378723, 0.0005002022, 2.4191408)
+metadata/asset_placer_res_id = "uid://b8g377isltb6"
+
+[node name="RoseBush" parent="." instance=ExtResource("49_4j3q8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.82805, 0.0005002022, 2.4491024)
+metadata/asset_placer_res_id = "uid://ccq7joujkr2q1"
+
+[node name="Sofa" parent="." instance=ExtResource("50_hglfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.09514, 0.0005002022, 1.5824642)
+metadata/asset_placer_res_id = "uid://hrlr0f8xmimx"
+
+[node name="StreetLight" parent="." instance=ExtResource("51_yh8um")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.766098, 0.00049996376, 1.8813515)
+metadata/asset_placer_res_id = "uid://dwjhl2aiu57i5"
+
+[node name="Sushi" parent="." instance=ExtResource("52_umwan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.866737, 0.00049996376, 1.7924299)
+metadata/asset_placer_res_id = "uid://iwbdpxk67u11"
+
+[node name="Table" parent="." instance=ExtResource("53_bqu8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.22461, 0.00049972534, 1.7495289)
+metadata/asset_placer_res_id = "uid://b523xox4f7fbe"
+
+[node name="ToiletPaper" parent="." instance=ExtResource("54_fjl6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.50325, 0.00049996376, 1.667346)
+metadata/asset_placer_res_id = "uid://jfw7eb0thi6c"
+
+[node name="Tree1" parent="." instance=ExtResource("55_2a5ph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.59632, 0.00049972534, 1.6074171)
+metadata/asset_placer_res_id = "uid://c7sbhmasjlmmd"
+
+[node name="Bed1" parent="." instance=ExtResource("56_urmcy")]
+transform = Transform3D(1.43, 0, 0, 0, 1.43, 0, 0, 0, 1.43, 27.9, 0, -5)
+
+[connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

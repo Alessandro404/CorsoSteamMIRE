@@ -12,6 +12,19 @@ func change_scene(target: PackedScene = MAIN_MENU) -> void:
 	await get_tree().process_frame
 	$AnimationPlayer.play_backwards(\"dissolve\")
 
+func load_and_change_level(target: int, teleport: String) -> void:
+	$AnimationPlayer.play(\"dissolve\")
+	await $AnimationPlayer.animation_finished
+	var get_scene : String = \"res://scene/livello_\" + str(target+1)+ \".tscn\"
+	var scene = load(get_scene) 
+	get_tree().change_scene_to_packed(scene)
+	await get_tree().process_frame
+	for node in Singleton.registered_teleports:
+		if node.nome_teletrasporto == teleport:
+			node.receive(false)
+	await get_tree().process_frame
+	$AnimationPlayer.play_backwards(\"dissolve\")
+
 func fake_dissolve() -> void:
 	$AnimationPlayer.play(\"dissolve\")
 	Singleton.dialogue_playing = true

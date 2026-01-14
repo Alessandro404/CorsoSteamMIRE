@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6nac0ju7dpl8"]
+
+[ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/import/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_a8pr3"]
+[ext_resource type="Material" uid="uid://b8bcvf7e3ve7r" path="res://assets/materiali vari/protype_0.25_grid_dark.tres" id="5_1gkh3"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="8_m5lhb"]
+[ext_resource type="PackedScene" uid="uid://e6vautykdcjt" path="res://scene/cambia_tempo.tscn" id="15_3f0gx"]
+[ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://creature/giocatore.tscn" id="17_8b5lh"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]
+panorama = ExtResource("1_a8pr3")
+
+[sub_resource type="Sky" id="Sky_23ueg"]
+sky_material = SubResource("PanoramaSkyMaterial_iccas")
+
+[sub_resource type="Environment" id="Environment_31ryr"]
+background_mode = 2
+sky = SubResource("Sky_23ueg")
+tonemap_mode = 2
+glow_levels/1 = 7.35
+fog_depth_curve = 5.4641604
+
+[sub_resource type="GDScript" id="GDScript_rvfw7"]
+script/source = "extends Area3D
+
+# Trascina qui un nodo Marker3D dall'editor per impostare la destinazione
+@export var spawn_point : Marker3D 
+
+func _on_body_entered(body):
+	# Verifichiamo che l'oggetto sia il giocatore
+	print(\"entrato\")
+	if body.is_in_group(\"player\") or body.name == \"giocatore\":
+		teleport(body)
+
+func teleport(player):
+	if spawn_point:
+		# Sposta il giocatore alla posizione del Marker3D
+		player.global_position = spawn_point.global_position
+		
+		# Se il giocatore ha velocità (fisica), è meglio azzerarla
+		if player is CharacterBody3D:
+			player.velocity = Vector3.ZERO
+	else:
+		# Destinazione di default se non hai assegnato un Marker3D
+		player.global_position = Vector3(0, 5, 0)
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvfw7"]
+size = Vector3(1275, 6, 1639)
+
+[node name="SceneTemplate" type="Node3D"]
+
+[node name="CambiaTempo" parent="." instance=ExtResource("15_3f0gx")]
+transform = Transform3D(-0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071068, 2, 0, -2)
+scelta_tempo = 0
+sky_sereno = ExtResource("1_a8pr3")
+
+[node name="Ambiente" type="Node3D" parent="."]
+
+[node name="DirectLight" type="DirectionalLight3D" parent="Ambiente"]
+unique_name_in_owner = true
+transform = Transform3D(0.86667436, 0.3389592, -0.36603582, -0.023789385, 0.76096934, 0.6483516, 0.49830675, -0.5532019, 0.66757625, 0, 7.406396, 0)
+light_color = Color(0.60972697, 0.63731664, 0.6582302, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Ambiente"]
+unique_name_in_owner = true
+environment = SubResource("Environment_31ryr")
+
+[node name="respwan" type="Marker3D" parent="Ambiente"]
+gizmo_extents = 1.0
+
+[node name="KillPlane" type="Area3D" parent="Ambiente" node_paths=PackedStringArray("spawn_point")]
+collision_layer = 3
+collision_mask = 3
+script = SubResource("GDScript_rvfw7")
+spawn_point = NodePath("../respwan")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ambiente/KillPlane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, -27.5, 40)
+shape = SubResource("BoxShape3D_rvfw7")
+metadata/_edit_lock_ = true
+
+[node name="playerbase" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+use_collision = true
+radius = 1.0
+height = 0.1
+sides = 16
+
+[node name="giocatore" parent="playerbase" instance=ExtResource("17_8b5lh")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10000001, 0)
+
+[node name="terrain" type="Node3D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Base" parent="terrain" instance=ExtResource("8_m5lhb")]
+material_override = ExtResource("5_1gkh3")
+size = Vector3(5, 0.001, 5)
+
+[node name="OggettiRagazzi" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="Ambiente/KillPlane" to="Ambiente/KillPlane" method="_on_body_entered"]

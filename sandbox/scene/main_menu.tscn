@@ -26,9 +26,11 @@ func _on_exit_button_button_down() -> void:
 "
 
 [sub_resource type="SystemFont" id="SystemFont_3er1b"]
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_hxu56"]
 font_names = PackedStringArray("Hack")
+subpixel_positioning = 0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
