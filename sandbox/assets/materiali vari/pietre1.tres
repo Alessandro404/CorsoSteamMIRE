@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqamnpkb1vra4"]
+
+[ext_resource type="Texture2D" uid="uid://cq1eqi02jl2ah" path="res://assets/import/texture_materiali/256_Stone Rubble 02.png" id="1_u15d7"]
+
+[resource]
+albedo_texture = ExtResource("1_u15d7")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0717734
+uv1_world_triplanar = true

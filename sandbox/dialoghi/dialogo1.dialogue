@@ -1,0 +1,8 @@
+~ start
+Che strano! 
+Sto pensando tra me e e me.
+Devo ricordarmi di non cencellare la scritta AEND in fondo!
+
+~ AEND
+set Singleton.dialogue_playing = false
+=> END

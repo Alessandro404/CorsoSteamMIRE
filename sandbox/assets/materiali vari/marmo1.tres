@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjpbdmdcuyh7s"]
+
+[ext_resource type="Texture2D" uid="uid://yn5qjdftp72a" path="res://assets/import/texture_materiali/256_Marble 01.png" id="1_ooq4r"]
+
+[resource]
+albedo_texture = ExtResource("1_ooq4r")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0717734
+uv1_world_triplanar = true

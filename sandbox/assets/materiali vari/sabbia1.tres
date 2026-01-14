@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d1cpewey3vcu6"]
+
+[ext_resource type="Texture2D" uid="uid://b4jlbty4hvddq" path="res://assets/import/texture_materiali/256_Sand 01.png" id="1_cf312"]
+
+[resource]
+albedo_texture = ExtResource("1_cf312")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.0717734
+uv1_world_triplanar = true

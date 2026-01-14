@@ -77,22 +77,6 @@ tracks/2/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_b2o2f"]
-resource_name = "interact"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("testa/shoulder:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.06666667, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0.15603243, 0, -0.15950564), Vector3(-0.5061455, 0.57072264, 0.1134464), Vector3(0.15603243, 0, -0.15950564)]
-}
-
 [sub_resource type="Animation" id="Animation_8pqo5"]
 resource_name = "die"
 tracks/0/type = "value"
@@ -118,6 +102,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.23448499), Vector3(0, 0, -0.23877847), Vector3(0, 0, 1.4328804)]
+}
+
+[sub_resource type="Animation" id="Animation_b2o2f"]
+resource_name = "interact"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("testa/shoulder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.15603243, 0, -0.15950564), Vector3(-0.5061455, 0.57072264, 0.1134464), Vector3(0.15603243, 0, -0.15950564)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8pqo5"]
@@ -171,7 +171,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.4, 0)
 cull_mask = 1048573
 
 [node name="RayCast3D" type="RayCast3D" parent="testa/Camera3D"]
-target_position = Vector3(0, 0, -1.8)
+target_position = Vector3(0, 0, -2)
 collision_mask = 16
 collide_with_areas = true
 

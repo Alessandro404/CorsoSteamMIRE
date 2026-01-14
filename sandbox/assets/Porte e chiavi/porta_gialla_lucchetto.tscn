@@ -10,3 +10,6 @@ key_id_required = "Scrivi un ID Chiave!"
 
 [node name="Simple Padlock" parent="." index="0" instance=ExtResource("3_70g1c")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.4, 0.8, 0.1)
+
+[node name="Simple Padlock2" parent="Simple Padlock" index="3" instance=ExtResource("3_70g1c")]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -0.2, 0, 0)

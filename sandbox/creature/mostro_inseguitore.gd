@@ -96,7 +96,7 @@ func _state_attacking() -> void:
 	velocity = Vector3.ZERO
 	look_at(player.global_position)
 	player.look_at(self.global_position)
-	animation_player.play("Zombie|ZombieBite")
+	animation_player.play("Zombie|ZombieBite", -1, 3)
 	player.die()
 	await animation_player.animation_finished
 	print("attacco")
