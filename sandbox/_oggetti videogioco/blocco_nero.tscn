@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://jh3niovqnuxg"]
 
-[ext_resource type="Material" uid="uid://b8bcvf7e3ve7r" path="res://assets/materiali vari/protype_0.25_grid_dark.tres" id="1_ohcmc"]
+[ext_resource type="Material" uid="uid://b8bcvf7e3ve7r" path="res://_oggetti videogioco/materiali vari/protype_0.25_grid_dark.tres" id="1_ohcmc"]
 
 [node name="BloccoNero" type="CSGBox3D"]
 material_override = ExtResource("1_ohcmc")

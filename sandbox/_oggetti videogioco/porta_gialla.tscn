@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://chhcj0suq7bh0"]
 
 [ext_resource type="PackedScene" uid="uid://drldkl2fsubkt" path="res://assets/import/Porta1.gltf" id="1_kcex4"]
-[ext_resource type="Script" uid="uid://bjny6dq1supma" path="res://assets/Porte e chiavi/porta.gd" id="2_cx2ac"]
+[ext_resource type="Script" uid="uid://bjny6dq1supma" path="res://scene/porta.gd" id="2_cx2ac"]
 [ext_resource type="AudioStream" uid="uid://c2y68hpxiuoxa" path="res://assets/import/15419__pagancow__dorm-door-opening.wav" id="3_1kbud"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kcex4"]

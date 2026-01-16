@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dcwp1tg8ete38"]
 
-[ext_resource type="Material" uid="uid://bhejrqn73j7cu" path="res://assets/materiali vari/erba1.tres" id="1_hhi5w"]
+[ext_resource type="Material" uid="uid://bhejrqn73j7cu" path="res://_oggetti videogioco/materiali vari/erba1.tres" id="1_hhi5w"]
 
 [node name="PavimentoErba" type="CSGBox3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00049999356, 0)

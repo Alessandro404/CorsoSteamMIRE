@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b33w08bssjq8b"]
 
-[ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="1_k7tph"]
+[ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://_oggetti videogioco/mostro.tscn" id="1_k7tph"]
 [ext_resource type="Script" uid="uid://chjhrigt4h1vh" path="res://creature/mostro_percorso.gd" id="2_tyykf"]
-[ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://creature/player_detector.tscn" id="3_wevio"]
+[ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://_oggetti videogioco/player_detector.tscn" id="3_wevio"]
 
 [node name="MostroPercorso" instance=ExtResource("1_k7tph")]
 script = ExtResource("2_tyykf")

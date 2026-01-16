@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bremswwt3c5qa"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_glkqy"]
-[ext_resource type="Material" uid="uid://cx15q4ooop7cm" path="res://assets/materiali vari/piastrelle1.tres" id="2_xifix"]
-[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="3_d2el6"]
-[ext_resource type="Material" uid="uid://bqamnpkb1vra4" path="res://assets/materiali vari/pietre1.tres" id="4_rwcoq"]
-[ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://assets/costruzioni/blocco_nero.tscn" id="5_hgfc1"]
+[ext_resource type="Material" uid="uid://cx15q4ooop7cm" path="res://_oggetti videogioco/materiali vari/piastrelle1.tres" id="2_xifix"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://_oggetti videogioco/pavimento_erba.tscn" id="3_d2el6"]
+[ext_resource type="Material" uid="uid://bqamnpkb1vra4" path="res://_oggetti videogioco/materiali vari/pietre1.tres" id="4_rwcoq"]
+[ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://_oggetti videogioco/blocco_nero.tscn" id="5_hgfc1"]
 
 [node name="Livello_2" instance=ExtResource("1_glkqy")]
 

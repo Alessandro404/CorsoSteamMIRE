@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://c6nac0ju7dpl8"]
 
 [ext_resource type="Texture2D" uid="uid://40oh7ulev4bt" path="res://assets/import/sky/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_a8pr3"]
-[ext_resource type="Material" uid="uid://b8bcvf7e3ve7r" path="res://assets/materiali vari/protype_0.25_grid_dark.tres" id="5_1gkh3"]
-[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="8_m5lhb"]
-[ext_resource type="PackedScene" uid="uid://e6vautykdcjt" path="res://scene/cambia_tempo.tscn" id="15_3f0gx"]
+[ext_resource type="Material" uid="uid://b8bcvf7e3ve7r" path="res://_oggetti videogioco/materiali vari/protype_0.25_grid_dark.tres" id="5_1gkh3"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://_oggetti videogioco/pavimento_erba.tscn" id="8_m5lhb"]
+[ext_resource type="PackedScene" uid="uid://e6vautykdcjt" path="res://_oggetti videogioco/cambia_tempo.tscn" id="15_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://cp31w60s8pdsu" path="res://creature/giocatore.tscn" id="17_8b5lh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_iccas"]

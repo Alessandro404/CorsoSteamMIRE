@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://kg1le6pj131x"]
 
 [ext_resource type="PackedScene" uid="uid://b3ahj04yib2ka" path="res://assets/import/blockbench_models/?.gltf" id="1_p6fkw"]
-[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://assets/materiali vari/protype_0.25_grid_orange.tres" id="2_p6fkw"]
+[ext_resource type="Material" uid="uid://bh2ix3qgoq1eg" path="res://_oggetti videogioco/materiali vari/protype_0.25_grid_orange.tres" id="2_p6fkw"]
 
 [sub_resource type="GDScript" id="GDScript_p6fkw"]
 script/source = "@tool
