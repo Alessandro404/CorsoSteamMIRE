@@ -16,6 +16,12 @@ material_override = ExtResource("2_puba2")
 size = Vector3(16, 0.001, 20)
 metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
 
+[node name="PavimentoErba2" parent="." instance=ExtResource("1_puba2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.4995, 1)
+material_override = ExtResource("2_puba2")
+size = Vector3(16, 0.001, 18)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
 [node name="BloccoNero" parent="." instance=ExtResource("3_lo16p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 1)
 material_override = ExtResource("5_8x0r6")

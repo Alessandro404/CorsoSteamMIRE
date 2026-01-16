@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dba85cqxqhr1b"]
+[gd_scene load_steps=59 format=3 uid="uid://dba85cqxqhr1b"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_h0kme"]
 [ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://assets/oggetti dialoghi/cartello_1.tscn" id="4_j6lu3"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dyeex7jc60pqr" path="res://creature/player_detector.tscn" id="13_7cl2x"]
 [ext_resource type="PackedScene" uid="uid://dnbua5nses3vv" path="res://creature/mostro.tscn" id="14_3f0gx"]
 [ext_resource type="PackedScene" uid="uid://u07gtp1leahb" path="res://scene/arena.tscn" id="16_iccas"]
+[ext_resource type="Material" uid="uid://cr5j3yjrjmddp" path="res://assets/materiali vari/legno1.tres" id="18_nug5w"]
 [ext_resource type="PackedScene" uid="uid://dhbto73a386nh" path="res://scene/casa.tscn" id="19_qyuct"]
 [ext_resource type="PackedScene" uid="uid://btnega8tlb5a0" path="res://scene/luce.tscn" id="20_ytmia"]
 [ext_resource type="Resource" uid="uid://df1oxa1g0twsd" path="res://dialoghi/dialogo1.dialogue" id="22_8jbqr"]
@@ -277,7 +278,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4621849, 1.1000038, -36.03
 curve = SubResource("Curve3D_4ra05")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" index="0"]
-transform = Transform3D(-0.85156196, 0, 0.52422774, 0, 0.9999934, 0, -0.5242271, 0, -0.851563, -1.0783741, -0.1, 2.4232826)
+transform = Transform3D(-0.8515615, 0, 0.52422714, 0, 0.9999934, 0, -0.5242268, 0, -0.851562, -1.0783741, -0.1, 2.4232826)
 progress = 33.500683
 rotation_mode = 1
 
@@ -345,46 +346,55 @@ omni_range = 4.0
 
 [node name="BloccoNero (6)" parent="." index="28" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.042858, 0.9, -16.757143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.6, 2.8, 8.6)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)3" parent="." index="29" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.592857, 0.9, -9.557143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 3.5)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)6" parent="." index="30" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.392857, 0.9, -9.557143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 3.3)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)4" parent="." index="31" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.042858, 0.9, -11.057143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.6, 2.8, 12)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)5" parent="." index="32" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.842859, 0.9, -7.807143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 5.5)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)8" parent="." index="33" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.842859, 0.9, -14.707145)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 4.7000003)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)2" parent="." index="34" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.3928585, 0.9, -13.557143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 3.3)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)9" parent="." index="35" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.392859, 0.9, -13.557143)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.2, 2.8, 3.1000001)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (6)7" parent="." index="36" instance=ExtResource("8_rvfw7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.742857, 0.9, -5.3571424)
+material_override = ExtResource("18_nug5w")
 size = Vector3(0.6, 2.8, 8)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
