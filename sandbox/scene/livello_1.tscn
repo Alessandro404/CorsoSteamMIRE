@@ -1,5 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://qqqkmat1tp1q"]
+[gd_scene load_steps=6 format=3 uid="uid://qqqkmat1tp1q"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_l4cpm"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="2_846g4"]
+[ext_resource type="PackedScene" uid="uid://b68nhcaxfqylo" path="res://assets/costruzioni/blocco_bianco.tscn" id="6_3di2u"]
+[ext_resource type="Texture2D" uid="uid://bm78o4dodw216" path="res://assets/import/texture_materiali/prototype_grid_light.png" id="7_8jogc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gx3fe"]
+albedo_texture = ExtResource("7_8jogc")
+uv1_triplanar = true
 
 [node name="Livello_1" instance=ExtResource("1_l4cpm")]
+
+[node name="PavimentoErba (1)" parent="." index="5" instance=ExtResource("2_846g4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -8.5)
+size = Vector3(9, 0.001, 12)
+metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
+
+[node name="BloccoBianco" parent="." index="6" instance=ExtResource("6_3di2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.0000005, -14)
+material_override = SubResource("StandardMaterial3D_gx3fe")
+size = Vector3(9, 5, 1)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="BloccoBianco (1)" parent="." index="7" instance=ExtResource("6_3di2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -8)
+material_override = SubResource("StandardMaterial3D_gx3fe")
+size = Vector3(1, 5, 11)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="BloccoBianco (1)2" parent="." index="8" instance=ExtResource("6_3di2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -8)
+size = Vector3(1, 5, 11)
+metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"

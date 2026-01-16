@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://4303s1w6bakf"]
+[gd_scene load_steps=4 format=3 uid="uid://4303s1w6bakf"]
 
 [sub_resource type="GDScript" id="GDScript_5e1x4"]
 script/source = "extends Area3D
@@ -9,6 +9,8 @@ class_name DialogActivator
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group(\"player\")
 
+func _ready() -> void:
+	$CSGCylinder3D.queue_free()
 
 func _on_body_entered(body: Node3D) -> void:
 	if !Singleton.dialogue_playing and body == player:
@@ -20,6 +22,9 @@ func _on_body_entered(body: Node3D) -> void:
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dad3e"]
 radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5e1x4"]
+albedo_color = Color(1, 0.54509807, 1, 0.47843137)
 
 [node name="DialogoActivator" type="Area3D"]
 collision_layer = 2
@@ -34,5 +39,6 @@ shape = SubResource("CylinderShape3D_dad3e")
 radius = 1.0
 height = 0.1
 sides = 16
+material = SubResource("StandardMaterial3D_5e1x4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

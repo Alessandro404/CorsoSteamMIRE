@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhbto73a386nh"]
+[gd_scene load_steps=8 format=3 uid="uid://dhbto73a386nh"]
 
 [ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://assets/costruzioni/pavimento_erba.tscn" id="1_puba2"]
 [ext_resource type="Material" uid="uid://b0o3cbhxf7rw6" path="res://assets/materiali vari/mattoni2.tres" id="2_puba2"]
@@ -7,33 +7,24 @@
 [ext_resource type="Material" uid="uid://dwqr8fngl2ict" path="res://assets/materiali vari/mattoni1.tres" id="5_8x0r6"]
 [ext_resource type="PackedScene" uid="uid://chhcj0suq7bh0" path="res://assets/Porte e chiavi/porta_gialla.tscn" id="6_0nnbt"]
 [ext_resource type="PackedScene" uid="uid://b68nhcaxfqylo" path="res://assets/costruzioni/blocco_bianco.tscn" id="7_0nnbt"]
-[ext_resource type="Script" uid="uid://bjny6dq1supma" path="res://assets/Porte e chiavi/porta.gd" id="7_1lcfq"]
 
 [node name="Casa" type="Node3D"]
 
-[node name="PavimentoErba" type="CSGBox3D" parent="." instance=ExtResource("1_puba2")]
+[node name="PavimentoErba" parent="." instance=ExtResource("1_puba2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.00049999356, 0)
 material_override = ExtResource("2_puba2")
-use_collision = true
-size = Vector3(10, 0.001, 20)
+size = Vector3(16, 0.001, 20)
 metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
 
-[node name="PavimentoErba2" parent="." instance=ExtResource("1_puba2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
-material_override = ExtResource("3_0nnbt")
-size = Vector3(10, 0.001, 18)
-metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
-
-[node name="BloccoNero" type="CSGBox3D" parent="." instance=ExtResource("3_lo16p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, 1)
+[node name="BloccoNero" parent="." instance=ExtResource("3_lo16p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 1)
 material_override = ExtResource("5_8x0r6")
-use_collision = true
 size = Vector3(1, 4, 19)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
-[node name="BloccoNero (1)" type="CSGBox3D" parent="." instance=ExtResource("3_lo16p")]
+[node name="BloccoNero (1)" parent="." instance=ExtResource("3_lo16p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.15000004, 1)
 material_override = ExtResource("5_8x0r6")
-use_collision = true
 size = Vector3(1, 1.3000001, 19)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
@@ -73,11 +64,10 @@ material_override = ExtResource("5_8x0r6")
 size = Vector3(1, 1, 19)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
-[node name="BloccoNero (2)" type="CSGBox3D" parent="." instance=ExtResource("3_lo16p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10)
+[node name="BloccoNero (2)" parent="." instance=ExtResource("3_lo16p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, 5)
 material_override = ExtResource("5_8x0r6")
-use_collision = true
-size = Vector3(9, 4, 1)
+size = Vector3(15, 4, 1)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
 [node name="BloccoNero (2)2" parent="." instance=ExtResource("3_lo16p")]
@@ -98,14 +88,12 @@ material_override = ExtResource("5_8x0r6")
 size = Vector3(1.8000001, 1.2, 1)
 metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
 
-[node name="porta_gialla" type="Node3D" parent="." instance=ExtResource("6_0nnbt")]
+[node name="porta_gialla" parent="." instance=ExtResource("6_0nnbt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.000500679, -8)
-script = ExtResource("7_1lcfq")
 metadata/asset_placer_res_id = "uid://chhcj0suq7bh0"
 
-[node name="BloccoBianco" type="CSGBox3D" parent="." instance=ExtResource("7_0nnbt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, -2)
+[node name="BloccoBianco" parent="." instance=ExtResource("7_0nnbt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -2)
 material_override = ExtResource("3_0nnbt")
-use_collision = true
-size = Vector3(6, 4, 1)
+size = Vector3(12, 4, 1)
 metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
