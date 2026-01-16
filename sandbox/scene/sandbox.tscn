@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dba85cqxqhr1b"]
+[gd_scene load_steps=61 format=3 uid="uid://dba85cqxqhr1b"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_h0kme"]
 [ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://_oggetti videogioco/cartello_1.tscn" id="4_j6lu3"]
@@ -55,6 +55,8 @@
 [ext_resource type="Texture2D" uid="uid://bm78o4dodw216" path="res://assets/import/texture_materiali/prototype_grid_light.png" id="55_nug5w"]
 [ext_resource type="PackedScene" uid="uid://jfw7eb0thi6c" path="res://_oggetti videogioco/asset ragazze/toilet_paper.tscn" id="55_xolfh"]
 [ext_resource type="PackedScene" uid="uid://c7sbhmasjlmmd" path="res://_oggetti videogioco/asset ragazze/tree_1.tscn" id="56_flofe"]
+[ext_resource type="PackedScene" uid="uid://d0vuugnep5nyg" path="res://_oggetti videogioco/quadro_magico.tscn" id="56_sqvtq"]
+[ext_resource type="PackedScene" uid="uid://5ncimvuyk1kr" path="res://_oggetti videogioco/chiavepiatta.tscn" id="57_p1scd"]
 
 [sub_resource type="Curve3D" id="Curve3D_4ra05"]
 closed = true
@@ -586,3 +588,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 2, -13.5)
 material_override = SubResource("StandardMaterial3D_gx3fe")
 size = Vector3(1, 5, 4)
 metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
+
+[node name="QuadroMagico" parent="." index="81" instance=ExtResource("56_sqvtq")]
+transform = Transform3D(-4.738075, 0, 2.1425798, 0, 5.2000003, 0, -2.1425798, 0, -4.738075, 2.2285933, 0.000500679, -5.336713)
+metadata/asset_placer_res_id = "uid://d0vuugnep5nyg"
+
+[node name="ChiaveNascosta" parent="." index="82" instance=ExtResource("57_p1scd")]
+transform = Transform3D(1.9454936, 0, -0.82433057, 0, 2.1129282, 0, 0.82433057, 0, 1.9454936, 1.2862498, 1, -5.6979356)
+id_chiave = "chiave2"
+
+[node name="porta_gialla_lucchetto" parent="." index="83" instance=ExtResource("11_qqy3k")]
+transform = Transform3D(-0.116774715, 0, -0.9931584, 0, 1, 0, 0.9931584, 0, -0.116774715, 4.011499, 0.70050067, -1.5110054)
+key_id_required = "chiave2"
