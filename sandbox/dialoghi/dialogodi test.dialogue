@@ -2,10 +2,12 @@
 Godot: [[Hi|Hello|Howdy]], come stai?
 Godot: Questo dialogo è il dialogo standard.
 Godot: Ricorda di cambiarlo nel manager di dialogo!
+Godot: Vuoi teletrasportarti? Scegli la seconda scelta
 - La prima
 	Godot: Hai scelto la prima scelta!
 - La seconda
 	Godot: Hai scelto la seconda!
+	do! SceneTransition.load_and_change_level(1, "test")
 - Ricomincia => start
 - Finisci la conversazione => AEND
 Godot: Chiedete ad Alessandro per altre regole!
