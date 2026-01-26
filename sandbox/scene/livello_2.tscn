@@ -1,33 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bremswwt3c5qa"]
+[gd_scene load_steps=3 format=3 uid="uid://bremswwt3c5qa"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_glkqy"]
 [ext_resource type="Material" uid="uid://cx15q4ooop7cm" path="res://_oggetti videogioco/materiali vari/piastrelle1.tres" id="2_xifix"]
-[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://_oggetti videogioco/pavimento_erba.tscn" id="3_d2el6"]
-[ext_resource type="Material" uid="uid://bqamnpkb1vra4" path="res://_oggetti videogioco/materiali vari/pietre1.tres" id="4_rwcoq"]
-[ext_resource type="PackedScene" uid="uid://jh3niovqnuxg" path="res://_oggetti videogioco/blocco_nero.tscn" id="5_hgfc1"]
 
 [node name="Livello_2" instance=ExtResource("1_glkqy")]
 
 [node name="Base" parent="terrain" index="0"]
 material_override = ExtResource("2_xifix")
-
-[node name="PavimentoErba" parent="." index="5" instance=ExtResource("3_d2el6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -7)
-material_override = ExtResource("4_rwcoq")
-size = Vector3(8, 0.001, 9)
-metadata/asset_placer_res_id = "uid://dcwp1tg8ete38"
-
-[node name="BloccoNero" parent="." index="6" instance=ExtResource("5_hgfc1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.9999998, -7)
-size = Vector3(1, 5, 9)
-metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
-
-[node name="BloccoNero2" parent="." index="7" instance=ExtResource("5_hgfc1")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 1.9999998, -12)
-size = Vector3(1, 5, 10)
-metadata/asset_placer_res_id = "uid://jh3niovqnuxg"
-
-[node name="BloccoNero (1)" parent="." index="8" instance=ExtResource("5_hgfc1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -7.5)
-size = Vector3(1, 5, 10)
-metadata/asset_placer_res_id = "uid://jh3niovqnuxg"

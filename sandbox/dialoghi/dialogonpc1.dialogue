@@ -1,6 +1,13 @@
 ~ start
-Luna: Ciao! Modificami ma non cancellare mai AEND!
+Antonietta: Ciao! mi stai scrivendo il dialogo
+Antonietta: Clicca per proseguire!
+Antonietta: tu come stai?
+- mi sento giù...
+	Antonietta: Mi dispiace
+- sono contento!
+	Antonietta: Allora sono contenta anche io!
 
+Antonietta: E ora continuiamo a parlare
 
 ~ AEND
 set Singleton.dialogue_playing = false

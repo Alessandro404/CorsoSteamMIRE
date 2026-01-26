@@ -51,7 +51,7 @@ size = Vector3(1275, 6, 1639)
 
 [node name="CambiaTempo" parent="." instance=ExtResource("15_3f0gx")]
 transform = Transform3D(-0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071068, 2, 0, -2)
-scelta_tempo = 0
+scelta_tempo = 2
 sky_sereno = ExtResource("1_a8pr3")
 
 [node name="Ambiente" type="Node3D" parent="."]

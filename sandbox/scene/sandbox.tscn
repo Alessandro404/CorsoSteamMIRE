@@ -410,7 +410,7 @@ transform = Transform3D(1.0000006, 0, -2.448771e-07, 0, 1, 0, 2.448771e-07, 0, 1
 metadata/asset_placer_res_id = "uid://dnbua5nses3vv"
 
 [node name="DialogoActivator" parent="." index="39" instance=ExtResource("23_6akiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.862832, 0.0005002022, 12.229423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.862832, 0.0005002022, -11.770577)
 dialogue_resource = ExtResource("22_8jbqr")
 
 [node name="DialogoNpc" parent="." index="40" instance=ExtResource("23_in15d")]
