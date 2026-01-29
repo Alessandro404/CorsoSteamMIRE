@@ -43,7 +43,7 @@ transform = Transform3D(-0.011588715, 0.9999328, 0, -0.9999328, -0.011588715, 0,
 shape = SubResource("CapsuleShape3D_q07n8")
 
 [node name="Root Scene" parent="." instance=ExtResource("1_q07n8")]
-transform = Transform3D(1.7080932, 0, 0, 0, 1.7080932, 0, 0, 0, 1.7080932, -0.07905882, 0.51515496, 0)
+transform = Transform3D(0.004734829, 0, 0, 0, 0.004734829, 0, 0, 0, 0.004734829, 0.020941183, 0.11515497, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 volume_db = -32.848

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dba85cqxqhr1b"]
+[gd_scene load_steps=61 format=3 uid="uid://dba85cqxqhr1b"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_h0kme"]
 [ext_resource type="PackedScene" uid="uid://ct3i7ryn7x360" path="res://_oggetti videogioco/cartello_1.tscn" id="4_j6lu3"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://dlk05syxs4vj6" path="res://_oggetti videogioco/asset ragazze/bed_1.tscn" id="26_cd6fx"]
 [ext_resource type="PackedScene" uid="uid://dnxi5kj5ywlgn" path="res://_oggetti videogioco/asset ragazze/book_stack.tscn" id="27_85qsr"]
 [ext_resource type="PackedScene" uid="uid://3qoywacjpnv6" path="res://_oggetti videogioco/asset ragazze/box.tscn" id="28_f57hn"]
-[ext_resource type="PackedScene" uid="uid://boi7knqmwfdxx" path="res://_oggetti videogioco/asset ragazze/box_2.tscn" id="29_3qv46"]
 [ext_resource type="PackedScene" uid="uid://tn0bkbb3du4v" path="res://_oggetti videogioco/asset ragazze/camera.tscn" id="30_kat5w"]
 [ext_resource type="PackedScene" uid="uid://b1tumjbhpkmjl" path="res://_oggetti videogioco/asset ragazze/car_model.tscn" id="31_cd6fx"]
 [ext_resource type="PackedScene" uid="uid://b1witoxr2or50" path="res://_oggetti videogioco/asset ragazze/castle_1.tscn" id="32_sqvtq"]
@@ -431,170 +430,166 @@ metadata/asset_placer_res_id = "uid://dnxi5kj5ywlgn"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.57887, 0.000500679, -5.490283)
 metadata/asset_placer_res_id = "uid://3qoywacjpnv6"
 
-[node name="Box2" parent="." index="44" instance=ExtResource("29_3qv46")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.651287, 0.0005002022, -4.8231554)
-metadata/asset_placer_res_id = "uid://boi7knqmwfdxx"
-
-[node name="Camera" parent="." index="45" instance=ExtResource("30_kat5w")]
+[node name="Camera" parent="." index="44" instance=ExtResource("30_kat5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.760628, 0.0005002022, -5.383087)
 metadata/asset_placer_res_id = "uid://tn0bkbb3du4v"
 
-[node name="CarModel" parent="." index="46" instance=ExtResource("31_cd6fx")]
+[node name="CarModel" parent="." index="45" instance=ExtResource("31_cd6fx")]
 transform = Transform3D(0.28107297, 0, 0, 0, 0.28107297, 0, 0, 0, 0.28107297, 38.743103, 0.000500679, -4.794969)
 metadata/asset_placer_res_id = "uid://b1tumjbhpkmjl"
 
-[node name="Castle1" parent="." index="47" instance=ExtResource("32_sqvtq")]
+[node name="Castle1" parent="." index="46" instance=ExtResource("32_sqvtq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.59075, 0.00049972534, -16.020658)
 metadata/asset_placer_res_id = "uid://b1witoxr2or50"
 
-[node name="Computer mouse" parent="." index="48" instance=ExtResource("33_p1scd")]
+[node name="Computer mouse" parent="." index="47" instance=ExtResource("33_p1scd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.85417, 0.0005016327, -3.48975)
 metadata/asset_placer_res_id = "uid://p0mm866ugiu6"
 
-[node name="DeadRat" parent="." index="49" instance=ExtResource("34_ufyj1")]
+[node name="DeadRat" parent="." index="48" instance=ExtResource("34_ufyj1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.51091, 0.00049972534, -3.6810198)
 metadata/asset_placer_res_id = "uid://1n4u6gfdgff8"
 
-[node name="DesktopComputer" parent="." index="50" instance=ExtResource("35_fx2ho")]
+[node name="DesktopComputer" parent="." index="49" instance=ExtResource("35_fx2ho")]
 transform = Transform3D(0.5807796, 0, 0, 0, 0.5807796, 0, 0, 0, 0.5807796, 63.038418, 0.000500679, -3.5554724)
 metadata/asset_placer_res_id = "uid://oa2rnyayrylj"
 
-[node name="Gabbia1" parent="." index="51" instance=ExtResource("36_ryo4p")]
+[node name="Gabbia1" parent="." index="50" instance=ExtResource("36_ryo4p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.35925, 0.00049972534, -3.5254812)
 metadata/asset_placer_res_id = "uid://5pto2qphkq1u"
 
-[node name="Gate" parent="." index="52" instance=ExtResource("37_a3wlh")]
+[node name="Gate" parent="." index="51" instance=ExtResource("37_a3wlh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.33378, 0.000500679, -6.409421)
 metadata/asset_placer_res_id = "uid://b75qiacyghnvd"
 
-[node name="GreenNotebook" parent="." index="53" instance=ExtResource("38_nbcyy")]
+[node name="GreenNotebook" parent="." index="52" instance=ExtResource("38_nbcyy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.802914, 0.00049972534, -1.575139)
 metadata/asset_placer_res_id = "uid://6aikxnh6gvs2"
 
-[node name="Guardaroba" parent="." index="54" instance=ExtResource("39_6gkuv")]
+[node name="Guardaroba" parent="." index="53" instance=ExtResource("39_6gkuv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.768982, 0.00049972534, -0.5377321)
 metadata/asset_placer_res_id = "uid://ci6ttcknfbtny"
 
-[node name="House1" parent="." index="55" instance=ExtResource("40_gwvrx")]
+[node name="House1" parent="." index="54" instance=ExtResource("40_gwvrx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.26019, 0.000500679, -19.408546)
 metadata/asset_placer_res_id = "uid://rkf5p0ojscef"
 
-[node name="Kitten" parent="." index="56" instance=ExtResource("41_flm7v")]
+[node name="Kitten" parent="." index="55" instance=ExtResource("41_flm7v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.180782, 0.0005002022, 0.25237083)
 metadata/asset_placer_res_id = "uid://dk6m1ty7p87i4"
 
-[node name="LaptopAndMonitor" parent="." index="57" instance=ExtResource("42_gn3ig")]
+[node name="LaptopAndMonitor" parent="." index="56" instance=ExtResource("42_gn3ig")]
 transform = Transform3D(0.011399993, 0, 0, 0, 0.011399993, 0, 0, 0, 0.011399993, 58.549797, 0.000500679, 0.7295151)
 metadata/asset_placer_res_id = "uid://cih0lh5x87mha"
 
-[node name="LiberiaStorta" parent="." index="58" instance=ExtResource("43_gndlo")]
+[node name="LiberiaStorta" parent="." index="57" instance=ExtResource("43_gndlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.986237, 0.00049972534, 0.12055874)
 metadata/asset_placer_res_id = "uid://cf2lblgjcpbl1"
 
-[node name="OpenBook" parent="." index="59" instance=ExtResource("44_duoqq")]
+[node name="OpenBook" parent="." index="58" instance=ExtResource("44_duoqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.071857, 0.0005002022, 0.13529015)
 metadata/asset_placer_res_id = "uid://cm0on11pqfx75"
 
-[node name="paper1" parent="." index="60" instance=ExtResource("45_0ivgi")]
+[node name="paper1" parent="." index="59" instance=ExtResource("45_0ivgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.302288, 0.0005002022, 0.09103489)
 metadata/asset_placer_res_id = "uid://da41u3ydqcoiy"
 
-[node name="Pens" parent="." index="61" instance=ExtResource("46_ddmow")]
+[node name="Pens" parent="." index="60" instance=ExtResource("46_ddmow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.26466, 0.0005002022, 0.097929)
 metadata/asset_placer_res_id = "uid://coswac0lxl2ns"
 
-[node name="Potion1" parent="." index="62" instance=ExtResource("47_7kivy")]
+[node name="Potion1" parent="." index="61" instance=ExtResource("47_7kivy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.27581, 0.0005002022, 1.8184414)
 metadata/asset_placer_res_id = "uid://5a6mybi3ylgj"
 
-[node name="Potions" parent="." index="63" instance=ExtResource("48_3v5mo")]
+[node name="Potions" parent="." index="62" instance=ExtResource("48_3v5mo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.81511, 0.0005002022, 2.18476)
 metadata/asset_placer_res_id = "uid://cndbbcp6bbrsr"
 
-[node name="Ragnatele" parent="." index="64" instance=ExtResource("49_2sote")]
+[node name="Ragnatele" parent="." index="63" instance=ExtResource("49_2sote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.378723, 0.0005002022, 2.4191408)
 metadata/asset_placer_res_id = "uid://b8g377isltb6"
 
-[node name="RoseBush" parent="." index="65" instance=ExtResource("50_8mxhq")]
+[node name="RoseBush" parent="." index="64" instance=ExtResource("50_8mxhq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.82805, 0.0005002022, 2.4491024)
 metadata/asset_placer_res_id = "uid://ccq7joujkr2q1"
 
-[node name="Sofa" parent="." index="66" instance=ExtResource("51_k1xj7")]
+[node name="Sofa" parent="." index="65" instance=ExtResource("51_k1xj7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.09514, 0.0005002022, 1.5824642)
 metadata/asset_placer_res_id = "uid://hrlr0f8xmimx"
 
-[node name="StreetLight" parent="." index="67" instance=ExtResource("52_0er4m")]
+[node name="StreetLight" parent="." index="66" instance=ExtResource("52_0er4m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.766098, 0.00049996376, 1.8813515)
 metadata/asset_placer_res_id = "uid://dwjhl2aiu57i5"
 
-[node name="Sushi" parent="." index="68" instance=ExtResource("53_l8smn")]
+[node name="Sushi" parent="." index="67" instance=ExtResource("53_l8smn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.866737, 0.00049996376, 1.7924299)
 metadata/asset_placer_res_id = "uid://iwbdpxk67u11"
 
-[node name="Table" parent="." index="69" instance=ExtResource("54_io52b")]
+[node name="Table" parent="." index="68" instance=ExtResource("54_io52b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.22461, 0.00049972534, 1.7495289)
 metadata/asset_placer_res_id = "uid://b523xox4f7fbe"
 
-[node name="ToiletPaper" parent="." index="70" instance=ExtResource("55_xolfh")]
+[node name="ToiletPaper" parent="." index="69" instance=ExtResource("55_xolfh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.50325, 0.00049996376, 1.667346)
 metadata/asset_placer_res_id = "uid://jfw7eb0thi6c"
 
-[node name="Tree1" parent="." index="71" instance=ExtResource("56_flofe")]
+[node name="Tree1" parent="." index="70" instance=ExtResource("56_flofe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.59632, 0.00049972534, 1.6074171)
 metadata/asset_placer_res_id = "uid://c7sbhmasjlmmd"
 
-[node name="Bed1" parent="." index="72" instance=ExtResource("26_cd6fx")]
+[node name="Bed1" parent="." index="71" instance=ExtResource("26_cd6fx")]
 transform = Transform3D(1.43, 0, 0, 0, 1.43, 0, 0, 0, 1.43, 27.9, 0, -5)
 
-[node name="Table (1)" parent="." index="73" instance=ExtResource("54_io52b")]
+[node name="Table (1)" parent="." index="72" instance=ExtResource("54_io52b")]
 transform = Transform3D(1.0679551, 0, 0, 0, 1.0679551, 0, 0, 0, 1.0679551, -35, 0, -7)
 metadata/asset_placer_res_id = "uid://b523xox4f7fbe"
 
-[node name="Sofa (1)" parent="." index="74" instance=ExtResource("51_k1xj7")]
+[node name="Sofa (1)" parent="." index="73" instance=ExtResource("51_k1xj7")]
 transform = Transform3D(-1.7881393e-07, 0, -0.8000021, 0, 0.8, 0, 0.8000021, 0, -1.7881393e-07, -39, 1.1920929e-07, -5)
 metadata/asset_placer_res_id = "uid://hrlr0f8xmimx"
 
-[node name="@OmniLight3D@71126" parent="." index="75" instance=ExtResource("20_ytmia")]
+[node name="@OmniLight3D@71126" parent="." index="74" instance=ExtResource("20_ytmia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.8956659, -13)
 omni_range = 3.310603
 script = SubResource("GDScript_7rvsi")
 metadata/asset_placer_res_id = "uid://btnega8tlb5a0"
 
-[node name="Luce (1)" parent="." index="76" instance=ExtResource("20_ytmia")]
+[node name="Luce (1)" parent="." index="75" instance=ExtResource("20_ytmia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2.1525671, -13)
 omni_range = 4.9722314
 script = SubResource("GDScript_7rvsi")
 metadata/asset_placer_res_id = "uid://btnega8tlb5a0"
 
-[node name="Luce (2)" parent="." index="77" instance=ExtResource("20_ytmia")]
+[node name="Luce (2)" parent="." index="76" instance=ExtResource("20_ytmia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.7999997, -8)
 script = SubResource("GDScript_7rvsi")
 metadata/asset_placer_res_id = "uid://btnega8tlb5a0"
 
-[node name="Luce (3)" parent="." index="78" instance=ExtResource("20_ytmia")]
+[node name="Luce (3)" parent="." index="77" instance=ExtResource("20_ytmia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2.5453382, -15)
 omni_range = 3.072031
 script = SubResource("GDScript_7rvsi")
 metadata/asset_placer_res_id = "uid://btnega8tlb5a0"
 
-[node name="BloccoBianco" parent="." index="79" instance=ExtResource("7_rvfw7")]
+[node name="BloccoBianco" parent="." index="78" instance=ExtResource("7_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 2, -16)
 material_override = SubResource("StandardMaterial3D_gx3fe")
 size = Vector3(10, 5, 1)
 metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
 
-[node name="BloccoBianco2" parent="." index="80" instance=ExtResource("7_rvfw7")]
+[node name="BloccoBianco2" parent="." index="79" instance=ExtResource("7_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 2, -12)
 size = Vector3(10, 5, 1)
 metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
 
-[node name="BloccoBianco (1)" parent="." index="81" instance=ExtResource("7_rvfw7")]
+[node name="BloccoBianco (1)" parent="." index="80" instance=ExtResource("7_rvfw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 2, -13.5)
 material_override = SubResource("StandardMaterial3D_gx3fe")
 size = Vector3(1, 5, 4)
 metadata/asset_placer_res_id = "uid://b68nhcaxfqylo"
 
-[node name="QuadroMagico" parent="." index="82" instance=ExtResource("56_sqvtq")]
+[node name="QuadroMagico" parent="." index="81" instance=ExtResource("56_sqvtq")]
 transform = Transform3D(-5.1745825, 0, -0.5135087, 0, 5.2, 0, 0.5135087, 0, -5.1745825, 27.228594, 0.000500679, -10.336712)
 metadata/asset_placer_res_id = "uid://d0vuugnep5nyg"
 
@@ -602,9 +597,9 @@ metadata/asset_placer_res_id = "uid://d0vuugnep5nyg"
 transform = Transform3D(-0.40621623, 0, -0.00971283, 0, 0.40633228, 0, 0.00971283, 0, -0.40621623, 0.19374418, 0.19221137, -0.011373758)
 id_chiave = "chiave2"
 
-[node name="porta_gialla_lucchetto" parent="." index="83" instance=ExtResource("11_qqy3k")]
+[node name="porta_gialla_lucchetto" parent="." index="82" instance=ExtResource("11_qqy3k")]
 transform = Transform3D(-0.116774715, 0, -0.9931584, 0, 1, 0, 0.9931584, 0, -0.116774715, 21.0115, 0.10050064, -9.511005)
 key_id_required = "chiave2"
 
-[node name="Teleport" parent="." index="84" instance=ExtResource("58_ufyj1")]
+[node name="Teleport" parent="." index="83" instance=ExtResource("58_ufyj1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)

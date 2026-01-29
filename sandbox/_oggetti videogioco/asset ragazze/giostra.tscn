@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg7b0jgw507vj"]
+
+[ext_resource type="PackedScene" uid="uid://b5mr7g1qthis8" path="res://assets/import/2701/giostra.gltf" id="1_no1cf"]
+
+[node name="Giostra" instance=ExtResource("1_no1cf")]
+transform = Transform3D(0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0)
+
+[node name="cylinder" parent="." index="0"]
+transform = Transform3D(54.560005, 0, 0, 0, 54.560005, 0, 0, 0, 54.560005, 0, -1.7900009, 0)
+
+[node name="cylinder2" parent="." index="1"]
+transform = Transform3D(54.560005, 0, 0, 0, 54.560005, 0, 0, 0, 54.560005, 0, 32.31, 0)
+
+[node name="cylinder3" parent="." index="2"]
+transform = Transform3D(54.560005, 0, 0, 0, 54.560005, 0, 0, 0, 54.560005, 0, 13.554999, 0)
+
+[node name="cone" parent="." index="3"]
+transform = Transform3D(54.560005, 0, 0, 0, 54.560005, 0, 0, 0, 54.560005, 0, 37.425003, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="4"]

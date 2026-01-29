@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckfugl2ir0kh0"]
+
+[ext_resource type="AudioStream" uid="uid://35fb54eqmyts" path="res://assets/import/162805__timgormly__8-bit-coin11.wav" id="1_n4eng"]
+[ext_resource type="PackedScene" uid="uid://dkqtnplw4s3om" path="res://assets/import/Key3.glb" id="2_n4eng"]
+
+[sub_resource type="GDScript" id="GDScript_q07n8"]
+script/source = "extends Area3D
+class_name Chiave
+
+@export var id_chiave: String = \"No porta!\"
+@export var sound_effect: AudioStreamWAV
+
+func _ready():
+	body_entered.connect(_on_body_entered)
+	$AudioStreamPlayer3D.set_stream(sound_effect)
+
+func _on_body_entered(body):
+	# Controlliamo se chi è entrato è il Player (regola il nome in base al tuo progetto)
+	if body.name == \"Player\":
+		action()
+
+func action() -> void:
+	print(\"Chiave raccolta: \", id_chiave)
+	# Comunichiamo al Singleton che questa chiave è stata presa
+	Singleton.keys_found.append(id_chiave)
+	# La chiave scompare dal gioco
+	$AudioStreamPlayer3D.play()
+	await $AudioStreamPlayer3D.finished
+	queue_free()
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q07n8"]
+radius = 0.49951172
+height = 1.9974365
+
+[node name="Chiave" type="Area3D"]
+collision_layer = 17
+script = SubResource("GDScript_q07n8")
+sound_effect = ExtResource("1_n4eng")
+
+[node name="Root Scene2" parent="." instance=ExtResource("2_n4eng")]
+transform = Transform3D(5.7145497e-09, -6.531758e-08, 1.5, -1.494292, -0.13073365, 0, 0.13073365, -1.494292, -6.556708e-08, 0, 0.4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.011588715, 0.9999328, 0, -0.9999328, -0.011588715, 0, 0, 0, 1, -0.00020048395, 0.49351794, 0.0063228607)
+shape = SubResource("CapsuleShape3D_q07n8")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -32.848
+max_db = -3.954

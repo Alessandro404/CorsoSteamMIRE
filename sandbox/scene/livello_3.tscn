@@ -1,5 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl77jav4bgki0"]
+[gd_scene load_steps=10 format=3 uid="uid://dl77jav4bgki0"]
 
 [ext_resource type="PackedScene" uid="uid://c6nac0ju7dpl8" path="res://scene/scene_template.tscn" id="1_jkcjv"]
+[ext_resource type="PackedScene" uid="uid://dcwp1tg8ete38" path="res://_oggetti videogioco/pavimento_erba.tscn" id="2_7333x"]
+[ext_resource type="Material" uid="uid://cbw3rtoacjnd8" path="res://_oggetti videogioco/materiali vari/cemento1.tres" id="3_13mo6"]
+[ext_resource type="PackedScene" uid="uid://cbtbgih7b7ov6" path="res://_oggetti videogioco/asset ragazze/farm_house.tscn" id="4_02oft"]
+[ext_resource type="PackedScene" uid="uid://dwjhl2aiu57i5" path="res://_oggetti videogioco/asset ragazze/street_light.tscn" id="5_qr8on"]
+[ext_resource type="PackedScene" uid="uid://b1witoxr2or50" path="res://_oggetti videogioco/asset ragazze/castle_1.tscn" id="6_qavlf"]
+[ext_resource type="PackedScene" uid="uid://rkf5p0ojscef" path="res://_oggetti videogioco/asset ragazze/house_1.tscn" id="7_dg5fh"]
+[ext_resource type="PackedScene" uid="uid://v8hgl21oesa1" path="res://_oggetti videogioco/teleport.tscn" id="8_13mo6"]
+[ext_resource type="PackedScene" uid="uid://btnega8tlb5a0" path="res://_oggetti videogioco/luce.tscn" id="9_02oft"]
 
 [node name="Livello_3" instance=ExtResource("1_jkcjv")]
+
+[node name="CambiaTempo" parent="." index="0"]
+scelta_tempo = 1
+
+[node name="PavimentoErba" parent="." index="5" instance=ExtResource("2_7333x")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -23.5, -0.00049999356, -7)
+material_override = ExtResource("3_13mo6")
+size = Vector3(31, 0.001, 21)
+
+[node name="Farm house" parent="." index="6" instance=ExtResource("4_02oft")]
+transform = Transform3D(0.57600003, 0, -1.0071105e-07, 0, 0.57600003, 0, 1.0071105e-07, 0, 0.57600003, -22.500002, 0, 9)
+
+[node name="Farm house2" parent="." index="7" instance=ExtResource("4_02oft")]
+transform = Transform3D(-0.49883077, 0, -0.288, 0, 0.576, 0, 0.288, 0, -0.49883077, -28.5, 0, -16)
+
+[node name="StreetLight" parent="." index="8" instance=ExtResource("5_qr8on")]
+transform = Transform3D(-1.8, 0, 1.57361e-07, 0, 1.8, 0, -1.57361e-07, 0, -1.8, -18.5, 0, -2)
+
+[node name="Castle1" parent="." index="9" instance=ExtResource("6_qavlf")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.5, 0, -2.999999)
+
+[node name="House1" parent="." index="10" instance=ExtResource("7_dg5fh")]
+transform = Transform3D(-0.9899494, 0, 0.9899495, 0, 1.4000001, 0, -0.9899495, 0, -0.9899494, -31.5, 0, 2.999999)
+
+[node name="House2" parent="." index="11" instance=ExtResource("7_dg5fh")]
+transform = Transform3D(-0.9899494, 0, 0.9899495, 0, 1.4000001, 0, -0.9899495, 0, -0.9899494, -12.499999, 0, -12.999999)
+
+[node name="Teleport" parent="." index="12" instance=ExtResource("8_13mo6")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -13.5, 0, -2.9999995)
+nome_teletrasporto = "portacastello"
+destinazione = "cameramia"
+monouso = true
+
+[node name="Teleport2" parent="." index="13" instance=ExtResource("8_13mo6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, -4)
+nome_teletrasporto = "portasegretapiazza"
+destinazione = "camerasegreta"
+
+[node name="Luce" parent="." index="14" instance=ExtResource("9_02oft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 2, -1)
+light_color = Color(1, 1, 0, 1)
+omni_range = 17.0
+
+[node name="Luce2" parent="." index="15" instance=ExtResource("9_02oft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 4, -1)
+light_color = Color(1, 0, 1, 1)
+omni_range = 17.0
